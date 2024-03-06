@@ -2,6 +2,10 @@
 
 Currently no info, sorry.
 
+## Use
+
+You can manually use this component by enabling the [script](https://raw.githubusercontent.com/Neutrxl/Themed/main/Theme.user.js) in Tampermonkey.
+
 ## Browser compatibility
 
 Here's the list of browsers and their versions which support the code. On the other side for simple script using is needed Tampermonkey extension.
