@@ -22,7 +22,7 @@
 
 			var interval = setInterval(function () {
 				// Random next index
-				var index
+				var index;
 				do {
 					index = randomInt(0, rects.length);
 				} while (lastIndex === index); // Cannot be the same as previous

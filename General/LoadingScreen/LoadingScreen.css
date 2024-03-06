@@ -121,7 +121,12 @@ body {
 
 .ApplicationLoaderComponentStyle-helpChangeKey {
 	background: transparent;
-	color: var(--theme-dark-white-text-color);
 	border: var(--theme-gray-color) dashed .1em;
 	border-radius: .1em;
+}
+
+/* Help hotkey text */
+
+.ApplicationLoaderComponentStyle-helpChangeKey > span {
+	color: var(--theme-dark-white-text-color);
 }
