@@ -1,0 +1,254 @@
+/* Button 'back' with arrow (top-left corner) the arrow element */
+
+.HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock > div {
+	background-color: var(--theme-extra-light-gray-color);
+	transition: background-color .2s ease;
+}
+
+/* Button 'back' with arrow (top-left corner) the text */
+
+.HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock > span {
+	color: var(--theme-extra-light-gray-color) !important;
+	transition: color .2s ease;
+}
+
+/* Button 'back' with arrow (top-left corner) the arrow element on hover */
+
+.HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock:hover > div {
+	background-color: var(--theme-white-color);
+}
+
+/* Button 'back' with arrow (top-left corner) the text on hover */
+
+.HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock:hover > span {
+	color: var(--theme-white-color) !important;
+}
+
+/* General container of buttons or login/register */
+
+.EntranceComponentStyle-ContainerForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Form inside the container */
+
+.EntranceComponentStyle-ContainerForm form {
+	width: auto;
+	padding: 1.5em;
+	/* border-radius: .5em; */
+	/* background-color: var(--theme-dark-transparent-background1); */
+	/* border: .1em solid var(--theme-light-gray-color); */
+	/* box-shadow: 0 0 1em 0 var(--theme-white-color); */
+	/* backdrop-filter: blur(.2em); */
+}
+
+/* Header + buttons containers + login/register elements */
+
+.EntranceComponentStyle-ContainerForm form > div {
+	width: auto;
+}
+
+/* Title text of the container */
+
+.MainEntranceComponentStyle-title,
+.EntranceComponentStyle-title {
+	font-size: 1.5em;
+}
+
+/* Registration container with passwords and button */
+
+.EntranceComponentStyle-ContainerForm form > .RegistrationComponentStyle-containerItem + div {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Creepy thing for input background */
+
+.InputComponentStyle-blurBackground {
+	display: none;
+}
+
+/* Entrance error icon */
+
+.EntranceComponentStyle-commonBlockMessageError {
+	right: 3em;
+}
+
+/* Inputs for text and password */
+
+.EntranceComponentStyle-ContainerForm form input[type='text'],
+.EntranceComponentStyle-ContainerForm form input[type='password'] {
+	background-color: var(--theme-dark-transparent-background2);
+	border: .1em solid var(--theme-light-gray-color);
+	transition: background-color .2s ease;
+}
+
+/* Inputs for text and password on hover */
+
+.EntranceComponentStyle-ContainerForm form input[type='text']:hover,
+.EntranceComponentStyle-ContainerForm form input[type='password']:hover,
+.EntranceComponentStyle-ContainerForm form input[type='text']:focus,
+.EntranceComponentStyle-ContainerForm form input[type='password']:focus {
+	background-color: var(--theme-light-transparent-background2);
+	color: var(--theme-white-text-color);
+}
+
+/* Invalid inputs for text and password */
+
+.EntranceComponentStyle-ContainerForm form input[type='text'][class*='invalid'],
+.EntranceComponentStyle-ContainerForm form input[type='password'][class*='invalid'] {
+	background-color: var(--theme-red-transparent-background1);
+	color: var(--theme-red-text-color);
+}
+
+/* Button of login/registration */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i] {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	margin: 0;
+	margin-top: 1em;
+	padding: 1em 1em;
+	-ms-grid-row-align: center;
+		align-self: center;
+}
+
+/* Disabled button (in forms or 'header' of the entrance page) */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i],
+.HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] {
+	background-color: var(--theme-light-transparent-background1);
+}
+
+/* Active button (in forms or 'header' of the entrance page) */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i],
+.HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] {
+	background-color: var(--theme-gray-button-background);
+	border: .1em solid var(--theme-gray-button-border-color);
+	transition: background-color .2s ease, border-color .2s ease;
+}
+
+/* Active button on hover (in forms or 'header' of the entrance page) */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i]:hover,
+.HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i]:hover {
+	background-color: var(--theme-green-button-background);
+	border-color: var(--theme-green-button-border-color-hover);
+}
+
+/* Disabled button (in forms or 'header' of the entrance page) */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] span,
+.HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] span {
+	color: var(--theme-black-text-color);
+}
+
+
+/* Active button text (in forms or 'header' of the entrance page) */
+
+.EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] span,
+.HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] span {
+	color: var(--theme-white-text-color);
+}
+
+/* Custom checkbox visuals */
+
+/* Label */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+/* Input (hidden) */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > .checkbox-text {
+	font-size: 1.125em;
+	white-space: nowrap;
+}
+
+/* Container of the checkbox */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon {
+	width: 2.5em;
+	height: 2.5em;
+	flex-shrink: 0;
+	overflow: visible;
+}
+
+/* Borders */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon rect {
+	stroke-width: .1em;
+	stroke: var(--theme-green-color);
+	transition: stroke .2 ease;
+}
+
+/* Checkbox checkmark */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon .tick {
+	stroke: var(--theme-green-color);
+	stroke-dasharray: 100%;
+	stroke-dashoffset: 100%;
+	transition: stroke-dashoffset 0.2s ease-out;
+	stroke-width: .15em;
+}
+
+/* Checkbox checkmark when input is checked */
+
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input:checked + .checkbox-icon .tick {
+	stroke-dashoffset: 0%;
+}
+
+/* Start screen container with logo, tankionline icon and text */
+
+.EntranceComponentStyle-ContainerForm form > div.StartScreenComponentStyle-mainContainer {
+	-webkit-transform: scale(.8);
+			transform: scale(.8);
+	transition: -webkit-transform .2s ease;
+	transition: transform .2s ease;
+	transition: transform .2s ease, -webkit-transform .2s ease;
+	-webkit-animation: startcontainer-animation 5s linear infinite;
+			animation: startcontainer-animation 5s linear infinite;
+}
+
+/* Animation for start screen container with logo, tankionline icon and text */
+
+@-webkit-keyframes startcontainer-animation {
+	0%, 100% {
+		-webkit-transform: scale(.8);
+				transform: scale(.8);
+	}
+	50% {
+		-webkit-transform: scale(1);
+				transform: scale(1);
+	}
+}
+
+@keyframes startcontainer-animation {
+	0%, 100% {
+		-webkit-transform: scale(.8);
+				transform: scale(.8);
+	}
+	50% {
+		-webkit-transform: scale(1);
+				transform: scale(1);
+	}
+}

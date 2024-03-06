@@ -1,0 +1,118 @@
+/* Body element */
+
+body {
+	margin: 0;
+	background: #000 !important;
+}
+
+/* Loading background on the entrance screen and also after login/register */
+
+.ApplicationLoaderComponentStyle-container {
+	background-image: none;
+}
+
+/* Loading background after login/register overlaying container */
+
+.Common-background + div > div[style*='background'i] {
+	display: none;
+}
+
+/* Loading in lobby */
+
+.LobbyLoaderComponentStyle-container {
+	background: none !important;
+}
+
+/* Logo in lobby (tankionline icon) */
+
+.LobbyLoaderComponentStyle-logo,
+#preloader .logo {
+	width: 8em;
+	height: auto;
+	-webkit-animation: logo-animation 1s infinite;
+			animation: logo-animation 1s infinite;
+}
+
+/* Define keyframes for animation */
+@-webkit-keyframes logo-animation {
+	0% {
+		width: 8em;
+	}
+	50% {
+		width: 6em;
+	}
+	100% {
+		width: 8em;
+	}
+}
+@keyframes logo-animation {
+	0% {
+		width: 8em;
+	}
+	50% {
+		width: 6em;
+	}
+	100% {
+		width: 8em;
+	}
+}
+
+/* Canvas for custom background with stars */
+
+.star-canvas-container {
+	z-index: -1;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Custom progress element to replace the defauld gif */
+
+.custom-progress {
+	background: none;
+	position: absolute;
+	bottom: 4em;
+	width: 15em;
+	height: .2em;
+	background-color: var(--theme-gray-color);
+	border-radius: 1em;
+	overflow: hidden;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+	-webkit-filter: drop-shadow(var(--theme-main-color) 0 0 .5em);
+			filter: drop-shadow(var(--theme-main-color) 0 0 .5em);
+}
+
+/* Inner of the custom progress (running line) */
+
+.custom-progress > div {
+	width: 50%;
+	height: 100%;
+	background-color: var(--theme-main-color);
+	position: absolute;
+	-webkit-animation: progress-animation 1.5s linear infinite;
+			animation: progress-animation 1.5s linear infinite;
+	box-shadow: 0 0 4em var(--theme-main-color);
+}
+
+/* Animation for custom progress */
+
+@-webkit-keyframes progress-animation {
+	0% {
+		left: -50%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes progress-animation {
+	0% {
+		left: -50%;
+	}
+	100% {
+		left: 100%;
+	}
+}

@@ -1,0 +1,39 @@
+/* Dropdown outer container */
+
+.UidInputComponentStyle-dropDownRoot .DropDownStyle-outerContainerStyle {
+	border-radius: 0;
+}
+
+/* Dropdown inner container */
+
+.DropDownStyle-innerContainerStyle {
+	border: .1em solid var(--theme-light-gray-color);
+	-webkit-backdrop-filter: blur(.2em);
+			backdrop-filter: blur(.2em);
+	background-color: var(--theme-dark-transparent-background1);
+}
+
+/* Dropdown list item */
+
+.DropDownStyle-innerContainerStyle > div > div {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Dropdown list item on hover */
+
+.DropDownStyle-innerContainerStyle > div > div:hover {
+	background-color: var(--theme-light-transparent-background2);
+}
+
+/* Dropdown list first item (text 'incorrect') */
+
+.DropDownStyle-innerContainerStyle > div > div > span:not(.UidInputComponentStyle-firstItem) {
+	color: var(--theme-white-text-color);
+}
+
+/* Dropdown list first item inside the login/register form */
+
+.EntranceComponentStyle-ContainerForm form .DropDownStyle-innerContainerStyle > div:first-child > div {
+	pointer-events: none;
+}

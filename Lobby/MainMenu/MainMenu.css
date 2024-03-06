@@ -1,0 +1,105 @@
+/* Block with buttons */
+
+.MainScreenComponentStyle-blockMainMenu {
+	width: auto;
+	height: auto;
+	padding: 1em;
+	margin-left: 3em;
+}
+
+/* List of buttons */
+
+.MainScreenComponentStyle-blockMainMenu > ul {
+	width: auto;
+	height: auto;
+	gap: 1em;
+}
+
+/* Single button */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li {
+	width: 20em;
+	height: auto;
+	position: relative;
+	padding: .2em .5em;
+	transition: background-color .2s ease;
+}
+
+/* Button on hover */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover {
+	border: none;
+	outline: none;
+	box-shadow: none;
+/* 	background: var(--theme-dark-transparent-background1); */
+	border-radius: 0;
+}
+
+/* Button icon */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li [class*='itemli'i] {
+	margin: 0;
+	background-color: var(--theme-main-color);
+}
+
+/* Button text */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li span {
+	color: var(--theme-extra-light-gray-text-color);
+	transition: color .2s ease;
+}
+
+/* Button text on button hover */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover span {
+	color: var(--theme-white-text-color);
+}
+
+/* Pseudo elements for beauty corner borders animation */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li::before,
+.MainScreenComponentStyle-blockMainMenu > ul > li::after {
+	content: '';
+	height: 2em;
+	width: 2em;
+	position: absolute;
+	transition: all .2s ease;
+	opacity: 0;
+}
+
+/* Pseudo element before (top-right) */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li::before {
+	right: 0;
+	top: 0;
+	border-top: var(--theme-main-color) solid .4em;
+	border-right: var(--theme-main-color) solid .4em;
+	-webkit-transform: translate(-100%, 50%);
+			transform: translate(-100%, 50%);
+}
+
+/* Pseudo element after (bottom-left) */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li::after {
+	left: 0;
+	bottom: 0;
+	border-bottom: var(--theme-main-color) solid .4em;
+	border-left: var(--theme-main-color) solid .4em;
+	-webkit-transform: translate(100%, -50%);
+			transform: translate(100%, -50%);
+}
+
+/* Pseudo elements on button hover */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover::before,
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover::after {
+	-webkit-transform: translate(0,0);
+			transform: translate(0,0);
+	opacity: 1;
+}
+
+/* Notificators (THEY SUCK) */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li [class*='notification'i] {
+	display: none;
+}

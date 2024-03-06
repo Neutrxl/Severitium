@@ -1,0 +1,217 @@
+/* Tab container */
+
+.BattleTabStatisticComponentStyle-container > div {
+	background: var(--theme-tab-background);
+	-webkit-backdrop-filter: blur(.2em);
+	        backdrop-filter: blur(.2em);
+	box-shadow: none;
+	border: .1em solid var(--theme-tab-borders-color);
+}
+
+/* All elements inside the tab */
+
+.BattleTabStatisticComponentStyle-container > div * {
+	box-sizing: border-box;
+}
+
+/* Tab header */
+
+.BattleTabStatisticComponentStyle-container > div .BattleTabStatisticComponentStyle-header {
+	border-bottom: .1em solid var(--theme-tab-header-border-color);
+}
+
+/* Tab table */
+
+.BattleTabStatisticComponentStyle-container > div table tbody {
+	--row-background-color: var(--theme-tab-other-string-background);
+	--selected-row-background-color: var(--theme-tab-self-string-background);
+}
+
+/* A string inside the tab */
+
+.BattleTabStatisticComponentStyle-container > div table tbody tr {
+	border: .1em solid var(--theme-tab-borders-color);
+	transition: border .2s ease;
+}
+
+/* + Hover */
+
+.BattleTabStatisticComponentStyle-container > div table tbody tr:hover {
+	border: .1em solid var(--theme-tab-borders-hover-color);
+	box-shadow: none;
+}
+
+/* Nicknames inside the tab */
+
+.BattleTabStatisticComponentStyle-container > div table tbody tr td:first-child span {
+	color: var(--theme-tab-nickname-color);
+	cursor: pointer;
+}
+
+/* + Hover */
+
+.BattleTabStatisticComponentStyle-container > div table tbody tr td:first-child span:hover {
+	color: var(--theme-tab-nickname-hover-color);
+}
+
+/* Selected string in the tab */
+
+.BattleTabStatisticComponentStyle-selectedRowBackGround {
+	pointer-events: none;
+}
+
+/* Team battles tab */
+
+/* Tab headers */
+
+/* Name */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer .TableComponentStyle-thead tr th:nth-child(1),
+.BattleTabStatisticComponentStyle-redTeamTableContainer .TableComponentStyle-thead tr th:nth-child(1) {
+	width: 22.5em;
+}
+
+/* GS */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer .TableComponentStyle-thead tr th:nth-child(2),
+.BattleTabStatisticComponentStyle-redTeamTableContainer .TableComponentStyle-thead tr th:nth-child(2) {
+	width: 2.5em;
+}
+
+/* Turret */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer .TableComponentStyle-thead tr th:nth-child(3),
+.BattleTabStatisticComponentStyle-redTeamTableContainer .TableComponentStyle-thead tr th:nth-child(3) {
+	width: 3em;
+}
+
+/* Hull */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer .TableComponentStyle-thead tr th:nth-child(4),
+.BattleTabStatisticComponentStyle-redTeamTableContainer .TableComponentStyle-thead tr th:nth-child(4) {
+	width: 3em;
+}
+
+/* Player string */
+
+/* Name */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:first-child,
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:first-child {
+	margin-right: 1em;
+	width: 10em;
+	overflow: hidden;
+}
+
+/* Modules container */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:nth-child(2),
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:nth-child(2) {
+	width: auto;
+}
+
+/* One module icon of player in the tab */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody .BattleTabStatisticComponentStyle-defenceLabel,
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody .BattleTabStatisticComponentStyle-defenceLabel {
+	visibility: visible;
+	width: 2.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* GS */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:nth-child(3),
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:nth-child(3) {
+	visibility: visible;
+	width: 3em;
+}
+
+/* Turret + device */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:nth-child(4),
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:nth-child(4) {
+	visibility: visible;
+	width: 3em;
+}
+
+/* Hull + immunity */
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:nth-child(5),
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:nth-child(5) {
+	visibility: visible;
+	width: 3em;
+}
+
+/* Tab in solo battles (DM) */
+
+/* Tab headers */
+
+/* Name */
+
+.BattleTabStatisticComponentStyle-dmTableContainer .TableComponentStyle-thead tr th:nth-child(1) {
+	width: 22.5em;
+}
+
+/* GS */
+.BattleTabStatisticComponentStyle-dmTableContainer .TableComponentStyle-thead tr th:nth-child(2) {
+	width: 6.5em;
+}
+
+/* Turret */
+
+.BattleTabStatisticComponentStyle-dmTableContainer .TableComponentStyle-thead tr th:nth-child(3) {
+	width: 6em;
+}
+
+/* Hull */
+
+.BattleTabStatisticComponentStyle-dmTableContainer .TableComponentStyle-thead tr th:nth-child(4) {
+	width: 6em
+}
+
+/* Player string */
+
+/* Nickname */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:first-child {
+	margin-right: 1em;
+	width: 10em;
+	overflow: hidden;
+}
+
+/* Modules container */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(2) {
+	width: auto;
+}
+
+/* One module icon of player in the tab */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody .BattleTabStatisticComponentStyle-defenceLabel {
+	visibility: visible;
+	width: 2.5em;
+}
+
+/* GS */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(3) {
+	visibility: visible;
+	width: 7em;
+}
+
+/* Turret + device */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(4) {
+	visibility: visible;
+	width: 6em;
+}
+
+/* Hull + immunity */
+
+.BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(5) {
+	visibility: visible;
+	width: 6em;
+}

@@ -1,0 +1,131 @@
+/* Entrance icon to links (top-right corner) */
+
+.HeaderComponentStyle-enableIconLinksComponentShowed,
+.HeaderComponentStyle-enableIconLinksComponentShowed:hover {
+	width: auto;
+	height: auto;
+	background: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 1.5em;
+	margin-right: 4em;
+}
+
+/* Custom icon */
+
+svg.link-rects {
+	fill: var(--theme-extra-light-gray-color);
+	padding: .5em;
+	width: 2rem;
+}
+
+/* Custom icon on hover */
+
+svg.link-rects:hover {
+	fill: var(--theme-white-color);
+}
+
+/* Custom icon parts (rectangles) */
+
+svg.link-rects rect {
+	transition: fill .2s ease;
+}
+
+/* Common container background on entrance */
+
+.Common-entranceGradient > .Common-container {
+	background: transparent;
+}
+
+/* Single link card */
+
+.HeaderComponentStyle-siteLink {
+	background-color: var(--theme-dark-transparent-background2);
+	-webkit-backdrop-filter: blur(.2em);
+			backdrop-filter: blur(.2em);
+	box-shadow: 0 0 .25em .05em var(--theme-gray-color);
+	transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+/* Header of a card */
+
+.HeaderComponentStyle-siteLink .EntranceComponentStyle-fontStyleLabel {
+	color: var(--theme-white-text-color);
+	transition: color .2s ease;
+}
+
+/* Icon of a card */
+
+.HeaderComponentStyle-siteLink > div:nth-child(2) {
+	background-color: var(--theme-white-color);
+	width: 6em;
+	height: 6em;
+	transition: background-color .2s ease, width .2s ease, height .2s ease;
+}
+
+/* Link URL on bottom side of a card on card hover */
+
+.HeaderComponentStyle-siteLink .HeaderComponentStyle-textLink > span {
+	transition: color .2s ease;
+}
+
+/* Single link card on hover */
+
+.HeaderComponentStyle-siteLink:hover {
+	background-color: var(--theme-dark-transparent-background1);
+	box-shadow: 0 0 .25em .05em var(--theme-main-color);
+}
+
+/* Header of a card on card hover */
+
+.HeaderComponentStyle-siteLink:hover .EntranceComponentStyle-fontStyleLabel {
+	color: var(--theme-main-color);
+}
+
+/* Icon of a card on card hover */
+
+.HeaderComponentStyle-siteLink:hover > div:nth-child(2) {
+	width: 8em;
+	height: 8em;
+	background-color: var(--theme-main-color);
+}
+
+/* Link URL on bottom side of a card on card hover */
+
+.HeaderComponentStyle-siteLink:hover .HeaderComponentStyle-textLink > span {
+	color: var(--theme-main-color);
+}
+
+/* Close icon (top-right) */
+
+.HeaderComponentStyle-iconCloseLinks {
+	-webkit-mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 36 36"><path d="m30 2 4 4-16 16L6 34l-4-4 12-12L2 6l4-4 12 12z"/><path d="M18 22h8l8 8-4 4z"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 36 36"><path d="m30 2 4 4-16 16L6 34l-4-4 12-12L2 6l4-4 12 12z"/><path d="M18 22h8l8 8-4 4z"/></svg>');
+	background-color: var(--theme-white-color);
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	transition: background-color .2s ease;
+}
+
+/* Close icon (top-right) on hover */
+
+.HeaderComponentStyle-iconCloseLinks:hover {
+	background-color: var(--theme-red-color);
+}
+
+/* Both states: normal and on hover */
+
+.HeaderComponentStyle-iconCloseLinks,
+.HeaderComponentStyle-iconCloseLinks:hover {
+	background-image: none;
+	width: 2em;
+	height: 2em;
+	margin-left: 1.5em;
+	margin-right: 4em;
+}
