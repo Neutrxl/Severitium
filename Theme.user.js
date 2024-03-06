@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.3
+// @version			1.0.4
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -12,7 +12,7 @@
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/_additional/_getSeason.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/_Additional/_getSeason.min.js
 
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/General/LoadingScreen/LoadingScreen.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/General/NotificatorIcon/NotificatorIcon.min.js
