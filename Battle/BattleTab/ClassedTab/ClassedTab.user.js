@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Classed Tab
-// @version			1.1.0
+// @version			1.1.1
 // @description		Module that adds a new class to Battle tab element (Group or Solo)
 // @author			OrakomoRi
 
