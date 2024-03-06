@@ -124,4 +124,5 @@
 	background: transparent;
 	color: var(--theme-dark-white-text-color);
 	border: var(--theme-gray-color) dashed .1em;
+	border-radius: .1em;
 }
