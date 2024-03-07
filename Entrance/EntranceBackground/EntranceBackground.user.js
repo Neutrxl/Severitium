@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Background
-// @version			1.2.5
+// @version			1.2.6
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -68,7 +68,7 @@
 			function backgroundSetup() {
 				// Set image as background with url
 				const backgroundImageUrl = `data:image/png;base64,${response.responseText}`;
-				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground');
+				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground, .SystemMessageStyle-container');
 				for (const element of elements) {
 					// If element is one of changing backgrounds
 					if (element.classList.contains('Common-changingBackground')) {
@@ -99,7 +99,7 @@
 						mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 							if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 								// Find an element with the needed selector in the added node
-								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground`);
+								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground, .SystemMessageStyle-container`);
 								if (entranceBackground) { // If found
 									backgroundSetup();
 								}
