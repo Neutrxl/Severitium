@@ -68,7 +68,7 @@
 			function backgroundSetup() {
 				// Set image as background with url
 				const backgroundImageUrl = `data:image/png;base64,${response.responseText}`;
-				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground, .SystemMessageStyle-container');
+				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground, .Common-background.SystemMessageStyle-container');
 				for (const element of elements) {
 					// If element is one of changing backgrounds
 					if (element.classList.contains('Common-changingBackground')) {
@@ -101,7 +101,7 @@
 						mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 							if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 								// Find an element with the needed selector in the added node
-								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground, .SystemMessageStyle-container`);
+								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground, .Common-background.SystemMessageStyle-container`);
 								if (entranceBackground) { // If found
 									backgroundSetup();
 								}
