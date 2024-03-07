@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Background
-// @version			1.2.6
+// @version			1.2.7
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -85,6 +85,8 @@
 							// There's only one background element needed for purposes
 							parent.removeChild(element);
 						}
+					} else {
+						element.backgroundImage = `url(${backgroundImageUrl})`;
 					}
 				}
 			}
