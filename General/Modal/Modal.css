@@ -132,3 +132,9 @@
 .ServerHaltAlertComponentStyle-timer span[id*='timer'i] {
 	color: var(--theme-main-color);
 }
+
+/* Close area when some window overlays the game */
+
+.NewsComponentStyle-closeArea {
+	background-color: rgba(0, 0, 0, .4);
+}
