@@ -61,10 +61,10 @@
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const iconImg = node.querySelector(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src=*'circle'i]`);
+						const iconImg = node.querySelector(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
 						if (iconImg) { // If found
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
-							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src=*'circle'i]`);
+							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
 							for (const target of iconsImg) { // Iterate through found elements
 								replaceNotificationImg(target); // Apply styles to each element
 							}
