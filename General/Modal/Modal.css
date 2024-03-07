@@ -126,3 +126,9 @@
 	border: var(--theme-gray-color) dashed .1em;
 	border-radius: .1em;
 }
+
+/* Server restart timer */
+
+.ServerHaltAlertComponentStyle-timer span[id*='timer'i] {
+	color: var(--theme-main-color);
+}

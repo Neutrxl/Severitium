@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.5
+// @version			1.0.6
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -22,6 +22,7 @@
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/ColorfulResists/ColorfulResists.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/FooterMenu/FooterMenu.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/PlayButton/PlayButtonAnimation.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -51,6 +52,8 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/FooterMenu/FooterMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/MainMenu/MainMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/PlayButton/PlayButton.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/NewsWindow/NewsWindow.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.css',
 	];
 
 	for (const link of linksCSS) {

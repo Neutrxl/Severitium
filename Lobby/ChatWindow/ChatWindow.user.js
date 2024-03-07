@@ -1,7 +1,7 @@
 // ==UserScript==
 
-// @name			CSS Modal
-// @version			1.2.8
+// @name			CSS Chat Window
+// @version			1.0.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -11,6 +11,8 @@
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
+
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -22,7 +24,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/Modal/Modal.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({

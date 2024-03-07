@@ -32,6 +32,8 @@
 			// Inject CSS into the page
 			// Create a <style> element
 			var styleElement = document.createElement('style');
+			// Set the class for the element to detect the 'container' with variables
+			styleElement.className = 'ThemeVariables';
 			// Set the CSS text to styles
 			styleElement.textContent = response.responseText;
 			// Apply styles to body end (to override initial styles)

@@ -35,7 +35,7 @@
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the class '.FooterComponentStyle-footer ul > li' in the added node
-						const icon = node.querySelector('.FooterComponentStyle-footer ul > li');
+						const icon = node.querySelector('.FooterComponentStyle-footer ul > li > div');
 						if (icon) { // If found
 							// Get all elements with the class '.FooterComponentStyle-footer ul > li'
 							const icons = document.querySelectorAll('.FooterComponentStyle-footer ul > li');
