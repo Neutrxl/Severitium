@@ -108,3 +108,9 @@
 .NewsComponentStyle-newsItemBody > span > a:hover {
 	color: var(--theme-white-text-color);
 }
+
+/* Close area when news window overlays the game */
+
+.NewsComponentStyle-closeArea {
+	background-color: rgba(0, 0, 0, .4);
+}

@@ -257,3 +257,9 @@
 			mask-position: center;
 	background-color: var(--theme-main-color);
 }
+
+/* Close area when chat window overlays the game */
+
+.ChatComponentStyle-closeArea {
+	background-color: rgba(0, 0, 0, .4);
+}
