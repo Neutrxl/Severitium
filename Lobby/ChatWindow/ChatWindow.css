@@ -124,7 +124,7 @@
 	left: 0;
 	top: 100%;
 	margin-top: .5em;
-	background-color: var(--theme-dark-transparent-background1);
+	background-color: var(--theme-dark-transparent-background4);
 	transition: background-color .2s ease;
 	border: .075em solid var(--theme-gray-color);
 	justify-content: center;
@@ -261,5 +261,5 @@
 /* Close area when chat window overlays the game */
 
 .ChatComponentStyle-closeArea {
-	background-color: rgba(0, 0, 0, .4);
+	background-color: var(--theme-dark-transparent-background1);
 }

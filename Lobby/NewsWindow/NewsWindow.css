@@ -112,5 +112,5 @@
 /* Close area when news window overlays the game */
 
 .NewsComponentStyle-closeArea {
-	background-color: rgba(0, 0, 0, .4);
+	background-color: var(--theme-dark-transparent-background1);
 }
