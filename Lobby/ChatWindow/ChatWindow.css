@@ -184,6 +184,12 @@
 	font-size: 1em;
 }
 
+/* Line in the message 'from' - 'to' */
+
+.ChatComponentStyle-arrowForPrivateMessage::before {
+	color: var(--theme-main-color);
+}
+
 /* Message text */
 
 .ChatComponentStyle-messageRow .ChatComponentStyle-message {
