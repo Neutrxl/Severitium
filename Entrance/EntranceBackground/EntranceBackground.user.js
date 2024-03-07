@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Background
-// @version			1.2.7
+// @version			1.2.8
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -57,9 +57,9 @@
 		url: imageLink,
 		onload: function(response) {
 			// Initial adding of the background to the first entrance screen
-			const target = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}`;
+			const styledBackgrounds = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
 			var styleElement = document.createElement("style");
-			styleElement.textContent = target;
+			styleElement.textContent = styledBackgrounds;
 			document.body.appendChild(styleElement);
 
 			/**
@@ -68,7 +68,7 @@
 			function backgroundSetup() {
 				// Set image as background with url
 				const backgroundImageUrl = `data:image/png;base64,${response.responseText}`;
-				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground, .Common-background.SystemMessageStyle-container');
+				const elements = document.querySelectorAll('.Common-entranceBackground, .Common-changingBackground');
 				for (const element of elements) {
 					// If element is one of changing backgrounds
 					if (element.classList.contains('Common-changingBackground')) {
@@ -85,8 +85,6 @@
 							// There's only one background element needed for purposes
 							parent.removeChild(element);
 						}
-					} else {
-						element.backgroundImage = `url(${backgroundImageUrl})`;
 					}
 				}
 			}
@@ -101,7 +99,7 @@
 						mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 							if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 								// Find an element with the needed selector in the added node
-								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground, .Common-background.SystemMessageStyle-container`);
+								const entranceBackground = node.querySelector(`.Common-changingBackground, .Common-entranceBackground`);
 								if (entranceBackground) { // If found
 									backgroundSetup();
 								}
