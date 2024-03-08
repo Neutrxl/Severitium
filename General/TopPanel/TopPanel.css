@@ -119,14 +119,14 @@
 
 /* Rank button */
 
-.UserInfoContainerStyle-userTitleContainer > div:last-child {
+.UserInfoContainerStyle-userTitleContainer > .UserInfoContainerStyle-rankIconContainerClickable {
 	background-color: transparent;
 	transition: background-color .2s ease;
 }
 
 /* Rank button on hover */
 
-.UserInfoContainerStyle-userTitleContainer > div:last-child:hover {
+.UserInfoContainerStyle-userTitleContainer > .UserInfoContainerStyle-rankIconContainerClickable:hover {
 	background-color: var(--theme-light-transparent-background3);
 }
 
