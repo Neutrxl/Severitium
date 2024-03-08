@@ -168,5 +168,6 @@
 /* Close (cross) icon of the modal container on hover */
 
 .DialogContainerComponentStyle-imgClose:hover {
+	background-image: none;
 	background-color: var(--theme-red-color);
 }
