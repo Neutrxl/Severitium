@@ -68,3 +68,135 @@
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(3) .UserInfoContainerStyle-progressValue > span {
 	color: var(--theme-light-gray-color);
 }
+
+/* Premium button */
+
+.UserInfoContainerStyle-userTitleContainer > div:first-child {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Premium button on hover */
+
+.UserInfoContainerStyle-userTitleContainer > div:first-child:hover {
+	background-color: var(--theme-light-transparent-background3);
+}
+
+/* Group button */
+
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Group button on hover */
+
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2):hover {
+	background-color: var(--theme-light-transparent-background3);
+}
+
+/* Icon of a group button (old icon parts) */
+
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img {
+	display: none;
+}
+
+/* Icon of a group button (new icon parts) */
+
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div {
+	-webkit-mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.5"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.5"/></svg>');
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	background-color: var(--theme-light-gray-color);
+	transition: background-color .2s ease;
+}
+
+/* Rank button */
+
+.UserInfoContainerStyle-userTitleContainer > div:last-child {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Rank button on hover */
+
+.UserInfoContainerStyle-userTitleContainer > div:last-child:hover {
+	background-color: var(--theme-light-transparent-background3);
+}
+
+/* Currency buttons */
+
+.UserScoreComponentStyle-blockRightPanel > div:first-child > div {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Currency buttons on hover */
+
+.UserScoreComponentStyle-blockRightPanel > div:first-child > div:hover {
+	background-color: linear-gradient(270deg, var(--theme-light-transparent-background3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Full screen button */
+
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2) {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Full screen button on hover */
+
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2) {
+	background-color: var(--theme-light-transparent-background3);
+}
+
+/* Icon of the full screen button */
+
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2) > div {
+	-webkit-mask-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 2C0 0.895431 0.89543 0 2 0H7.5L0 7.5V2Z" fill="white"/><path d="M0 22C0 23.1046 0.89543 24 2 24H7.5L0 16.5V22Z" fill="white"/><path d="M22 24C23.1046 24 24 23.1046 24 22V16.5L16.5 24H22Z" fill="white"/><path d="M24 2C24 0.895431 23.1046 0 22 0H16.5L24 7.5V2Z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 2C0 0.895431 0.89543 0 2 0H7.5L0 7.5V2Z" fill="white"/><path d="M0 22C0 23.1046 0.89543 24 2 24H7.5L0 16.5V22Z" fill="white"/><path d="M22 24C23.1046 24 24 23.1046 24 22V16.5L16.5 24H22Z" fill="white"/><path d="M24 2C24 0.895431 23.1046 0 22 0H16.5L24 7.5V2Z" fill="white"/></svg>');
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	background-color: var(--theme-light-gray-color);
+	transition: background-color .2s ease;
+}
+
+/* Icon of the full screen button on buttons' hover */
+
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover > div:hover {
+	background-color: var(--theme-white-color);
+}
+
+/* Logout icon */
+
+.UserScoreComponentStyle-blockRightPanel .BreadcrumbsComponentStyle-iconLogout {
+	-webkit-mask-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.89543 0 2V10.5H15L7.5 3H12L21 12L12 21H7.5L15 13.5H0V22C0 23.1046 0.89543 24 2 24H22C23.1046 24 24 23.1046 24 22V2C24 0.895431 23.1046 0 22 0H2Z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.89543 0 2V10.5H15L7.5 3H12L21 12L12 21H7.5L15 13.5H0V22C0 23.1046 0.89543 24 2 24H22C23.1046 24 24 23.1046 24 22V2C24 0.895431 23.1046 0 22 0H2Z" fill="white"/></svg>');
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	background-color: var(--theme-light-gray-color);
+	transition: background-color .2s ease;
+}
+
+/* Logout icon on buttons' hover */
+
+.UserScoreComponentStyle-blockRightPanel .BreadcrumbsComponentStyle-logout:hover .BreadcrumbsComponentStyle-iconLogout {
+	background-image: none;
+	background-color: var(--theme-white-color);
+}

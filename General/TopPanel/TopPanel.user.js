@@ -1,11 +1,11 @@
 // ==UserScript==
 
-// @name			CSS Top Panel
-// @version			1.1.5
-// @description		Injects CSS code into the page
+// @name			Top Panel
+// @version			1.1.6
+// @description		Restyles the common look of the top panel
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/InNLwvb.png
+// @icon			https://i.imgur.com/WtGwbtP.png
 
 // @match			https://*.tankionline.com/*
 
