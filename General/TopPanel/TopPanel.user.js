@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Top Panel
-// @version			1.1.7
+// @version			1.1.8
 // @description		Restyles the common look of the top panel
 // @author			OrakomoRi
 

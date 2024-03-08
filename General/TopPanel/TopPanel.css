@@ -174,7 +174,7 @@
 
 /* Icon of the full screen button on buttons' hover */
 
-.UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover > div:hover {
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover > div {
 	background-color: var(--theme-white-color);
 }
 
