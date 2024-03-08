@@ -19,11 +19,11 @@ Here's the list of browsers and their versions which support the code. On the ot
 
 Browser|Version
 -|:-:
-Google Chrome|88+
-Edge|88+
-Safary|10+
-Firefox|103+
-Opera|75+
+Google Chrome|105+
+Edge|105+
+Safary|15.4+
+Firefox|121+
+Opera|91+
 
 ### ✅ Mobile
 
@@ -33,5 +33,5 @@ Opera Mobile|73+
 Android Browser|122+
 Google Chrome for Android|122+
 Firefox for Android|123+
-Safary for iOS|10+
-Samsung Internet|15+
+Safary for iOS|15.4+
+Samsung Internet|20+
