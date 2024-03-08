@@ -146,7 +146,7 @@
 
 /* Icon part of a group button (inactive) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offine'i]),
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]),
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offine'i]) {
 	background-color: var(--theme-light-gray-color);
 }
