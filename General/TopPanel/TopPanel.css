@@ -123,15 +123,17 @@
 
 /* Icon of a group button (old icon parts) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img {
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img,
+.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img {
 	display: none;
 }
 
 /* Icon of a group button (new icon parts) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div {
-	-webkit-mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.5"/></svg>');
-			mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.5"/></svg>');
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div,
+.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div {
+	-webkit-mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white"/></svg>');
 	-webkit-mask-size: contain;
 			mask-size: contain;
 	-webkit-mask-position: center;
@@ -144,19 +146,22 @@
 
 /* Icon part of a group button (inactive) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(> img[src*='offine'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offine'i]),
+.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offine'i]) {
 	background-color: var(--theme-light-gray-color);
 }
 
 /* Icon part of a group button (leader) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(> img[src*='lead'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]),
+.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]) {
 	background-color: var(--theme-main-color);
 }
 
 /* Icon part of a group button (member) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(> img[src*='ready'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]),
+.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]) {
 	background-color: var(--theme-green-color);
 }
 
