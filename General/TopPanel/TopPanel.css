@@ -152,7 +152,7 @@
 
 /* Full screen button on hover */
 
-.UserScoreComponentStyle-blockRightPanel > div:nth-child(2) {
+.UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover {
 	background-color: var(--theme-light-transparent-background3);
 }
 
