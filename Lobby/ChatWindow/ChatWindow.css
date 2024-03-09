@@ -180,14 +180,14 @@
 /* Message header, user nickname */
 
 .ChatComponentStyle-messageRow .ChatComponentStyle-chatUserLabel span {
-	color: var(--theme-main-color);
+	color: var(--theme-extra-light-gray-text-color);
 	font-size: 1em;
 }
 
 /* Line in the message 'from' - 'to' */
 
 .ChatComponentStyle-arrowForPrivateMessage::before {
-	color: var(--theme-main-color);
+	color: var(--theme-extra-light-gray-text-color);
 }
 
 /* Message text */

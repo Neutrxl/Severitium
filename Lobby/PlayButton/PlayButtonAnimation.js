@@ -32,7 +32,7 @@
 			disabledButton.style.backgroundPosition = `${randomX}% ${randomY}%`; // Set new background position
 			disabledButton.dataset.prevX = randomX; // Update previous value of X in dataset
 			disabledButton.dataset.prevY = randomY; // Update previous value of Y in dataset
-		}, 750); // Update position every 0.75 seconds
+		}, 1250); // Update position every 1.25 seconds
 
 		// Save interval identifier in the element's dataset
 		disabledButton.dataset.animationIntervalId = intervalId;

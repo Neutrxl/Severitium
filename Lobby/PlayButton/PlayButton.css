@@ -109,3 +109,19 @@
 	top: unset;
 	color: var(--theme-white-text-color);
 }
+
+/* Lock icon on a play button */
+
+.MainScreenComponentStyle-disabledButtonPlay > div:first-child {
+	-webkit-mask-image: url('data:image/svg+xml,<svg width="42" height="45" viewBox="0 0 42 45" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M33 15H39L42 18V42L39 45H3L0 42V18L3 15H9V12C9 5.37258 14.3726 0 21 0C27.6274 0 33 5.37258 33 12V15ZM28.5 15V12C28.5 7.85786 25.1421 4.5 21 4.5C16.8579 4.5 13.5 7.85786 13.5 12V15H28.5ZM15 30L21 24L27 30L21 36L15 30Z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg width="42" height="45" viewBox="0 0 42 45" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M33 15H39L42 18V42L39 45H3L0 42V18L3 15H9V12C9 5.37258 14.3726 0 21 0C27.6274 0 33 5.37258 33 12V15ZM28.5 15V12C28.5 7.85786 25.1421 4.5 21 4.5C16.8579 4.5 13.5 7.85786 13.5 12V15H28.5ZM15 30L21 24L27 30L21 36L15 30Z" fill="white"/></svg>');
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	color: var(--theme-white-color);
+	transition: background-color .2s ease;
+}

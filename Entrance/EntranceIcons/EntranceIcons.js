@@ -31,14 +31,14 @@
 					if (src.includes(linkPart)) {
 						// Replace the button's HTML with SVG icon and text
 						const svg = `
-					<div class="entrance-icon">
-						<div>
-							<svg viewBox="0 0 200 200" fill="none" class="border-visuals"><circle cx="100" cy="100" r="96"/></svg>
-							${SVGs[linkPart]}
-						</div>
-						<span>${text}</span>
-					</div>
-					`;
+							<div class="entrance-icon">
+								<div>
+									<svg viewBox="0 0 200 200" fill="none" class="border-visuals"><circle cx="100" cy="100" r="96"/></svg>
+									${SVGs[linkPart]}
+								</div>
+								<span>${text}</span>
+							</div>
+						`;
 						button.innerHTML = svg;
 
 						break;

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Footer Menu
-// @version			1.5.8
+// @version			1.5.9
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -11,8 +11,6 @@
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
-
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/FooterMenu/FooterMenu.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
