@@ -100,7 +100,7 @@
 	transition: background-color .2s ease;
 }
 
-/* Icon of back button on buttons' hover */
+/* Icon of back button on button's hover */
 
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:first-child:hover .IconStyle-iconBackArrow {
 	background-color: var(--theme-white-color);
@@ -225,7 +225,7 @@
 	transition: background-color .2s ease;
 }
 
-/* Icon of the full screen button on buttons' hover */
+/* Icon of the full screen button on button's hover */
 
 .UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover > div,
 .BreadcrumbsComponentStyle-rightButtonsContainer > div:nth-child(2):hover > div {
@@ -261,7 +261,7 @@
 	transition: background-color .2s ease;
 }
 
-/* Icon of the logout button on buttons' hover */
+/* Icon of the logout button on button's hover */
 
 .UserScoreComponentStyle-blockRightPanel .BreadcrumbsComponentStyle-logout:hover .BreadcrumbsComponentStyle-iconLogout {
 	background-image: none;
@@ -297,7 +297,7 @@
 	transition: background-color .2s ease;
 }
 
-/* Icon of the home button on buttons' hover */
+/* Icon of the home button on button's hover */
 
 .BreadcrumbsComponentStyle-rightButtonsContainer .BreadcrumbsComponentStyle-exitGameButton:hover .IconStyle-iconLogOff {
 	background-image: none;

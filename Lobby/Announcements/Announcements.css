@@ -77,13 +77,13 @@
 	color: var(--theme-black-text-color);
 }
 
-/* Announcement on cards' bottom container */
+/* Announcement on card's bottom container */
 
 .AnnouncementHomeScreenComponentStyle-announceContainer {
 	background: linear-gradient(transparent 0%, var(--theme-black-color) 100%);
 }
 
-/* Announcement on cards' bottom text */
+/* Announcement on card's bottom text */
 
 .AnnouncementHomeScreenComponentStyle-announceContainer > h3 {
 	color: var(--theme-white-text-color);

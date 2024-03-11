@@ -82,13 +82,13 @@
 	background-color: transparent;
 }
 
-/* Progressbar circles' unfilled part color */
+/* Progressbar circle's unfilled part color */
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar > div > div {
 	border-color: var(--theme-light-transparent-background2);
 }
 
-/* Progressbar circles' filled part color */
+/* Progressbar circle's filled part color */
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar > div > div > div {
 	border-color: var(--theme-main-color);

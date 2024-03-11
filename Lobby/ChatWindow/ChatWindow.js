@@ -1,8 +1,14 @@
 (function() {
+	/**
+	 * Replaces the original select element with a custom dropdown menu.
+	 * Adds event listeners to handle selection changes and dropdown display.
+	*/
 	function replaceOriginalSelector() {
+		// Find the original select container and select element
 		const originalSelectContainer = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
 		const originalSelect = originalSelectContainer.querySelector('select');
 
+		// Create elements for the custom dropdown menu
 		const selectorContainer = document.createElement('div');
 		selectorContainer.classList.add('selector-container');
 
@@ -12,16 +18,20 @@
 		const customDropdown = document.createElement('div');
 		customDropdown.classList.add('custom-dropdown');
 
+		// Append elements to the selector container
 		selectorContainer.appendChild(customDropdown);
 		selectorContainer.appendChild(selectorArrow);
 
+		// Insert the selector container after the original select container
 		originalSelectContainer.parentNode.insertBefore(selectorContainer, originalSelectContainer.nextSibling);
 
+		// Create and display the currently selected option
 		const selectedText = document.createElement('span');
 		selectedText.classList.add('selected-text');
 		selectedText.textContent = originalSelect.options[originalSelect.selectedIndex].textContent;
 		customDropdown.appendChild(selectedText);
 
+		// Create and populate the custom dropdown list
 		const customList = document.createElement('div');
 
 		originalSelect.querySelectorAll('option').forEach(option => {
@@ -29,24 +39,26 @@
 			listItem.textContent = option.textContent;
 			listItem.dataset.value = option.value;
 			customList.appendChild(listItem);
-		
+
+			// Add event listener for option selection
 			listItem.addEventListener('click', (event) => {
 				event.stopPropagation();
 				originalSelect.value = option.value;
 				customDropdown.querySelector('.selected-text').textContent = option.textContent;
 				selectorContainer.classList.remove('show');
 
+				// Trigger change event on original select
 				originalSelect.dispatchEvent(new Event('change', { bubbles: true }));
 			});
 		});
 
+		// Add event listener to toggle dropdown display
 		customDropdown.addEventListener('click', (event) => {
 			event.stopPropagation();
 			selectorContainer.classList.toggle('show');
 		});
 
-		customDropdown.appendChild(customList);
-
+		// Close dropdown when clicking outside of it
 		document.addEventListener('mousedown', (event) => {
 			if (!selectorContainer.contains(event.target) && !event.target.closest('.selector-container')) {
 				selectorContainer.classList.remove('show');
