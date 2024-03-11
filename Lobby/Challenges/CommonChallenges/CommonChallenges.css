@@ -1,0 +1,125 @@
+/* Common challenges container */
+
+.BattlePassLobbyComponentStyle-menuBattlePass {
+	-webkit-filter: none;
+			filter: none;
+	-webkit-backdrop-filter: blur(.2em);
+			backdrop-filter: blur(.2em);
+	background: none;
+	background-color: var(--theme-dark-transparent-background1);
+	box-shadow: 0 0 0 .05em var(--theme-main-color);
+	border-radius: 0;
+	transition: none;
+	transition: box-shadow .2s ease, background-color .2s ease, -webkit-backdrop-filter .2s ease;
+	transition: box-shadow .2s ease, background-color .2s ease, backdrop-filter .2s ease;
+	transition: box-shadow .2s ease, background-color .2s ease, backdrop-filter .2s ease, -webkit-backdrop-filter .2s ease;
+}
+
+/* Common challenges container on hover */
+
+.BattlePassLobbyComponentStyle-menuBattlePass:hover {
+	-webkit-backdrop-filter: blur(.5em);
+			backdrop-filter: blur(.5em);
+	background-color: var(--theme-dark-transparent-background2);
+	box-shadow: 0 0 0 .075em var(--theme-main-color);
+}
+
+/* Common challenges container pseudo elements for corner border hover animation */
+
+.BattlePassLobbyComponentStyle-menuBattlePass::before,
+.BattlePassLobbyComponentStyle-menuBattlePass::after {
+	content: '';
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	transition: all .35s ease;
+	opacity: 0;
+}
+
+/* Common challenges container before pseudo element (top-right corner) */
+
+.BattlePassLobbyComponentStyle-menuBattlePass::before {
+	content: '';
+	right: -.75em;
+	top: -.75em;
+	border-top: var(--theme-main-color) solid .25em;
+	border-right: var(--theme-main-color) solid .25em;
+	-webkit-transform: translate(100%, -50%);
+			transform: translate(100%, -50%);
+}
+
+/* Common challenges container after pseudo element (bottom-left corner) */
+
+.BattlePassLobbyComponentStyle-menuBattlePass::after {
+	content: '';
+	left: -.75em;
+	bottom: -.75em;
+	border-bottom: var(--theme-main-color) solid .25em;
+	border-left: var(--theme-main-color) solid .25em;
+	-webkit-transform: translate(-100%, 50%);
+			transform: translate(-100%, 50%);
+}
+
+/* Common challenges container pseudo elements on hover */
+
+.BattlePassLobbyComponentStyle-menuBattlePass:hover::before,
+.BattlePassLobbyComponentStyle-menuBattlePass:hover::after {
+	-webkit-transform: translate(0,0);
+			transform: translate(0,0);
+	opacity: 1;
+}
+
+/* Container and all elements inside it */
+
+.BattlePassLobbyComponentStyle-menuBattlePass,
+.BattlePassLobbyComponentStyle-menuBattlePass * {
+	box-sizing: border-box;
+}
+
+/* Containers' header */
+
+.BattlePassLobbyComponentStyle-descriptionMenuPass > div:first-child > span {
+	color: var(--theme-main-color);
+}
+
+/* Block of revards inside the container */
+
+.BattlePassLobbyComponentStyle-blockBattlePass {
+	background-color: transparent;
+	border: .05em solid var(--theme-dark-gray-color);
+	border-radius: 0;
+}
+
+/* Simple revards block */
+
+/* Price text */
+
+.BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription:not(.BattlePassLobbyComponentStyle-premiumPass) > span {
+	color: var(--theme-white-text-color);
+}
+
+/* Level text */
+
+.BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription:not(.BattlePassLobbyComponentStyle-premiumPass) > p {
+	color: var(--theme-light-gray-text-color);
+}
+
+/* BP revards block */
+
+/* Price text */
+
+.BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass > span {
+	color: var(--theme-gold-text-color);
+}
+
+/* Level text (locked) */
+
+.BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass.BattlePassLobbyComponentStyle-lockedBlock > p {
+	color: var(--theme-red-text-color);
+}
+
+/* Level text (not locked) */
+
+.BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass:not(.BattlePassLobbyComponentStyle-lockedBlock) > p {
+	color: var(--theme-red-text-color);
+}

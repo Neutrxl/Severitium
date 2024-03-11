@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Footer Menu
-// @version			1.5.9
+// @version			1.5.10
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 

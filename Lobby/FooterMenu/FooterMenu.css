@@ -44,8 +44,8 @@
 .FooterComponentStyle-footer ul > li::before {
 	right: 0;
 	top: 0;
-	border-top: var(--theme-main-color) solid .4em;
-	border-right: var(--theme-main-color) solid .4em;
+	border-top: var(--theme-main-color) solid .3em;
+	border-right: var(--theme-main-color) solid .3em;
 	-webkit-transform: translate(-100%, 100%);
 			transform: translate(-100%, 100%);
 }
@@ -55,8 +55,8 @@
 .FooterComponentStyle-footer ul > li::after {
 	left: 0;
 	bottom: 0;
-	border-bottom: var(--theme-main-color) solid .4em;
-	border-left: var(--theme-main-color) solid .4em;
+	border-bottom: var(--theme-main-color) solid .3em;
+	border-left: var(--theme-main-color) solid .3em;
 	-webkit-transform: translate(100%, -100%);
 			transform: translate(100%, -100%);
 }
@@ -103,12 +103,6 @@
 	fill: transparent;
 	stroke: transparent;
 }
-
-/* Initial div element with the icon */
-
-/* .FooterComponentStyle-footer ul > li div:first-child {
-	display: none;
-} */
 
 /* Custom backgrounds for each icon */
 

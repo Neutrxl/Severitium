@@ -11,6 +11,7 @@
 	--theme-light-gray-text-color: rgb(150, 150, 150);
 	--theme-black-text-color: rgb(0, 0, 0);
 	--theme-red-text-color: rgb(255, 100, 100);
+	--theme-gold-text-color: rgb(255, 200, 100);
 
 	/* Theme backgrounds */
 
@@ -31,9 +32,10 @@
 	--theme-extra-light-gray-color: rgb(200, 200, 200);
 	--theme-light-gray-color: rgb(150, 150, 150);
 	--theme-gray-color: rgb(100, 100, 100);
+	--theme-dark-gray-color: rgb(50, 50, 50);
+	--theme-black-color: rgb(0, 0, 0);
 	--theme-light-green-color: rgb(75, 255, 58);
 	--theme-green-color: rgb(75, 200, 75);
-	--theme-black-color: rgb(0, 0, 0);
 	--theme-red-color: rgb(225, 75, 75);
 
 	/* Theme button colors */

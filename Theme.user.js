@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.27
+// @version			1.0.28
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -53,6 +53,9 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/PlayButton/PlayButton.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/NewsWindow/NewsWindow.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Challenges/CommonChallenges/CommonChallenges.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Challenges/EliteChallenges/EliteChallenges.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Announcements/Announcements.min.css',
 	];
 
 	for (const link of linksCSS) {

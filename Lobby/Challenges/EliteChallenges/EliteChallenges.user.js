@@ -1,7 +1,7 @@
 // ==UserScript==
 
-// @name			CSS Modal
-// @version			1.2.13
+// @name			CSS Elite Challenges
+// @version			1.0.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/Modal/Modal.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Challenges/EliteChallenges/EliteChallenges.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({
