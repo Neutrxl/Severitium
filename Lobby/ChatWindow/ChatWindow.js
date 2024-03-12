@@ -68,7 +68,7 @@
 		});
 
 		// Add event listener to set original select value based on selected text
-		selectorContainer.addEventListener('click', (event) => {
+		customDropdown.addEventListener('click', (event) => {
 			const selectedOptionText = customDropdown.querySelector('.selected-text').textContent;
 			originalSelect.querySelectorAll('option').forEach(option => {
 				if (option.textContent === selectedOptionText) {
