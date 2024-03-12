@@ -170,7 +170,7 @@
 	color: var(--theme-white-text-color);
 }
 
-.ChatComponentStyle-channels .ChatComponentStyle-clanChannel.selected {
+.ChatComponentStyle-channels .ChatComponentStyle-clanChannel[data-state='selected'] {
 	color: var(--theme-main-color);
 	pointer-events: none;
 }
@@ -185,14 +185,21 @@
 /* Message header, user nickname */
 
 .ChatComponentStyle-messageRow .ChatComponentStyle-chatUserLabel span {
-	color: var(--theme-extra-light-gray-text-color);
+	color: var(--theme-orange-text-color);
 	font-size: 1em;
+	transition: color .2s ease;
+}
+
+/* Message header, user nickname on hover */
+
+.ChatComponentStyle-messageRow .ChatComponentStyle-chatUserLabel span:hover {
+	color: var(--theme-main-color);
 }
 
 /* Line in the message 'from' - 'to' */
 
 .ChatComponentStyle-arrowForPrivateMessage::before {
-	color: var(--theme-extra-light-gray-text-color);
+	color: var(--theme-orange-text-color);
 }
 
 /* Message text */
