@@ -1,0 +1,87 @@
+/* Container */
+
+.ContextMenuStyle-menu {
+	background: var(--severitium-dark-transparent-background1);
+	-webkit-backdrop-filter: blur(.5em);
+			backdrop-filter: blur(.5em);
+	border-radius: .1em;
+	border: .1em solid var(--severitium-dark-gray-color);
+	-webkit-animation: fadeInUp 0.25s ease;
+			animation: fadeInUp 0.25s ease;
+}
+
+/* Fade out down animation on container close */
+
+.ContextMenuStyle-menu.fadeOutDown {
+	-webkit-animation: fadeOutDown 0.25s ease;
+			animation: fadeOutDown 0.25s ease;
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+				transform: translateY(100%);
+   	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+   	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+				transform: translateY(100%);
+   	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+   	}
+}
+@-webkit-keyframes fadeOutDown {
+	from {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+				transform: translateY(100%);
+	}
+}
+@keyframes fadeOutDown {
+	from {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateY(100%);
+				transform: translateY(100%);
+	}
+}
+
+/* Container for player's nickname */
+
+.ContextMenuStyle-menuItemRank {
+	border-bottom: .1em solid var(--severitium-dark-gray-color);
+}
+
+/* Nickname text */
+
+.ContextMenuStyle-menuItemRank span {
+	color: var(--severitium-main-color);
+	font-weight: bold;
+}
+
+/* Nickname text on hover */
+
+.ContextMenuStyle-menuItemRank:hover span {
+	color: var(--severitium-main-color);
+}

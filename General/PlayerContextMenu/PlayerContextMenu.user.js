@@ -1,16 +1,18 @@
 // ==UserScript==
 
-// @name			CSS Common Container
-// @version			1.0.2
+// @name			CSS Player Context Menu
+// @version			1.0.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/InNLwvb.png
+// @icon			https://i.imgur.com/kazYkHx.png
 
 // @match			https://*.tankionline.com/*
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
+
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/General/PlayerContextMenu/PlayerContextMenu.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -22,7 +24,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/CommonContainer/CommonContainer.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/PlayerContextMenu/PlayerContextMenu.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({
@@ -39,22 +41,6 @@
 		},
 		onerror: function(error) {
 			console.error('Failed to load CSS file:', error);
-		}
-	});
-
-	// Link to raw TXT file
-	const imageLink = `https://raw.githubusercontent.com/Neutrxl/Themed/main/_Base64/General/png/EndlessDark.txt`;
-
-	// Make an AJAX request to fetch the TXT file
-	GM_xmlhttpRequest({
-		method: 'GET',
-		url: imageLink,
-		onload: function(response) {
-			// Initial adding of the background to the first entrance screen
-			const styledBackgrounds = `.Common-container{background-image:url(data:image/png;base64,${response.responseText})}`;
-			var styleElement = document.createElement("style");
-			styleElement.textContent = styledBackgrounds;
-			document.body.appendChild(styleElement);
 		}
 	});
 })();
