@@ -3,7 +3,7 @@
 	 * Replaces the original select element with a custom dropdown menu.
 	 * Adds event listeners to handle selection changes and dropdown display.
 	*/
-	function replaceOriginalSelector() {
+	function customChatLogic() {
 		// Find the original select container and select element
 		const originalSelectContainer = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
 		const originalSelect = originalSelectContainer.querySelector('select');
@@ -54,21 +54,19 @@
 
 		customDropdown.appendChild(customList);
 
-		// Add event listener to toggle dropdown display
-		customDropdown.addEventListener('click', (event) => {
-			event.stopPropagation();
-			selectorContainer.classList.toggle('show');
-		});
-
-		// Close dropdown when clicking outside of it
-		document.addEventListener('mousedown', (event) => {
-			if (!selectorContainer.contains(event.target) && !event.target.closest('.selector-container')) {
-				selectorContainer.classList.remove('show');
+		// Handle clicks on '.ChatComponentStyle-channels .ChatComponentStyle-clanChannel'
+		const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
+		clanChannel.addEventListener('click', () => {
+			if (!clanChannel.classList.contains('selected')) {
+				// Если канал не выбран, добавить класс selected
+				clanChannel.classList.add('selected');
 			}
 		});
 
-		// Add event listener to set original select value based on selected text
+		// Add event listener to toggle dropdown display
 		customDropdown.addEventListener('click', (event) => {
+			event.stopPropagation();
+
 			const selectedOptionText = customDropdown.querySelector('.selected-text').textContent;
 			originalSelect.querySelectorAll('option').forEach(option => {
 				if (option.textContent === selectedOptionText) {
@@ -76,6 +74,20 @@
 					originalSelect.dispatchEvent(new Event('change', { bubbles: true }));
 				}
 			});
+
+			const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
+			if (clanChannel && clanChannel.classList.contains('selected')) {
+				clanChannel.classList.remove('selected');
+			} else {
+				selectorContainer.classList.toggle('show');
+			}
+		});
+
+		// Close dropdown when clicking outside of it
+		document.addEventListener('mousedown', (event) => {
+			if (!selectorContainer.contains(event.target) && !event.target.closest('.selector-container')) {
+				selectorContainer.classList.remove('show');
+			}
 		});
 	}
 
@@ -91,7 +103,7 @@
 						// Find an element with the selector in the added node
 						const select = node.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
 						if (select) { // If found
-							replaceOriginalSelector();
+							customChatLogic();
 						}
 					}
 				});

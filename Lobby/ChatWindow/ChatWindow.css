@@ -170,6 +170,11 @@
 	color: var(--theme-white-text-color);
 }
 
+.ChatComponentStyle-channels .ChatComponentStyle-clanChannel.selected {
+	color: var(--theme-main-color);
+	pointer-events: none;
+}
+
 /* Single chat message */
 
 .ChatComponentStyle-messageRow {
