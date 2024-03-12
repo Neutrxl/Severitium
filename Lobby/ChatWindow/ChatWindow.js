@@ -52,6 +52,8 @@
 			});
 		});
 
+		customDropdown.appendChild(customList);
+
 		// Add event listener to toggle dropdown display
 		customDropdown.addEventListener('click', (event) => {
 			event.stopPropagation();
