@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			XP
-// @version			1.0.0
+// @version			1.0.1
 // @description		RChanges the default XP icon
 // @author			OrakomoRi
 

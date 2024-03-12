@@ -78,10 +78,10 @@
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const iconImg = node.querySelector(`img[src*='XP']`);
+						const iconImg = node.querySelector(`img[src*='XP'], img[src*='experience'i]`);
 						if (iconImg) { // If found
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
-							const iconsImg = document.querySelectorAll(`img[src*='XP']`);
+							const iconsImg = document.querySelectorAll(`img[src*='XP'], img[src*='experience'i]`);
 							for (const target of iconsImg) { // Iterate through found elements
 								replaceXPIcon(target); // Apply styles to each element
 							}
