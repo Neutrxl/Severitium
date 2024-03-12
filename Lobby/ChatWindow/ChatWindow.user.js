@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Chat Window
-// @version			1.1.0
+// @version			1.1.1
 // @description		Changes the default look of a chat window
 // @author			OrakomoRi
 

@@ -54,15 +54,6 @@
 
 		customDropdown.appendChild(customList);
 
-		// Handle clicks on '.ChatComponentStyle-channels .ChatComponentStyle-clanChannel'
-		const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
-		clanChannel.addEventListener('click', () => {
-			if (!clanChannel.classList.contains('selected')) {
-				// Если канал не выбран, добавить класс selected
-				clanChannel.classList.add('selected');
-			}
-		});
-
 		// Add event listener to toggle dropdown display
 		customDropdown.addEventListener('click', (event) => {
 			event.stopPropagation();
@@ -87,6 +78,16 @@
 		document.addEventListener('mousedown', (event) => {
 			if (!selectorContainer.contains(event.target) && !event.target.closest('.selector-container')) {
 				selectorContainer.classList.remove('show');
+			}
+		});
+
+		// Handle clicks on '.ChatComponentStyle-channels .ChatComponentStyle-clanChannel'
+		const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
+		clanChannel.addEventListener('click', (event) => {
+			event.stopPropagation();
+			if (!clanChannel.classList.contains('selected')) {
+				// Если канал не выбран, добавить класс selected
+				clanChannel.classList.add('selected');
 			}
 		});
 	}
