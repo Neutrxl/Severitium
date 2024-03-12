@@ -2,7 +2,8 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		document.addEventListener('click', function(event) {
 			const menu = event.target.closest('.ContextMenuStyle-menu');
-			if (menu) {
+			const modalroot = event.target.closest('#modal-root');
+			if (modalroot && menu) {
 				event.stopPropagation();
 				if (!menu.contains(event.target)) {
 					menu.classList.add('fadeOutDown');

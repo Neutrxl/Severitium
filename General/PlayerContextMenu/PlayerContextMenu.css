@@ -6,15 +6,15 @@
 			backdrop-filter: blur(.5em);
 	border-radius: .1em;
 	border: .1em solid var(--severitium-dark-gray-color);
-	-webkit-animation: fadeInUp 0.25s ease;
-			animation: fadeInUp 0.25s ease;
+	-webkit-animation: fadeInUp 0.2s ease;
+			animation: fadeInUp 0.2s ease;
 }
 
 /* Fade out down animation on container close */
 
 .ContextMenuStyle-menu.fadeOutDown {
-	-webkit-animation: fadeOutDown 0.25s ease;
-			animation: fadeOutDown 0.25s ease;
+	-webkit-animation: fadeOutDown 0.2s ease;
+			animation: fadeOutDown 0.2s ease;
 }
 
 @-webkit-keyframes fadeInUp {
