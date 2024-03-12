@@ -169,13 +169,13 @@
 				if (currentBackgroundColor !== 'rgb(254, 102, 102)') {
 					element.style.backgroundColor = item.color;
 				} else {
-					element.style.backgroundColor = 'var(--theme-main-color)';
+					element.style.backgroundColor = 'var(--severitium-main-color)';
 
 					// Find adjacent text nodes
 					const adjacentText = element.nextElementSibling;
 					if (adjacentText && (adjacentText.tagName === 'H3' || adjacentText.tagName === 'SPAN')) {
 						// Change text color
-						adjacentText.style.color = 'var(--theme-main-color)';
+						adjacentText.style.color = 'var(--severitium-main-color)';
 					}
 				}
 			}

@@ -7,10 +7,10 @@
 /* Dropdown inner container */
 
 .DropDownStyle-innerContainerStyle {
-	border: .1em solid var(--theme-light-gray-color);
+	border: .1em solid var(--severitium-light-gray-color);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
-	background-color: var(--theme-dark-transparent-background1);
+	background-color: var(--severitium-dark-transparent-background1);
 }
 
 /* Dropdown list item */
@@ -23,13 +23,13 @@
 /* Dropdown list item on hover */
 
 .DropDownStyle-innerContainerStyle > div > div:hover {
-	background-color: var(--theme-light-transparent-background2);
+	background-color: var(--severitium-light-transparent-background2);
 }
 
 /* Dropdown list first item (text 'incorrect') */
 
 .DropDownStyle-innerContainerStyle > div > div > span:not(.UidInputComponentStyle-firstItem) {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Dropdown list first item inside the login/register form */

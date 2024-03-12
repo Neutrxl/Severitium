@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.42
+// @version			1.1.0
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -43,7 +43,7 @@
 			// Create a <style> element
 			var styleElement = document.createElement('style');
 			// Set the class for the element to detect the 'container' with variables
-			styleElement.setAttribute('data-module', 'ThemeVariables');
+			styleElement.setAttribute('data-module', 'SeveritiumVariables');
 			// Set the CSS text to styles
 			styleElement.textContent = response.responseText;
 			// Apply styles to body end (to override initial styles)

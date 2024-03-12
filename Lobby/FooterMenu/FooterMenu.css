@@ -45,8 +45,8 @@
 .FooterComponentStyle-footer ul > li::before {
 	right: 0;
 	top: 0;
-	border-top: var(--theme-main-color) solid .3em;
-	border-right: var(--theme-main-color) solid .3em;
+	border-top: var(--severitium-main-color) solid .3em;
+	border-right: var(--severitium-main-color) solid .3em;
 	-webkit-transform: translate(-100%, 100%);
 			transform: translate(-100%, 100%);
 }
@@ -56,8 +56,8 @@
 .FooterComponentStyle-footer ul > li::after {
 	left: 0;
 	bottom: 0;
-	border-bottom: var(--theme-main-color) solid .3em;
-	border-left: var(--theme-main-color) solid .3em;
+	border-bottom: var(--severitium-main-color) solid .3em;
+	border-left: var(--severitium-main-color) solid .3em;
 	-webkit-transform: translate(100%, -100%);
 			transform: translate(100%, -100%);
 }
@@ -75,7 +75,7 @@
 
 .FooterComponentStyle-footer ul > li > div {
 	background-image: none;
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 	-webkit-mask-position: center center;
 			mask-position: center center;
 	-webkit-mask-repeat: no-repeat;

@@ -32,7 +32,7 @@
 				// Set the color for selected random rectangle
 				for (var j = 0; j < rects.length; j++) {
 					if (j === index) {
-						rects[j].setAttribute("fill", "var(--theme-main-color)");
+						rects[j].setAttribute("fill", "var(--severitium-main-color)");
 					} else {
 						rects[j].setAttribute("fill", fill);
 					}

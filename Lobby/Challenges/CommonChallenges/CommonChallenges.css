@@ -6,8 +6,8 @@
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	background: none;
-	background-color: var(--theme-dark-transparent-background1);
-	box-shadow: 0 0 0 .075em var(--theme-main-color);
+	background-color: var(--severitium-dark-transparent-background1);
+	box-shadow: 0 0 0 .075em var(--severitium-main-color);
 	border-radius: 0;
 	transition: none;
 	transition: box-shadow .2s ease, background-color .2s ease, -webkit-backdrop-filter .2s ease;
@@ -20,8 +20,8 @@
 .BattlePassLobbyComponentStyle-menuBattlePass:hover {
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
-	background-color: var(--theme-dark-transparent-background2);
-	box-shadow: 0 0 0 .1em var(--theme-main-color);
+	background-color: var(--severitium-dark-transparent-background2);
+	box-shadow: 0 0 0 .1em var(--severitium-main-color);
 }
 
 /* Common challenges container pseudo elements for corner border hover animation */
@@ -43,8 +43,8 @@
 	content: '';
 	right: -.75em;
 	top: -.75em;
-	border-top: var(--theme-main-color) solid .25em;
-	border-right: var(--theme-main-color) solid .25em;
+	border-top: var(--severitium-main-color) solid .25em;
+	border-right: var(--severitium-main-color) solid .25em;
 	-webkit-transform: translate(100%, -50%);
 			transform: translate(100%, -50%);
 }
@@ -55,8 +55,8 @@
 	content: '';
 	left: -.75em;
 	bottom: -.75em;
-	border-bottom: var(--theme-main-color) solid .25em;
-	border-left: var(--theme-main-color) solid .25em;
+	border-bottom: var(--severitium-main-color) solid .25em;
+	border-left: var(--severitium-main-color) solid .25em;
 	-webkit-transform: translate(-100%, 50%);
 			transform: translate(-100%, 50%);
 }
@@ -80,14 +80,14 @@
 /* Container's header */
 
 .BattlePassLobbyComponentStyle-descriptionMenuPass > div:first-child > span {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* Block of revards inside the container */
 
 .BattlePassLobbyComponentStyle-blockBattlePass {
 	background-color: transparent;
-	border: .05em solid var(--theme-dark-gray-color);
+	border: .05em solid var(--severitium-dark-gray-color);
 	border-radius: 0;
 }
 
@@ -96,13 +96,13 @@
 /* Price text */
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription:not(.BattlePassLobbyComponentStyle-premiumPass) > span {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Level text */
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription:not(.BattlePassLobbyComponentStyle-premiumPass) > p {
-	color: var(--theme-light-gray-text-color);
+	color: var(--severitium-light-gray-text-color);
 }
 
 /* BP revards block */
@@ -110,17 +110,17 @@
 /* Price text */
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass > span {
-	color: var(--theme-gold-text-color);
+	color: var(--severitium-gold-text-color);
 }
 
 /* Level text (locked) */
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass.BattlePassLobbyComponentStyle-lockedBlock > p {
-	color: var(--theme-red-text-color);
+	color: var(--severitium-red-text-color);
 }
 
 /* Level text (not locked) */
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass:not(.BattlePassLobbyComponentStyle-lockedBlock) > p {
-	color: var(--theme-red-text-color);
+	color: var(--severitium-red-text-color);
 }

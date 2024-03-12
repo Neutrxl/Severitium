@@ -1,27 +1,27 @@
 /* Button 'back' with arrow (top-left corner) the arrow element */
 
 .HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock > div {
-	background-color: var(--theme-extra-light-gray-color);
+	background-color: var(--severitium-extra-light-gray-color);
 	transition: background-color .2s ease;
 }
 
 /* Button 'back' with arrow (top-left corner) the text */
 
 .HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock > span {
-	color: var(--theme-extra-light-gray-color) !important;
+	color: var(--severitium-extra-light-gray-color) !important;
 	transition: color .2s ease;
 }
 
 /* Button 'back' with arrow (top-left corner) the arrow element on hover */
 
 .HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock:hover > div {
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 }
 
 /* Button 'back' with arrow (top-left corner) the text on hover */
 
 .HeaderComponentStyle-commonBlockContentPanel .HeaderComponentStyle-backArrowBlock:hover > span {
-	color: var(--theme-white-color) !important;
+	color: var(--severitium-white-color) !important;
 }
 
 /* General container of buttons or login/register */
@@ -38,9 +38,9 @@
 	width: auto;
 	padding: 1.5em;
 	/* border-radius: .5em; */
-	/* background-color: var(--theme-dark-transparent-background1); */
-	/* border: .1em solid var(--theme-light-gray-color); */
-	/* box-shadow: 0 0 1em 0 var(--theme-white-color); */
+	/* background-color: var(--severitium-dark-transparent-background1); */
+	/* border: .1em solid var(--severitium-light-gray-color); */
+	/* box-shadow: 0 0 1em 0 var(--severitium-white-color); */
 	/* backdrop-filter: blur(.2em); */
 }
 
@@ -80,8 +80,8 @@
 
 .EntranceComponentStyle-ContainerForm form input[type='text'],
 .EntranceComponentStyle-ContainerForm form input[type='password'] {
-	background-color: var(--theme-dark-transparent-background2);
-	border: .1em solid var(--theme-light-gray-color);
+	background-color: var(--severitium-dark-transparent-background2);
+	border: .1em solid var(--severitium-light-gray-color);
 	transition: background-color .2s ease;
 }
 
@@ -91,16 +91,16 @@
 .EntranceComponentStyle-ContainerForm form input[type='password']:hover,
 .EntranceComponentStyle-ContainerForm form input[type='text']:focus,
 .EntranceComponentStyle-ContainerForm form input[type='password']:focus {
-	background-color: var(--theme-light-transparent-background2);
-	color: var(--theme-white-text-color);
+	background-color: var(--severitium-light-transparent-background2);
+	color: var(--severitium-white-text-color);
 }
 
 /* Invalid inputs for text and password */
 
 .EntranceComponentStyle-ContainerForm form input[type='text'][class*='invalid'],
 .EntranceComponentStyle-ContainerForm form input[type='password'][class*='invalid'] {
-	background-color: var(--theme-red-transparent-background1);
-	color: var(--theme-red-text-color);
+	background-color: var(--severitium-red-transparent-background1);
+	color: var(--severitium-red-text-color);
 }
 
 /* Button of login/registration */
@@ -123,15 +123,15 @@
 
 .EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i],
 .HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] {
-	background-color: var(--theme-light-transparent-background1);
+	background-color: var(--severitium-light-transparent-background1);
 }
 
 /* Active button (in forms or 'header' of the entrance page) */
 
 .EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i],
 .HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] {
-	background-color: var(--theme-gray-button-background);
-	border: .1em solid var(--theme-gray-button-border-color);
+	background-color: var(--severitium-gray-button-background);
+	border: .1em solid var(--severitium-gray-button-border-color);
 	transition: background-color .2s ease, border-color .2s ease;
 }
 
@@ -139,15 +139,15 @@
 
 .EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i]:hover,
 .HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i]:hover {
-	background-color: var(--theme-green-button-background);
-	border-color: var(--theme-green-button-border-color-hover);
+	background-color: var(--severitium-green-button-background);
+	border-color: var(--severitium-green-button-border-color-hover);
 }
 
 /* Disabled button (in forms or 'header' of the entrance page) */
 
 .EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] span,
 .HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonnoactive'i] span {
-	color: var(--theme-black-text-color);
+	color: var(--severitium-black-text-color);
 }
 
 
@@ -155,7 +155,7 @@
 
 .EntranceComponentStyle-ContainerForm form div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] span,
 .HeaderComponentStyle-supportBlock div[class*='EntranceComponentStyle-button'i][class*='buttonactive'i] span {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Custom checkbox visuals */
@@ -197,14 +197,14 @@
 
 .EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon rect {
 	stroke-width: .1em;
-	stroke: var(--theme-green-color);
+	stroke: var(--severitium-green-color);
 	transition: stroke .2 ease;
 }
 
 /* Checkbox checkmark */
 
 .EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon .tick {
-	stroke: var(--theme-green-color);
+	stroke: var(--severitium-green-color);
 	stroke-dasharray: 100%;
 	stroke-dashoffset: 100%;
 	transition: stroke-dashoffset 0.2s ease-out;

@@ -7,7 +7,7 @@
 			backdrop-filter: blur(.25em);
 	border: none;
 	border-radius: 0;
-	box-shadow: 0 0 0 .075em var(--theme-main-color);
+	box-shadow: 0 0 0 .075em var(--severitium-main-color);
 	transition: none;
 	transition: box-shadow .2s ease;
 }
@@ -16,7 +16,7 @@
 
 .AnnouncementHomeScreenComponentStyle-mainContainer:hover {
 	border: none;
-	box-shadow: 0 0 0 .1em var(--theme-main-color);
+	box-shadow: 0 0 0 .1em var(--severitium-main-color);
 }
 
 /* Announcements pseudo elements for corner border hover animation */
@@ -38,8 +38,8 @@
 	content: '';
 	right: -.75em;
 	top: -.75em;
-	border-top: var(--theme-main-color) solid .4em;
-	border-right: var(--theme-main-color) solid .4em;
+	border-top: var(--severitium-main-color) solid .4em;
+	border-right: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(100%, -50%);
 			transform: translate(100%, -50%);
 }
@@ -50,8 +50,8 @@
 	content: '';
 	left: -.75em;
 	bottom: -.75em;
-	border-bottom: var(--theme-main-color) solid .4em;
-	border-left: var(--theme-main-color) solid .4em;
+	border-bottom: var(--severitium-main-color) solid .4em;
+	border-left: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(-100%, 50%);
 			transform: translate(-100%, 50%);
 }
@@ -74,50 +74,50 @@
 /* Timer of an announcement */
 
 .AnnouncementHomeScreenComponentStyle-headerTimer {
-	background-color: var(--theme-main-color);
-	color: var(--theme-black-text-color);
+	background-color: var(--severitium-main-color);
+	color: var(--severitium-black-text-color);
 }
 
 /* Announcement on card's bottom container */
 
 .AnnouncementHomeScreenComponentStyle-announceContainer {
-	background: linear-gradient(transparent 0%, var(--theme-black-color) 100%);
+	background: linear-gradient(transparent 0%, var(--severitium-black-color) 100%);
 }
 
 /* Announcement on card's bottom text */
 
 .AnnouncementHomeScreenComponentStyle-announceContainer > h3 {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Announcement bottom panel */
 
 .AnnouncementHomeScreenComponentStyle-mainBackGroundContainer + div {
-	background-color: var(--theme-dark-transparent-background1);
+	background-color: var(--severitium-dark-transparent-background1);
 }
 
 /* Announcement bottom panel hotkey blocks */
 
 .AnnouncementHomeScreenComponentStyle-mainBackGroundContainer + div div[class*='button'i] {
 	background: transparent;
-	border: var(--theme-gray-color) dashed .1em;
+	border: var(--severitium-gray-color) dashed .1em;
 	border-radius: .1em;
 }
 
 /* Announcement bottom panel hotkey blocks text */
 
 .AnnouncementHomeScreenComponentStyle-mainBackGroundContainer + div div[class*='button'i] > span {
-	color: var(--theme-dark-white-text-color);
+	color: var(--severitium-dark-white-text-color);
 }
 
 /* Announcement bottom panel common point */
 
 .AnnouncementHomeScreenComponentStyle-navigationLabelPoint {
-	background-color: var(--theme-gray-color);
+	background-color: var(--severitium-gray-color);
 }
 
 /* Announcement bottom panel selected point */
 
 .AnnouncementHomeScreenComponentStyle-selectedNavigationLabelPoint {
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 }

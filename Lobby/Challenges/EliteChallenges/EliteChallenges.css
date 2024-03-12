@@ -6,8 +6,8 @@
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	background: none;
-	background-color: var(--theme-dark-transparent-background1);
-	box-shadow: 0 0 0 .075em var(--theme-main-color);
+	background-color: var(--severitium-dark-transparent-background1);
+	box-shadow: 0 0 0 .075em var(--severitium-main-color);
 	border-radius: 0;
 	transition: none;
 	transition: box-shadow .2s ease, background-color .2s ease, -webkit-backdrop-filter .2s ease;
@@ -20,8 +20,8 @@
 .EventBattlePassLobbyComponentStyle-buttonEventBattlePass:hover {
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
-	background-color: var(--theme-dark-transparent-background2);
-	box-shadow: 0 0 0 .1em var(--theme-main-color);
+	background-color: var(--severitium-dark-transparent-background2);
+	box-shadow: 0 0 0 .1em var(--severitium-main-color);
 }
 
 /* Elite challenges container pseudo elements for corner border hover animation */
@@ -43,8 +43,8 @@
 	content: '';
 	right: -.75em;
 	top: -.75em;
-	border-top: var(--theme-main-color) solid .25em;
-	border-right: var(--theme-main-color) solid .25em;
+	border-top: var(--severitium-main-color) solid .25em;
+	border-right: var(--severitium-main-color) solid .25em;
 	-webkit-transform: translate(100%, -50%);
 			transform: translate(100%, -50%);
 }
@@ -55,8 +55,8 @@
 	content: '';
 	left: -.75em;
 	bottom: -.75em;
-	border-bottom: var(--theme-main-color) solid .25em;
-	border-left: var(--theme-main-color) solid .25em;
+	border-bottom: var(--severitium-main-color) solid .25em;
+	border-left: var(--severitium-main-color) solid .25em;
 	-webkit-transform: translate(-100%, 50%);
 			transform: translate(-100%, 50%);
 }
@@ -73,8 +73,8 @@
 /* Timer on the top left cornet */
 
 .EventBattlePassLobbyComponentStyle-buttonEventBattlePass .ChallengeTimerComponentStyle-textTime {
-	background-color: var(--theme-main-color);
-	color: var(--theme-black-text-color);
+	background-color: var(--severitium-main-color);
+	color: var(--severitium-black-text-color);
 }
 
 /* Progressbar circle */
@@ -86,29 +86,29 @@
 /* Progressbar circle's unfilled part color */
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar > div > div {
-	border-color: var(--theme-light-transparent-background2);
+	border-color: var(--severitium-light-transparent-background2);
 }
 
 /* Progressbar circle's filled part color */
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar > div > div > div {
-	border-color: var(--theme-main-color);
+	border-color: var(--severitium-main-color);
 }
 
 /* Reached levels count text inside the circle */
 
 .EventBattlePassLobbyComponentStyle-commonBlockProgressBar > h2 {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* Description 'level' text */
 
 .EventBattlePassLobbyComponentStyle-descriptionEventPass > h3 {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* Description 'revards' text */
 
 .EventBattlePassLobbyComponentStyle-descriptionEventPass > h2 {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }

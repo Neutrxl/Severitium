@@ -43,8 +43,8 @@
 
 		// Add SVG inner content
 		svg.innerHTML = `
-		<circle cx="15" cy="15" r="8" fill="var(--theme-main-color)"/>
-		<circle cx="15" cy="15" r="11.5" stroke="var(--theme-main-color)" stroke-opacity="0.25" stroke-width="7"/>
+		<circle cx="15" cy="15" r="8" fill="var(--severitium-main-color)"/>
+		<circle cx="15" cy="15" r="11.5" stroke="var(--severitium-main-color)" stroke-opacity="0.25" stroke-width="7"/>
 	`;
 
 		// Replace the original element with the SVG

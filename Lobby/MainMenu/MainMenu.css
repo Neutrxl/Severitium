@@ -31,7 +31,7 @@
 	border: none;
 	outline: none;
 	box-shadow: none;
-/* 	background: var(--theme-dark-transparent-background1); */
+/* 	background: var(--severitium-dark-transparent-background1); */
 	border-radius: 0;
 }
 
@@ -39,20 +39,20 @@
 
 .MainScreenComponentStyle-blockMainMenu > ul > li [class*='itemli'i] {
 	margin: 0;
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 }
 
 /* Button text */
 
 .MainScreenComponentStyle-blockMainMenu > ul > li span {
-	color: var(--theme-extra-light-gray-text-color);
+	color: var(--severitium-extra-light-gray-text-color);
 	transition: color .2s ease;
 }
 
 /* Button text on button hover */
 
 .MainScreenComponentStyle-blockMainMenu > ul > li:hover span {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Pseudo elements for beauty corner borders animation */
@@ -73,8 +73,8 @@
 .MainScreenComponentStyle-blockMainMenu > ul > li::before {
 	right: 0;
 	top: 0;
-	border-top: var(--theme-main-color) solid .4em;
-	border-right: var(--theme-main-color) solid .4em;
+	border-top: var(--severitium-main-color) solid .4em;
+	border-right: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(-100%, 50%);
 			transform: translate(-100%, 50%);
 }
@@ -84,8 +84,8 @@
 .MainScreenComponentStyle-blockMainMenu > ul > li::after {
 	left: 0;
 	bottom: 0;
-	border-bottom: var(--theme-main-color) solid .4em;
-	border-left: var(--theme-main-color) solid .4em;
+	border-bottom: var(--severitium-main-color) solid .4em;
+	border-left: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(100%, -50%);
 			transform: translate(100%, -50%);
 }

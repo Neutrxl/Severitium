@@ -18,18 +18,18 @@
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
 	background-size: 300%;
-	box-shadow: inset 0 0 3em var(--theme-black-color);
+	box-shadow: inset 0 0 3em var(--severitium-black-color);
 	transition: background-color .2s ease;
 
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 	background-repeat: no-repeat;
 }
 
 /* Button on hover */
 
 .MainScreenComponentStyle-playButtonContainer:hover {
-	/* 	outline: var(--theme-light-green-color) solid .1em; */
-	box-shadow: inset 0 0 3em var(--theme-black-color);
+	/* 	outline: var(--severitium-light-green-color) solid .1em; */
+	box-shadow: inset 0 0 3em var(--severitium-black-color);
 }
 
 /* Play button pseudo elements for corner border hover animation */
@@ -51,8 +51,8 @@
 	content: '';
 	right: -.75em;
 	top: -.75em;
-	border-top: var(--theme-main-color) solid .4em;
-	border-right: var(--theme-main-color) solid .4em;
+	border-top: var(--severitium-main-color) solid .4em;
+	border-right: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(100%, -50%);
 			transform: translate(100%, -50%);
 }
@@ -63,8 +63,8 @@
 	content: '';
 	left: -.75em;
 	bottom: -.75em;
-	border-bottom: var(--theme-main-color) solid .4em;
-	border-left: var(--theme-main-color) solid .4em;
+	border-bottom: var(--severitium-main-color) solid .4em;
+	border-left: var(--severitium-main-color) solid .4em;
 	-webkit-transform: translate(-100%, 50%);
 			transform: translate(-100%, 50%);
 }
@@ -81,14 +81,14 @@
 /* Button text */
 
 .MainScreenComponentStyle-playButtonContainer span {
-	color: var(--theme-dark-white-text-color);
+	color: var(--severitium-dark-white-text-color);
 	transition: color .2s ease;
 }
 
 /* Button text on hover */
 
 .MainScreenComponentStyle-playButtonContainer:hover span {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Disabled play button */
@@ -108,7 +108,7 @@
 .MainScreenComponentStyle-disabledButtonPlay > h3 {
 	position: initial;
 	top: unset;
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 }
 
 /* Lock icon on a play button */
@@ -123,6 +123,6 @@
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 	background-image: none;
-	color: var(--theme-white-color);
+	color: var(--severitium-white-color);
 	transition: background-color .2s ease;
 }

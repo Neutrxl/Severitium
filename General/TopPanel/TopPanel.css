@@ -2,10 +2,10 @@
 
 .MainScreenComponentStyle-containerPanel,
 .BreadcrumbsComponentStyle-headerContainer {
-	background: var(--theme-dark-transparent-background1);
+	background: var(--severitium-dark-transparent-background1);
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
-	border-bottom: var(--theme-gray-color) solid .1em;
+	border-bottom: var(--severitium-gray-color) solid .1em;
 }
 
 /* All elements inside the panel, except the all elements inside user info container */
@@ -21,8 +21,8 @@
 .BreadcrumbsComponentStyle-headerContainer [class*="hotkey"i],
 .BreadcrumbsComponentStyle-backButton h3 {
 	background: transparent;
-	color: var(--theme-dark-white-text-color);
-	border: var(--theme-gray-color) dashed .1em;
+	color: var(--severitium-dark-white-text-color);
+	border: var(--severitium-gray-color) dashed .1em;
 	border-radius: .1em;
 }
 
@@ -35,19 +35,19 @@
 /* Nickname */
 
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(1) span {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* EXP bar (inactive) */
 
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(2) {
-	background-color: var(--theme-gray-color);
+	background-color: var(--severitium-gray-color);
 }
 
 /* EXP bar (active) */
 
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(2)::after {
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 }
 
 /* EXP icon */
@@ -60,13 +60,13 @@
 
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(3) .UserInfoContainerStyle-progressValue {
 	margin-left: 0;
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* EXP general number */
 
 .UserInfoContainerStyle-containerProgressMainScreen > div:nth-child(3) .UserInfoContainerStyle-progressValue > span {
-	color: var(--theme-light-gray-color);
+	color: var(--severitium-light-gray-color);
 }
 
 /* Premium button / Back button */
@@ -81,7 +81,7 @@
 
 .UserInfoContainerStyle-userTitleContainer > div:first-child:hover,
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:first-child:hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of back button */
@@ -96,14 +96,14 @@
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 	background-image: none;
-	background-color: var(--theme-light-gray-color);
+	background-color: var(--severitium-light-gray-color);
 	transition: background-color .2s ease;
 }
 
 /* Icon of back button on button's hover */
 
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:first-child:hover .IconStyle-iconBackArrow {
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 }
 
 /* Group button */
@@ -118,7 +118,7 @@
 
 .UserInfoContainerStyle-userTitleContainer > div:nth-child(2):hover,
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2):hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of a group button (old icon parts) */
@@ -148,21 +148,21 @@
 
 .UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]),
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]) {
-	background-color: var(--theme-light-gray-color);
+	background-color: var(--severitium-light-gray-color);
 }
 
 /* Icon part of a group button (leader) */
 
 .UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]),
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]) {
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 }
 
 /* Icon part of a group button (member) */
 
 .UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]),
 .BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]) {
-	background-color: var(--theme-green-color);
+	background-color: var(--severitium-green-color);
 }
 
 /* Rank button */
@@ -175,7 +175,7 @@
 /* Rank button on hover */
 
 .UserInfoContainerStyle-rankIconContainerClickable:hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Currency buttons */
@@ -190,7 +190,7 @@
 
 .UserScoreComponentStyle-blockRightPanel > div:first-child > div:hover,
 .BreadcrumbsComponentStyle-rightButtonsContainer > div:first-child > div:hover {
-	background-color: linear-gradient(270deg, var(--theme-light-transparent-background3) 0%, rgba(255, 255, 255, 0) 100%);
+	background-color: linear-gradient(270deg, var(--severitium-light-transparent-background3) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* Full screen button */
@@ -205,7 +205,7 @@
 
 .UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover,
 .BreadcrumbsComponentStyle-rightButtonsContainer > div:nth-child(2):hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of the full screen button */
@@ -221,7 +221,7 @@
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 	background-image: none;
-	background-color: var(--theme-light-gray-color);
+	background-color: var(--severitium-light-gray-color);
 	transition: background-color .2s ease;
 }
 
@@ -229,7 +229,7 @@
 
 .UserScoreComponentStyle-blockRightPanel > div:nth-child(2):hover > div,
 .BreadcrumbsComponentStyle-rightButtonsContainer > div:nth-child(2):hover > div {
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 }
 
 /* Logout button */
@@ -242,7 +242,7 @@
 /* Logout button on hover */
 
 .UserScoreComponentStyle-blockRightPanel .BreadcrumbsComponentStyle-logout:hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of the logout button */
@@ -257,7 +257,7 @@
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 	background-image: none;
-	background-color: var(--theme-light-gray-color);
+	background-color: var(--severitium-light-gray-color);
 	transition: background-color .2s ease;
 }
 
@@ -265,7 +265,7 @@
 
 .UserScoreComponentStyle-blockRightPanel .BreadcrumbsComponentStyle-logout:hover .BreadcrumbsComponentStyle-iconLogout {
 	background-image: none;
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 }
 
 /* Home button */
@@ -278,7 +278,7 @@
 /* Home button on hover */
 
 .BreadcrumbsComponentStyle-rightButtonsContainer .BreadcrumbsComponentStyle-exitGameButton:hover {
-	background-color: var(--theme-light-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of the home button */
@@ -293,7 +293,7 @@
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
 	background-image: none;
-	background-color: var(--theme-light-gray-color);
+	background-color: var(--severitium-light-gray-color);
 	transition: background-color .2s ease;
 }
 
@@ -301,5 +301,5 @@
 
 .BreadcrumbsComponentStyle-rightButtonsContainer .BreadcrumbsComponentStyle-exitGameButton:hover .IconStyle-iconLogOff {
 	background-image: none;
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 }

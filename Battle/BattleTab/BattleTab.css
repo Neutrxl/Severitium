@@ -1,11 +1,11 @@
 /* Tab container */
 
 .BattleTabStatisticComponentStyle-container > div {
-	background: var(--theme-tab-background);
+	background: var(--severitium-tab-background);
 	-webkit-backdrop-filter: blur(.2em);
 	        backdrop-filter: blur(.2em);
 	box-shadow: none;
-	border: .1em solid var(--theme-tab-borders-color);
+	border: .1em solid var(--severitium-tab-borders-color);
 }
 
 /* All elements inside the tab */
@@ -17,41 +17,41 @@
 /* Tab header */
 
 .BattleTabStatisticComponentStyle-container > div .BattleTabStatisticComponentStyle-header {
-	border-bottom: .1em solid var(--theme-tab-header-border-color);
+	border-bottom: .1em solid var(--severitium-tab-header-border-color);
 }
 
 /* Tab table */
 
 .BattleTabStatisticComponentStyle-container > div table tbody {
-	--row-background-color: var(--theme-tab-other-string-background);
-	--selected-row-background-color: var(--theme-tab-self-string-background);
+	--row-background-color: var(--severitium-tab-other-string-background);
+	--selected-row-background-color: var(--severitium-tab-self-string-background);
 }
 
 /* A string inside the tab */
 
 .BattleTabStatisticComponentStyle-container > div table tbody tr {
-	border: .1em solid var(--theme-tab-borders-color);
+	border: .1em solid var(--severitium-tab-borders-color);
 	transition: border .2s ease;
 }
 
 /* + Hover */
 
 .BattleTabStatisticComponentStyle-container > div table tbody tr:hover {
-	border: .1em solid var(--theme-tab-borders-hover-color);
+	border: .1em solid var(--severitium-tab-borders-hover-color);
 	box-shadow: none;
 }
 
 /* Nicknames inside the tab */
 
 .BattleTabStatisticComponentStyle-container > div table tbody tr td:first-child span {
-	color: var(--theme-tab-nickname-color);
+	color: var(--severitium-tab-nickname-color);
 	cursor: pointer;
 }
 
 /* + Hover */
 
 .BattleTabStatisticComponentStyle-container > div table tbody tr td:first-child span:hover {
-	color: var(--theme-tab-nickname-hover-color);
+	color: var(--severitium-tab-nickname-hover-color);
 }
 
 /* Selected string in the tab */

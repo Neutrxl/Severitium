@@ -15,7 +15,7 @@
 /* Custom icon */
 
 svg.link-rects {
-	fill: var(--theme-extra-light-gray-color);
+	fill: var(--severitium-extra-light-gray-color);
 	padding: .5em;
 	width: 2rem;
 }
@@ -23,7 +23,7 @@ svg.link-rects {
 /* Custom icon on hover */
 
 svg.link-rects:hover {
-	fill: var(--theme-white-color);
+	fill: var(--severitium-white-color);
 }
 
 /* Custom icon parts (rectangles) */
@@ -41,24 +41,24 @@ svg.link-rects rect {
 /* Single link card */
 
 .HeaderComponentStyle-siteLink {
-	background-color: var(--theme-dark-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
-	box-shadow: 0 0 .25em .05em var(--theme-gray-color);
+	box-shadow: 0 0 .25em .05em var(--severitium-gray-color);
 	transition: background-color .2s ease, box-shadow .2s ease;
 }
 
 /* Header of a card */
 
 .HeaderComponentStyle-siteLink .EntranceComponentStyle-fontStyleLabel {
-	color: var(--theme-white-text-color);
+	color: var(--severitium-white-text-color);
 	transition: color .2s ease;
 }
 
 /* Icon of a card */
 
 .HeaderComponentStyle-siteLink > div:nth-child(2) {
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 	width: 6em;
 	height: 6em;
 	transition: background-color .2s ease, width .2s ease, height .2s ease;
@@ -73,14 +73,14 @@ svg.link-rects rect {
 /* Single link card on hover */
 
 .HeaderComponentStyle-siteLink:hover {
-	background-color: var(--theme-dark-transparent-background1);
-	box-shadow: 0 0 .25em .05em var(--theme-main-color);
+	background-color: var(--severitium-dark-transparent-background1);
+	box-shadow: 0 0 .25em .05em var(--severitium-main-color);
 }
 
 /* Header of a card on card hover */
 
 .HeaderComponentStyle-siteLink:hover .EntranceComponentStyle-fontStyleLabel {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* Icon of a card on card hover */
@@ -88,13 +88,13 @@ svg.link-rects rect {
 .HeaderComponentStyle-siteLink:hover > div:nth-child(2) {
 	width: 8em;
 	height: 8em;
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 }
 
 /* Link URL on bottom side of a card on card hover */
 
 .HeaderComponentStyle-siteLink:hover .HeaderComponentStyle-textLink > span {
-	color: var(--theme-main-color);
+	color: var(--severitium-main-color);
 }
 
 /* Close icon (top-right) */
@@ -102,7 +102,7 @@ svg.link-rects rect {
 .HeaderComponentStyle-iconCloseLinks {
 	-webkit-mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 36 36"><path d="m30 2 4 4-16 16L6 34l-4-4 12-12L2 6l4-4 12 12z"/><path d="M18 22h8l8 8-4 4z"/></svg>');
 			mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 36 36"><path d="m30 2 4 4-16 16L6 34l-4-4 12-12L2 6l4-4 12 12z"/><path d="M18 22h8l8 8-4 4z"/></svg>');
-	background-color: var(--theme-white-color);
+	background-color: var(--severitium-white-color);
 	-webkit-mask-size: contain;
 			mask-size: contain;
 	-webkit-mask-position: center;
@@ -116,7 +116,7 @@ svg.link-rects rect {
 /* Close icon (top-right) on hover */
 
 .HeaderComponentStyle-iconCloseLinks:hover {
-	background-color: var(--theme-red-color);
+	background-color: var(--severitium-red-color);
 }
 
 /* Both states: normal and on hover */

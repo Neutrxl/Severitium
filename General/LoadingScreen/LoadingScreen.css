@@ -75,14 +75,14 @@ body {
 	bottom: 4em;
 	width: 15em;
 	height: .2em;
-	background-color: var(--theme-gray-color);
+	background-color: var(--severitium-gray-color);
 	border-radius: 1em;
 	overflow: hidden;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 			transform: translateX(-50%);
-	-webkit-filter: drop-shadow(var(--theme-main-color) 0 0 .5em);
-			filter: drop-shadow(var(--theme-main-color) 0 0 .5em);
+	-webkit-filter: drop-shadow(var(--severitium-main-color) 0 0 .5em);
+			filter: drop-shadow(var(--severitium-main-color) 0 0 .5em);
 }
 
 /* Inner of the custom progress (running line) */
@@ -90,11 +90,11 @@ body {
 .custom-progress > div {
 	width: 50%;
 	height: 100%;
-	background-color: var(--theme-main-color);
+	background-color: var(--severitium-main-color);
 	position: absolute;
 	-webkit-animation: progress-animation 1.5s linear infinite;
 			animation: progress-animation 1.5s linear infinite;
-	box-shadow: 0 0 4em var(--theme-main-color);
+	box-shadow: 0 0 4em var(--severitium-main-color);
 }
 
 /* Animation for custom progress */
@@ -121,12 +121,12 @@ body {
 
 .ApplicationLoaderComponentStyle-helpChangeKey {
 	background: transparent;
-	border: var(--theme-gray-color) dashed .1em;
+	border: var(--severitium-gray-color) dashed .1em;
 	border-radius: .1em;
 }
 
 /* Help hotkey text */
 
 .ApplicationLoaderComponentStyle-helpChangeKey > span {
-	color: var(--theme-dark-white-text-color);
+	color: var(--severitium-dark-white-text-color);
 }
