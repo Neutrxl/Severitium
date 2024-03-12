@@ -63,8 +63,9 @@
 	height: 2em;
 	width: 2em;
 	position: absolute;
-	transition: all .2s ease;
 	opacity: 0;
+	z-index: -1;
+	transition: all .2s ease;
 }
 
 /* Pseudo element before (top-right) */

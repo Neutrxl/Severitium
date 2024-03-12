@@ -40,8 +40,9 @@
 	position: absolute;
 	width: 3em;
 	height: 3em;
-	transition: all .35s ease;
 	opacity: 0;
+	z-index: -1;
+	transition: all .3s ease;
 }
 
 /* Play button before pseudo element (top-right corner) */

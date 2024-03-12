@@ -7,7 +7,7 @@
 			backdrop-filter: blur(.25em);
 	border: none;
 	border-radius: 0;
-	box-shadow: 0 0 0 .05em var(--theme-main-color);
+	box-shadow: 0 0 0 .075em var(--theme-main-color);
 	transition: none;
 	transition: box-shadow .2s ease;
 }
@@ -16,7 +16,7 @@
 
 .AnnouncementHomeScreenComponentStyle-mainContainer:hover {
 	border: none;
-	box-shadow: 0 0 0 .075em var(--theme-main-color);
+	box-shadow: 0 0 0 .1em var(--theme-main-color);
 }
 
 /* Announcements pseudo elements for corner border hover animation */
@@ -27,8 +27,9 @@
 	position: absolute;
 	width: 3em;
 	height: 3em;
-	transition: all .35s ease;
 	opacity: 0;
+	z-index: -1;
+	transition: all .2s ease;
 }
 
 /* Announcements before pseudo element (top-right corner) */

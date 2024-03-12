@@ -171,3 +171,10 @@
 	background-image: none;
 	background-color: var(--theme-red-color);
 }
+
+/* Links inside the modal window */
+
+.ModalStyle-rootHover > div:not([class*='battlepick'i]) a u,
+.DialogContainerComponentStyle-container a u {
+	color: var(--theme-main-color);
+}

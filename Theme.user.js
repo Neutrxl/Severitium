@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.29
+// @version			1.0.30
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -32,11 +32,31 @@
 (function() {
 	'use strict';
 
+	const variables = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Variables/Variables.min.css';
+
+	// Make an AJAX request to fetch the CSS file
+	GM_xmlhttpRequest({
+		method: 'GET',
+		url: variables,
+		onload: function(response) {
+			// Inject CSS into the page
+			// Create a <style> element
+			var styleElement = document.createElement('style');
+			// Set the class for the element to detect the 'container' with variables
+			styleElement.setAttribute('data-module', 'ThemeVariables');
+			// Set the CSS text to styles
+			styleElement.textContent = response.responseText;
+			// Apply styles to body end (to override initial styles)
+			document.body.appendChild(styleElement);
+		},
+		onerror: function(error) {
+			console.error('Failed to load CSS file:', error);
+		}
+	});
+
+
+
 	const linksCSS = [
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Variables/Variables.min.css',
-
-
-		
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/Modal/Modal.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/Dropdown/Dropdown.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/LoadingScreen/LoadingScreen.min.css',
@@ -56,6 +76,9 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Challenges/CommonChallenges/CommonChallenges.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Challenges/EliteChallenges/EliteChallenges.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/Announcements/Announcements.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/BattleSelect/BattleType/BattleType.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/BattleSelect/BattleMode/BattleMode.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/TopMenu/TopMenu.min.css',
 	];
 
 	for (const link of linksCSS) {

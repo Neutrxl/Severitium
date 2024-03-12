@@ -1,11 +1,11 @@
 // ==UserScript==
 
-// @name			Top Menu
+// @name			CSS Battle Mode
 // @version			1.0.0
-// @description		Restyles the common look of the top panel
+// @description		Injects CSS code into the page
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/WtGwbtP.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/TopMenu/TopMenu.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/BattleSelect/BattleMode/BattleMode.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({
