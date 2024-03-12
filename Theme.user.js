@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.0
+// @version			1.1.1
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -80,6 +80,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/BattleSelect/BattleMode/BattleMode.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/TopMenu/TopMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/FriendsScreen/FriendsScreen.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/InviteScreen/InviteScreen.min.css',
 	];
 
 	for (const link of linksCSS) {

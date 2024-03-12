@@ -1,7 +1,7 @@
 // ==UserScript==
 
-// @name			CSS Friends Screen
-// @version			1.0.3
+// @name			CSS Invite Screen
+// @version			1.0.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/FriendsScreen/FriendsScreen.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/InviteScreen/InviteScreen.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({

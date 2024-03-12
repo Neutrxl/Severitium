@@ -271,6 +271,7 @@
 
 .FriendListComponentStyle-containerButtonFriends[class*='disabled'i] {
 	background-color: var(--severitium-light-transparent-background3);
+	color: var(--severitium-white-text-color);
 }
 
 /* No user button */
