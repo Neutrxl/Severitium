@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Common Container
-// @version			1.0.0
+// @version			1.0.1
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -51,7 +51,7 @@
 		url: imageLink,
 		onload: function(response) {
 			// Initial adding of the background to the first entrance screen
-			const styledBackgrounds = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
+			const styledBackgrounds = `.Common-container{background-image:url(data:image/png;base64,${response.responseText})}`;
 			var styleElement = document.createElement("style");
 			styleElement.textContent = styledBackgrounds;
 			document.body.appendChild(styleElement);

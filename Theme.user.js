@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.2
+// @version			1.1.3
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -221,7 +221,7 @@
 		url: commonContainerBackground,
 		onload: function(response) {
 			// Initial adding of the background to the first entrance screen
-			const styledBackgrounds = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
+			const styledBackgrounds = `.Common-container{background-image:url(data:image/png;base64,${response.responseText})}`;
 			var styleElement = document.createElement("style");
 			styleElement.textContent = styledBackgrounds;
 			document.body.appendChild(styleElement);
