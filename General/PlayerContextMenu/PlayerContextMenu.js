@@ -6,7 +6,7 @@ function applyFadeOutAnimation() {
 		tempElement.classList.add('fadeOutDown');
 
 		// Replace the original element with the temporary element
-		menuElement.parentNode.replaceChild(tempElement, menuElement);
+		modalRoot.appendChild(tempElement);
 
 		// Add an event listener to remove the temporary element after the animation ends
 		tempElement.addEventListener('animationend', function() {
