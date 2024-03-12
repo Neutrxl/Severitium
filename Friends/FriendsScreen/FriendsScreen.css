@@ -418,6 +418,12 @@
 	color: var(--theme-extra-light-gray-text-color);
 }
 
+/* Table body line nickname text on hover */
+
+.FriendListComponentStyle-containerFriends .TableComponentStyle-table tbody > tr .FriendRequestComponentStyle-cellName span[class*='nickname'i]:hover span {
+	color: var(--theme-main-color);
+}
+
 /* Decline request button */
 
 /* Button */
