@@ -55,6 +55,12 @@
 	--theme-red-button-border-color: rgba(242, 27, 27, .25);
 	--theme-red-button-border-color-hover: rgba(242, 27, 27, .75);
 
+	--theme-gold-button-background: rgba(242, 192, 27, 0.2);
+	--theme-gold-button-color: rgb(255, 226, 169);
+	--theme-gold-button-border-color: rgba(242, 192, 27, .25);
+	--theme-gold-button-border-color-hover: rgba(242, 192, 27, .75);
+
+
 	/* Theme colors for battle tab */
 
 	--theme-tab-background: rgba(0, 0, 0, .75);
