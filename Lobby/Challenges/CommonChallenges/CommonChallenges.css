@@ -71,7 +71,6 @@
 
 /* Container and all elements inside it */
 
-.BattlePassLobbyComponentStyle-menuBattlePass,
 .BattlePassLobbyComponentStyle-menuBattlePass * {
 	box-sizing: border-box;
 }
