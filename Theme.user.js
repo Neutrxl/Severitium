@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.0.39
+// @version			1.0.40
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 

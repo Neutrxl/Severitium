@@ -83,8 +83,7 @@
 
 		// Handle clicks on '.ChatComponentStyle-channels .ChatComponentStyle-clanChannel'
 		const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
-		clanChannel.addEventListener('click', (event) => {
-			event.stopPropagation();
+		clanChannel.addEventListener('click', () => {
 			if (!clanChannel.classList.contains('selected')) {
 				// Если канал не выбран, добавить класс selected
 				clanChannel.classList.add('selected');
