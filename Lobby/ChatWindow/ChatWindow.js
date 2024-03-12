@@ -66,6 +66,17 @@
 				selectorContainer.classList.remove('show');
 			}
 		});
+
+		// Add event listener to set original select value based on selected text
+		selectorContainer.addEventListener('click', (event) => {
+			const selectedOptionText = customDropdown.querySelector('.selected-text').textContent;
+			originalSelect.querySelectorAll('option').forEach(option => {
+				if (option.textContent === selectedOptionText) {
+					originalSelect.value = option.value;
+					originalSelect.dispatchEvent(new Event('change', { bubbles: true }));
+				}
+			});
+		});
 	}
 
 	/**
