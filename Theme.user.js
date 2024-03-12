@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.1
+// @version			1.1.2
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -81,6 +81,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/TopMenu/TopMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/FriendsScreen/FriendsScreen.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/InviteScreen/InviteScreen.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/CommonContainer/CommonContainer.min.css',
 	];
 
 	for (const link of linksCSS) {
@@ -205,6 +206,25 @@
 		},
 		onerror: function(error) {
 			console.error('Failed to load TXT file:', error);
+		}
+	});
+
+
+
+
+	// Link to raw TXT file
+	const commonContainerBackground = `https://raw.githubusercontent.com/Neutrxl/Themed/main/_Base64/General/png/EndlessDark.txt`;
+
+	// Make an AJAX request to fetch the TXT file
+	GM_xmlhttpRequest({
+		method: 'GET',
+		url: commonContainerBackground,
+		onload: function(response) {
+			// Initial adding of the background to the first entrance screen
+			const styledBackgrounds = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
+			var styleElement = document.createElement("style");
+			styleElement.textContent = styledBackgrounds;
+			document.body.appendChild(styleElement);
 		}
 	});
 })();
