@@ -201,3 +201,17 @@
 .DialogContainerComponentStyle-container a u {
 	color: var(--theme-main-color);
 }
+
+/* Premium modal */
+
+/* Text under premium icon */
+
+.ModalStyle-rootHover > div:not([class*='battlepick'i]) img[src*='iconpremium'i] + span {
+	color: var(--theme-gold-text-color);
+}
+
+/* Benefits percents inside the premium modal */
+
+.ModalStyle-rootHover > div:not([class*='battlepick'i]) .UserInfoContainerStyle-premiumBenefitsContainer > span:last-child {
+	color: var(--theme-gold-text-color);
+}
