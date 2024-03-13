@@ -109,7 +109,7 @@
 	*/
 	function trackElements() {
 		// Delete previous repeating if exists
-		if (requestId) {
+		if (reqID) {
 			cancelAnimationFrame(reqID);
 			reqID = null;
 		}
@@ -256,7 +256,7 @@
 						const element = node.querySelector('.BattleTabStatisticComponentStyle-container > div');
 						if (element) {
 							// Stop animation request
-							if (requestId) {
+							if (reqID) {
 								cancelAnimationFrame(reqID);
 								reqID = null;
 							}
