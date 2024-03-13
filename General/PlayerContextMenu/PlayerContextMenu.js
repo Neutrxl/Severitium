@@ -14,7 +14,7 @@
 			// New style
 			var style = document.createElement('style');
 			// Style inner
-			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1) !important;}';
+			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)!important;}.ContextMenuStyle-menu>div:last-child:hover::before{background-color:rgba(225,75,75,.75)!important;}';
 			// Add this style
 			modal.appendChild(style);
 		}
