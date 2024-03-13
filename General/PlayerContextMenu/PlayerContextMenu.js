@@ -7,13 +7,14 @@
 	function configureLastElementHover(modal) {
 		const lastText = modal.querySelector('.ContextMenuStyle-menu > div:last-child > span');
 		// Get color of the last element
-		const lastTextColor = window.getComputedStyle(lastText).getPropertyValue('color');
+		const lastTextColor = window.getComputedStyle(lastText).color;
+
 		// If the color is red
 		if (lastTextColor === 'rgb(255, 124, 124)') {
 			// New style
 			var style = document.createElement('style');
 			// Style inner
-			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)}';
+			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1) !important;}';
 			// Add this style
 			modal.appendChild(style);
 		}
