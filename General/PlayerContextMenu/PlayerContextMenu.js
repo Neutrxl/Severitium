@@ -35,14 +35,20 @@
 	function applyFadeOutAnimation() {
 		const modalRoot = document.getElementById('modal-root');
 		const clone = modalRoot.querySelector('.modal.cloned');
-		const contextMenu = clone.querySelector('.ContextMenuStyle-menu');
+		const contextMenu = clone.querySelector(`.ContextMenuStyle-menu[data-clone='true']`);
 		contextMenu.classList.add('fadeOutDown');
 
-		// Add an event listener to remove the temporary element after the animation ends
-		contextMenu.addEventListener('animationend', function() {
-			// Remove the temporary element after the animation ends
-			modalRoot.removeChild(clone);
-			clonedModal = null;
+		// Add event listener to wait for transition to end
+		contextMenu.addEventListener('transitionend', function() {
+			// Add the fadeOutDown class after the previous animation has ended
+			contextMenu.classList.add('fadeOutDown');
+	
+			// Add another event listener to remove the element after the fadeOutDown animation
+			contextMenu.addEventListener('animationend', function() {
+				// Remove the temporary element after the animation ends
+				modalRoot.removeChild(clone);
+				clonedModal = null;
+			});
 		});
 	}
 
