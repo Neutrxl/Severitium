@@ -243,7 +243,7 @@
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const element = node.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
+						const element = node.querySelector('.BattleTabStatisticComponentStyle-container > div');
 						if (element) {
 							trackElements();
 						}
@@ -253,7 +253,7 @@
 				mutation.removedNodes.forEach(function(node) { // Iterate through removed nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const element = node.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
+						const element = node.querySelector('.BattleTabStatisticComponentStyle-container > div');
 						if (element) {
 							// Stop animation request
 							if (requestId) {
