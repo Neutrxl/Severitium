@@ -1,5 +1,25 @@
 (function() {
 	/**
+	 * Sets the background-color on hover to the last element inside modal if its text has red color
+	 * 
+	 * @param {HTMLElement} modal - The modal element to clone
+	*/
+	function configureLastElementHover(modal) {
+		const lastText = modal.querySelector('.ContextMenuStyle-menu > div:last-child > span');
+		// Get color of the last element
+		const lastTextColor = window.getComputedStyle(lastText).getPropertyValue('color');
+		// If the color is red
+		if (lastTextColor === 'rgb(255, 124, 124)') {
+			// New style
+			var style = document.createElement('style');
+			// Style inner
+			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)}';
+			// Add this style
+			modal.appendChild(style);
+		}
+	}
+
+	/**
 	 * Generates a unique identifier based on the current timestamp
 	 * 
 	 * @returns {string} - The generated unique identifier
@@ -7,7 +27,6 @@
 	function createIDFromDate() {
 		return Date.now().toString();
 	}
-
 
 	// Original modal clone
 	let clonedModals = [];
@@ -76,35 +95,43 @@
 		}
 	}
 
-	// Create a new MutationObserver instance
+	/**
+	 * Create a new instance of MutationObserver with a callback function
+	 * to observe changes in the DOM 
+	*/
 	const observer = new MutationObserver(function(mutations) {
 		mutations.forEach(function(mutation) {
-			// Check all added nodes
-			mutation.addedNodes.forEach(function(addedNode) {
-				// Check the event of adding needed element
-				if (addedNode.classList && addedNode.classList.contains('modal') && !addedNode.classList.contains('cloned')) {
-					// Clone it
-					cloneModal(addedNode);
-				}
-			});
-
-			// Check if nodes have been removed from #modal-root
-			mutation.removedNodes.forEach(function(removedNode) {
-				// Check if the needed element is deleted from the page
-				if (removedNode.classList && removedNode.classList.contains('ContextMenuStyle-menu') && !removedNode.dataset.clone) {
-					// Extract ModalID from the removed node and apply the fade out animation
-					const ModalID = removedNode.getAttribute('data-mid');
-					if (ModalID) {
-						applyFadeOutAnimation(ModalID);
+			if (mutation.type === 'childList') { // If the change is of type childList
+				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
+					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
+						// Check if the node is needed element
+						if (node.classList && node.classList.contains('modal') && !node.classList.contains('cloned')) {
+							// Clone it
+							cloneModal(node);
+							configureLastElementHover(node);
+						}
 					}
-				}
-			});
+				});
+
+				mutation.removedNodes.forEach(function(node) { // Iterate through removed nodes
+					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
+						// Check if the node is needed element
+						if (node.classList && node.classList.contains('ContextMenuStyle-menu') && !node.dataset.clone) {
+							// Extract ModalID from the removed node and apply the fade out animation
+							const ModalID = node.getAttribute('data-mid');
+							if (ModalID) {
+								applyFadeOutAnimation(ModalID);
+							}
+						}
+					}
+				});
+			}
 		});
 	});
 
-	// Configuration for observing changes to the children of #modal-root
-	const config = { childList: true, subtree: true };
-	
+	// Configuration for the mutation observer
+	const observerConfig = { childList: true, subtree: true };
+
 	// Start observing mutations in the document body
-	observer.observe(document.body, config);
+	observer.observe(document.body, observerConfig);
 })();

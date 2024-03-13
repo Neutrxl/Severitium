@@ -1,7 +1,7 @@
 // ==UserScript==
 
-// @name			CSS Battle Tab
-// @version			1.3.2
+// @name			CSS Tab Container
+// @version			1.4.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/BattleTab.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/TabContainer/TabContainer.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({

@@ -101,10 +101,19 @@
 		},
 	]
 
+	// Store ID to stop the repeating on each frame when tab is closed
+	let reqID = null;
+
 	/**
 	 * Function to track elements of tab 
 	*/
 	function trackElements() {
+		// Delete previous repeating if exists
+		if (requestId) {
+			cancelAnimationFrame(reqID);
+			reqID = null;
+		}
+
 		// Turret elements
 		const turrets = document.querySelectorAll('.BattleTabStatisticComponentStyle-deviceCell div');
 		// Module elements
@@ -131,7 +140,7 @@
 		}
 
 		// Repeat each frame
-		requestAnimationFrame(trackElements);
+		reqID = requestAnimationFrame(trackElements);
 	}
 
 	/**
@@ -224,6 +233,43 @@
 		}
 	}
 
-	// Initial call
-	trackElements();
+	/**
+	 * Create a new instance of MutationObserver with a callback function
+	 * to observe changes in the DOM 
+	*/
+	const observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			if (mutation.type === 'childList') { // If the change is of type childList
+				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
+					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
+						// Find an element with the selector in the added node
+						const element = node.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
+						if (element) {
+							trackElements();
+						}
+					}
+				});
+
+				mutation.removedNodes.forEach(function(node) { // Iterate through removed nodes
+					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
+						// Find an element with the selector in the added node
+						const element = node.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-channelsSelect');
+						if (element) {
+							// Stop animation request
+							if (requestId) {
+								cancelAnimationFrame(reqID);
+								reqID = null;
+							}
+						}
+					}
+				});
+			}
+		});
+	});
+
+	// Configuration for the mutation observer
+	const observerConfig = { childList: true, subtree: true };
+
+	// Start observing mutations in the document body
+	observer.observe(document.body, observerConfig);
 })();

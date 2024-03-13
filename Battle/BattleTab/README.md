@@ -1,7 +1,3 @@
 # Battle Tab
 
-Stilizes the battle tab component.
-
-## Usage
-
-You can manually use this component by enabling the [script](https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/BattleTab.user.js) in Tampermonkey.
+Here are stored all modules for battle tab elements / events.

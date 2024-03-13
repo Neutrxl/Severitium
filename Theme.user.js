@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.23
+// @version			1.1.24
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -69,7 +69,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Entrance/EntranceIcons/EntranceIcons.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Entrance/EntranceLinks/EntranceLinks.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleChat/BattleChat.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/BattleTab.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Battle/BattleTab/TabContainer/TabContainer.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/FooterMenu/FooterMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/MainMenu/MainMenu.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/PlayButton/PlayButton.min.css',
