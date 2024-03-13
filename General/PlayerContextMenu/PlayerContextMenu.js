@@ -36,7 +36,6 @@
 		const modalRoot = document.getElementById('modal-root');
 		const clone = modalRoot.querySelector('.modal.cloned');
 		const contextMenu = clone.querySelector(`.ContextMenuStyle-menu[data-clone='true']`);
-		contextMenu.classList.add('fadeOutDown');
 
 		// Add event listener to wait for transition to end
 		contextMenu.addEventListener('transitionend', function() {
