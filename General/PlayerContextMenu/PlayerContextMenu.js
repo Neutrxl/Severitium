@@ -22,7 +22,8 @@
 	 * Restores the cloned modal element back to the page
 	*/
 	function restoreModal() {
-		if (clonedModal) {
+		const modalRoot = document.getElementById('modal-root');
+		if (clonedModal && modalRoot) {
 			modalRoot.appendChild(clonedModal);
 		}
 	}
@@ -32,6 +33,7 @@
 	 * Removes the cloned modal element from the page after the animation ends
 	*/
 	function applyFadeOutAnimation() {
+		const modalRoot = document.getElementById('modal-root');
 		const clone = modalRoot.querySelector('.modal.cloned');
 		const contextMenu = clone.querySelector('.ContextMenuStyle-menu');
 		contextMenu.classList.add('fadeOutDown');
@@ -69,10 +71,7 @@
 
 	// Configuration for observing changes to the children of #modal-root
 	const config = { childList: true, subtree: true };
-
-	// Start observing changes to the children of #modal-root
-	const modalRoot = document.getElementById('modal-root');
-	if (modalRoot) {
-		observer.observe(modalRoot, config);
-	}
+	
+	// Start observing mutations in the document body
+	observer.observe(body, config);
 })();
