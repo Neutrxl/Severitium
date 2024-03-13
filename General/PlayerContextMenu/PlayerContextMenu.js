@@ -1,19 +1,16 @@
 // Function to apply the fadeOutDown animation class to a temporary replacement element
-function applyFadeOutAnimation() {
-	const menuElement = document.querySelector('.ContextMenuStyle-menu');
-	if (menuElement) {
-		const tempElement = menuElement.cloneNode(true);
-		tempElement.classList.add('fadeOutDown');
+function applyFadeOutAnimation(removedNode) {
+	const tempElement = removedNode.cloneNode(true);
+	tempElement.classList.add('fadeOutDown');
+	
+	// Replace the original element with the temporary element
+	modalRoot.appendChild(tempElement);
 
-		// Replace the original element with the temporary element
-		modalRoot.appendChild(tempElement);
-
-		// Add an event listener to remove the temporary element after the animation ends
-		tempElement.addEventListener('animationend', function() {
-			// Remove the temporary element after the animation ends
-			tempElement.parentNode.removeChild(tempElement);
-		});
-	}
+	// Add an event listener to remove the temporary element after the animation ends
+	tempElement.addEventListener('animationend', function() {
+		// Remove the temporary element after the animation ends
+		tempElement.parentNode.removeChild(tempElement);
+	});
 }
 
 // Create a new MutationObserver instance
@@ -25,7 +22,7 @@ const observer = new MutationObserver(function(mutations) {
 				// Check if the removed node is .ContextMenuStyle-menu
 				if (removedNode.classList && removedNode.classList.contains('ContextMenuStyle-menu')) {
 					// Apply the fadeOutDown animation to a temporary replacement element
-					applyFadeOutAnimation();
+					applyFadeOutAnimation(removedNode);
 				}
 			});
 		}
