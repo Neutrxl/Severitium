@@ -73,5 +73,5 @@
 	const config = { childList: true, subtree: true };
 	
 	// Start observing mutations in the document body
-	observer.observe(body, config);
+	observer.observe(document.body, config);
 })();
