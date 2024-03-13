@@ -83,6 +83,12 @@
 	color: var(--severitium-main-color);
 }
 
+/* Timer text */
+
+.BattlePassLobbyComponentStyle-timers span {
+	color: var(--severitium-main-color);
+}
+
 /* Block of revards inside the container */
 
 .BattlePassLobbyComponentStyle-blockBattlePass {
@@ -123,4 +129,19 @@
 
 .BattlePassLobbyComponentStyle-blockBattlePass .BattlePassLobbyComponentStyle-commonDescription.BattlePassLobbyComponentStyle-premiumPass:not(.BattlePassLobbyComponentStyle-lockedBlock) > p {
 	color: var(--severitium-red-text-color);
+}
+
+/* Image of closed revard */
+
+.BattlePassLobbyComponentStyle-imageClosed {
+	background-image: none;
+	background-color: var(--severitium-red-color);
+	-webkit-mask-position: center center;
+			mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	-webkit-mask-size: 30%;
+			mask-size: 30%;
+	-webkit-mask-image: url('data:image/svg+xml,<svg viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.51442 3.90679C3.95027 4.70077 3.75 5.69159 3.75 6.33333H1.25C1.25 5.28619 1.54973 3.74368 2.48558 2.42655C3.46733 1.04483 5.0926 0 7.5 0C9.9074 0 11.5327 1.04483 12.5144 2.42655C13.4503 3.74368 13.75 5.28619 13.75 6.33333H11.25C11.25 5.69159 11.0497 4.70077 10.4856 3.90679C9.96733 3.17739 9.0926 2.53333 7.5 2.53333C5.9074 2.53333 5.03267 3.17739 4.51442 3.90679Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 6.33333H1.25H0V19H15V6.33333H13.75H11.25H3.75ZM7.49994 10.0818C6.56076 10.0818 5.79941 10.8533 5.79941 11.805C5.79941 12.4429 6.14138 12.9998 6.64967 13.2977V15.2514H8.3502V13.2977C8.85849 12.9998 9.20046 12.4429 9.20046 11.805C9.20046 10.8533 8.43911 10.0818 7.49994 10.0818Z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.51442 3.90679C3.95027 4.70077 3.75 5.69159 3.75 6.33333H1.25C1.25 5.28619 1.54973 3.74368 2.48558 2.42655C3.46733 1.04483 5.0926 0 7.5 0C9.9074 0 11.5327 1.04483 12.5144 2.42655C13.4503 3.74368 13.75 5.28619 13.75 6.33333H11.25C11.25 5.69159 11.0497 4.70077 10.4856 3.90679C9.96733 3.17739 9.0926 2.53333 7.5 2.53333C5.9074 2.53333 5.03267 3.17739 4.51442 3.90679Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 6.33333H1.25H0V19H15V6.33333H13.75H11.25H3.75ZM7.49994 10.0818C6.56076 10.0818 5.79941 10.8533 5.79941 11.805C5.79941 12.4429 6.14138 12.9998 6.64967 13.2977V15.2514H8.3502V13.2977C8.85849 12.9998 9.20046 12.4429 9.20046 11.805C9.20046 10.8533 8.43911 10.0818 7.49994 10.0818Z" fill="white"/></svg>');
 }
