@@ -16,6 +16,10 @@
 	--severitium-blue-text-color: rgb(100, 170, 255);
 	--severitium-orange-text-color: rgb(255, 150, 100);
 
+	/* Some highlighting colors */
+
+	--severitium-friend-color: rgb(188, 132, 207);
+
 	/* Theme backgrounds */
 
 	--severitium-dark-transparent-background1: rgba(0, 0, 0, .5);
