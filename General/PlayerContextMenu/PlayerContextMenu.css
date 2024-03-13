@@ -88,3 +88,16 @@
 .ContextMenuStyle-menuItemRank:hover span {
 	color: var(--severitium-main-color);
 }
+
+/* Options of context menu */
+
+.ContextMenuStyle-menuItemRank + div {
+	background-color: transparent;
+	transition: background-color .2s ease;
+}
+
+/* Options of context menu on hover */
+
+.ContextMenuStyle-menuItemRank + div:hover {
+	background-color: var(--severitium-light-transparent-background3);
+}

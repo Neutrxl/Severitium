@@ -1,39 +1,78 @@
-// Function to apply the fadeOutDown animation class to a temporary replacement element
-function applyFadeOutAnimation(removedNode) {
-	const tempElement = removedNode.cloneNode(true);
-	tempElement.classList.add('fadeOutDown');
-	
-	// Replace the original element with the temporary element
-	modalRoot.appendChild(tempElement);
+(function() {
+	// Original modal clone
+	let clonedModal = null;
 
-	// Add an event listener to remove the temporary element after the animation ends
-	tempElement.addEventListener('animationend', function() {
-		// Remove the temporary element after the animation ends
-		tempElement.parentNode.removeChild(tempElement);
-	});
-}
+	/**
+	 * Clones the provided modal element and adds necessary attributes for cloning
+	 * 
+	 * @param {HTMLElement} modal - The modal element to clone
+	*/
+	function cloneModal(modal) {
+		clonedModal = modal.cloneNode(true);
+		// Classlist of container contains 'cloned'
+		clonedModal.classList.add('cloned');
+		const contextMenu = clonedModal.querySelector('.ContextMenuStyle-menu');
+		if (contextMenu) {
+			// Context menu container has value of data: 'data-clone = true'
+			contextMenu.dataset.clone = 'true';
+		}
+	}
 
-// Create a new MutationObserver instance
-const observer = new MutationObserver(function(mutations) {
-	mutations.forEach(function(mutation) {
-		// Check if nodes have been removed from #modal-root
-		if (mutation.removedNodes && mutation.removedNodes.length > 0) {
-			mutation.removedNodes.forEach(function(removedNode) {
-				// Check if the removed node is .ContextMenuStyle-menu
-				if (removedNode.classList && removedNode.classList.contains('ContextMenuStyle-menu')) {
-					// Apply the fadeOutDown animation to a temporary replacement element
-					applyFadeOutAnimation(removedNode);
+	/**
+	 * Restores the cloned modal element back to the page
+	*/
+	function restoreModal() {
+		if (clonedModal) {
+			modalRoot.appendChild(clonedModal);
+		}
+	}
+
+	/**
+	 * Applies the fadeOutDown animation class to the cloned modal element
+	 * Removes the cloned modal element from the page after the animation ends
+	*/
+	function applyFadeOutAnimation() {
+		const clone = modalRoot.querySelector('.modal.cloned');
+		const contextMenu = clone.querySelector('.ContextMenuStyle-menu');
+		contextMenu.classList.add('fadeOutDown');
+
+		// Add an event listener to remove the temporary element after the animation ends
+		contextMenu.addEventListener('animationend', function() {
+			// Remove the temporary element after the animation ends
+			modalRoot.removeChild(clone);
+			clonedModal = null;
+		});
+	}
+
+	// Create a new MutationObserver instance
+	const observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			// Check all added nodes
+			mutation.addedNodes.forEach(function(addedNode) {
+				// Check the event of adding needed element
+				if (addedNode.classList && addedNode.classList.contains('modal') && !addedNode.classList.contains('cloned')) {
+					// Clone it
+					cloneModal(addedNode);
 				}
 			});
-		}
+
+			// Check if nodes have been removed from #modal-root
+			mutation.removedNodes.forEach(function(removedNode) {
+				// Check if the needed element is deleted from the page
+				if (removedNode.classList && removedNode.classList.contains('ContextMenuStyle-menu') && !removedNode.dataset.clone) {
+					restoreModal();
+					applyFadeOutAnimation();
+				}
+			});
+		});
 	});
-});
 
-// Configuration for observing changes to the children of #modal-root
-const config = { childList: true, subtree: true };
+	// Configuration for observing changes to the children of #modal-root
+	const config = { childList: true, subtree: true };
 
-// Start observing changes to the children of #modal-root
-const modalRoot = document.getElementById('modal-root');
-if (modalRoot) {
-	observer.observe(modalRoot, config);
-}
+	// Start observing changes to the children of #modal-root
+	const modalRoot = document.getElementById('modal-root');
+	if (modalRoot) {
+		observer.observe(modalRoot, config);
+	}
+})();
