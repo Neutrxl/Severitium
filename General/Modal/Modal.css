@@ -172,6 +172,12 @@
 	color: var(--severitium-main-color);
 }
 
+/* All timers inside modal window */
+
+.ModalStyle-rootHover span[id*='timer'i] {
+	color: var(--severitium-main-color);
+}
+
 /* Close (cross) icon of the modal container */
 
 .DialogContainerComponentStyle-imgClose {

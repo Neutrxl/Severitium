@@ -9,6 +9,11 @@
 		// Get color of the last element
 		const lastTextColor = window.getComputedStyle(lastText).color;
 
+		// Check if the lastText is null (no element found)
+		if (!lastText) {
+			return;
+		}
+
 		// If the color is red
 		if (lastTextColor === 'rgb(255, 124, 124)') {
 			// New style
