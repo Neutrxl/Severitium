@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.35
+// @version			1.1.36
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -87,6 +87,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ClanModal/ClanModal.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ExistingClan/ExistingClan.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/JoinClan/JoinClan.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/XP/XP.min.css',
 	];
 
 	for (const link of linksCSS) {
