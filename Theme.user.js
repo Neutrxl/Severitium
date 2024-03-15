@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.40
+// @version			1.1.41
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -23,7 +23,6 @@
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/PlayButton/PlayButtonAnimation.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/General/PlayerContextMenu/PlayerContextMenu.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ExistingClan/ExistingClan.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
