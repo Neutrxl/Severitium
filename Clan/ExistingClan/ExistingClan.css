@@ -419,3 +419,12 @@
 .ClanCommonStyle-information .ClanCommonStyle-buttonInvite > span {
 	color: var(--severitium-green-button-color);
 }
+
+/* Button hotkey container */
+
+.ClanCommonStyle-information .ClanCommonStyle-buttonInvite [class*='hotkey'i] {
+	background: transparent;
+	color: var(--severitium-dark-white-text-color);
+	border: var(--severitium-gray-color) dashed .1em;
+	border-radius: .1em;
+}

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Background
-// @version			1.2.8
+// @version			1.2.9
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -57,7 +57,7 @@
 		url: imageLink,
 		onload: function(response) {
 			// Initial adding of the background to the first entrance screen
-			const styledBackgrounds = `.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
+			const styledBackgrounds = `.Common-container.Common-entranceBackground{background-image:url(data:image/png;base64,${response.responseText})}.Common-background.SystemMessageStyle-container{background-image:url(data:image/png;base64,${response.responseText})}`;
 			var styleElement = document.createElement("style");
 			styleElement.textContent = styledBackgrounds;
 			document.body.appendChild(styleElement);
