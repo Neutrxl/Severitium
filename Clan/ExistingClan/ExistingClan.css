@@ -187,6 +187,16 @@
 	color: var(--severitium-green-button-color);
 }
 
+/* Button hotkey container */
+
+.ClanCreateComponentStyle-leftBlockButtons > div > [class*='hotkey'i],
+.ClanCreateComponentStyle-rightBlockButtons > div > [class*='hotkey'i] {
+	background: transparent;
+	color: var(--severitium-dark-white-text-color);
+	border: var(--severitium-gray-color) dashed .1em;
+	border-radius: .1em;
+}
+
 /* Clan action button */
 
 .ClanInfoComponentStyle-clanForeignActions > div {
