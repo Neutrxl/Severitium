@@ -4,7 +4,7 @@ img[src*='experience'i] {
 }
 
 div:has(> img[src*='XP'])::before,
-div:has(img[src*='experience'i])::before {
+div:has(> img[src*='experience'i])::before {
 	content: '';
 	width: 1em;
 	height: 1em;
