@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Theme
-// @version			1.1.33
+// @version			1.1.34
 // @description		Custom theme for _game_
 // @author			OrakomoRi
 
@@ -85,6 +85,9 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Friends/InviteScreen/InviteScreen.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/CommonContainer/CommonContainer.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/General/PlayerContextMenu/PlayerContextMenu.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ClanModal/ClanModal.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ExistingClan/ExistingClan.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/JoinClan/JoinClan.min.css',
 	];
 
 	for (const link of linksCSS) {

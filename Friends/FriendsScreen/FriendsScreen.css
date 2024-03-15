@@ -407,6 +407,7 @@
 
 .FriendRequestComponentStyle-buttonDeclineAllInvisible {
 	background-color: var(--severitium-light-transparent-background3);
+	border-radius: .25em;
 	border: none;
 	outline: none;
 	box-shadow: none;
@@ -415,8 +416,9 @@
 /* Disabled button text */
 
 .FriendRequestComponentStyle-buttonDeclineAllInvisible > span {
-	color: var(--severitium-red-button-color);
+	color: var(--severitium-white-text-color);
 	text-shadow: none;
+	opacity: .25;
 }
 
 /* Table inside incoming requests */

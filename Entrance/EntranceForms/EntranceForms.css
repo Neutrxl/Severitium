@@ -252,3 +252,11 @@
 				transform: scale(1);
 	}
 }
+
+/* Buttons container in license agreement */
+
+.LicenseComponentStyle-buttonsBlock {
+	width: auto;
+	display: flex;
+	gap: 1em;
+}

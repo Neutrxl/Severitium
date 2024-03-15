@@ -1,18 +1,16 @@
 // ==UserScript==
 
-// @name			Chat Window
-// @version			1.1.6
-// @description		Changes the default look of a chat window
+// @name			CSS Clan Modal
+// @version			1.0.0
+// @description		Injects CSS code into the page
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/shBq1mo.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
-
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -24,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Lobby/ChatWindow/ChatWindow.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ClanModal/ClanModal.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({

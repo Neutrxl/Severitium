@@ -68,11 +68,11 @@
 
 			// Check clan button if the clan chat is opened
 			const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
-            if (clanChannel && clanChannel.dataset.state === 'selected') {
-                clanChannel.dataset.state = '';
-            } else {
-                selectorContainer.classList.toggle('show');
-            }
+			if (clanChannel && clanChannel.dataset.state === 'selected') {
+				clanChannel.dataset.state = '';
+			} else {
+				selectorContainer.classList.toggle('show');
+			}
 		});
 
 		// Close dropdown when clicking outside of it
@@ -84,11 +84,14 @@
 
 		// Handle clicks on '.ChatComponentStyle-channels .ChatComponentStyle-clanChannel'
 		const clanChannel = document.querySelector('.ChatComponentStyle-channels .ChatComponentStyle-clanChannel');
-		clanChannel.addEventListener('click', () => {
-			if (clanChannel.dataset.state !== 'selected') {
-                clanChannel.dataset.state = 'selected';
-            }
-		});
+		// Check if the clan channel exists to the user
+		if (clanChannel) {
+			clanChannel.addEventListener('click', () => {
+				if (clanChannel.dataset.state !== 'selected') {
+					clanChannel.dataset.state = 'selected';
+				}
+			});
+		}
 	}
 
 	/**
