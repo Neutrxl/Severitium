@@ -12,6 +12,8 @@
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/Clan/ExistingClan/ExistingClan.min.js
+
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
 // @grant			unsafeWindow

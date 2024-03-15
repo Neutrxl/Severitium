@@ -78,6 +78,8 @@
 	color: var(--severitium-white-text-color);
 }
 
+/* Placeholder on input focus and on hover */
+
 .ClanCommonStyle-center .ClanCommonStyle-information .SearchInputComponentStyle-searchInput:hover input::placeholder,
 .ClanCommonStyle-center .ClanCommonStyle-information .SearchInputComponentStyle-searchInput input:focus::placeholder {
 	color: var(--severitium-white-text-color);
