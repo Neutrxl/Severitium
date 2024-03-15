@@ -6,22 +6,26 @@
 	*/
 	function configureLastElementHover(modal) {
 		const lastText = modal.querySelector('.ContextMenuStyle-menu > div:last-child > span');
-		// Get color of the last element
-		const lastTextColor = window.getComputedStyle(lastText).color;
 
-		// Check if the lastText is null (no element found)
-		if (!lastText) {
-			return;
-		}
+		// Check if it exists
+		if (lastText) {
+			// Get color of the last element
+			const lastTextColor = window.getComputedStyle(lastText).color;
 
-		// If the color is red
-		if (lastTextColor === 'rgb(255, 124, 124)') {
-			// New style
-			var style = document.createElement('style');
-			// Style inner
-			style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)!important;}.ContextMenuStyle-menu>div:last-child:hover::before{background-color:rgba(225,75,75,.75)!important;}';
-			// Add this style
-			modal.appendChild(style);
+			// Check if the lastText is null (no element found)
+			if (!lastText) {
+				return;
+			}
+
+			// If the color is red
+			if (lastTextColor === 'rgb(255, 124, 124)') {
+				// New style
+				var style = document.createElement('style');
+				// Style inner
+				style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)!important;}.ContextMenuStyle-menu>div:last-child:hover::before{background-color:rgba(225,75,75,.75)!important;}';
+				// Add this style
+				modal.appendChild(style);
+			}
 		}
 	}
 
@@ -112,9 +116,13 @@
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Check if the node is needed element
 						if (node.classList && node.classList.contains('modal') && !node.classList.contains('cloned')) {
-							// Clone it
-							cloneModal(node);
-							configureLastElementHover(node);
+							// If inside modal there is a player's context menu element
+							const contextMenu = node.querySelector('.ContextMenuStyle-menu');
+							if (contextMenu) {
+								// Clone it
+								cloneModal(node);
+								configureLastElementHover(node);
+							}
 						}
 					}
 				});

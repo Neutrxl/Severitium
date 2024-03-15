@@ -48,6 +48,13 @@
 	display: none;
 }
 
+/* New friend text */
+
+.FriendListComponentStyle-newUser {
+	color: var(--severitium-main-color);
+	text-shadow: var(--severitium-main-color) 0 0 .5em;
+}
+
 /* Friend's nickname text */
 
 /* Offline */
@@ -272,6 +279,9 @@
 .FriendListComponentStyle-containerButtonFriends[class*='disabled'i] {
 	background-color: var(--severitium-light-transparent-background3);
 	color: var(--severitium-white-text-color);
+	border: none;
+	outline: none;
+	box-shadow: none;
 }
 
 /* No user button */
@@ -391,6 +401,22 @@
 
 .FriendRequestComponentStyle-buttonDeclineAll {
 	color: var(--severitium-red-button-color);
+}
+
+/* Disabled button */
+
+.FriendRequestComponentStyle-buttonDeclineAllInvisible {
+	background-color: var(--severitium-light-transparent-background3);
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+/* Disabled button text */
+
+.FriendRequestComponentStyle-buttonDeclineAllInvisible > span {
+	color: var(--severitium-red-button-color);
+	text-shadow: none;
 }
 
 /* Table inside incoming requests */
