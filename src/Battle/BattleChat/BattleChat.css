@@ -1,0 +1,13 @@
+/* Chat text container */
+
+div[class*="BattleChatComponentStyle-inputContainer"] {
+	background: var(--severitium-dark-transparent-background1);
+	-webkit-backdrop-filter: blur(.2em);
+			backdrop-filter: blur(.2em);
+}
+
+/* Chat text container, background behind the icon of chat mode */
+
+div[class*="BattleChatComponentStyle-inputContainer"] > div {
+	background: var(--severitium-light-transparent-background2);
+}

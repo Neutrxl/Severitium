@@ -1,0 +1,1 @@
+div[class*=BattleChatComponentStyle-inputContainer]{background:var(--severitium-dark-transparent-background1);-webkit-backdrop-filter:blur(.2em);backdrop-filter:blur(.2em)}div[class*=BattleChatComponentStyle-inputContainer]>div{background:var(--severitium-light-transparent-background2)}
