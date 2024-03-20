@@ -2,7 +2,7 @@
 
 # Severitium
 
-Currently no info, sorry.
+## :black_heart: Vibrant, interactive, memorable
 
 ---
 
