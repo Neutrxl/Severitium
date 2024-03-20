@@ -5,7 +5,7 @@
 // @description		Custom theme for _game_
 // @author			Neutrxl
 
-// @icon			https://i.imgur.com/6fdOVVu.png
+// @icon			https://i.imgur.com/Srv1szX.png
 
 // @match			https://*.tankionline.com/*
 
