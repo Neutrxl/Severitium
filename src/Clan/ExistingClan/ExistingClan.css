@@ -629,6 +629,7 @@
 	background-color: var(--severitium-light-transparent-background3);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
+	z-index: 2;
 }
 
 /* First container */
@@ -790,6 +791,7 @@
 	border-radius: .1em;
 	border: .05em solid var(--severitium-gray-color);
 	padding-bottom: 1em;
+	z-index: 1;
 }
 
 /* Header */
