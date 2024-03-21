@@ -46,7 +46,7 @@
 /* Single friend's container on hover */
 
 .InvitationWindowsComponentStyle-usersScroll > div > div:hover {
-	background-color: var(--severitium-dark-transparent-background3);
+	background-color: var(--severitium-light-transparent-background2);
 }
 
 /* Figure under the rank image */
