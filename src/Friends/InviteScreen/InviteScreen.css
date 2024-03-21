@@ -39,7 +39,7 @@
 	box-sizing: border-box;
 	padding: .2em .5em;
 	box-shadow: 0 0 .1em .05em var(--severitium-gray-color);
-	background-color: var(--severitium-dark-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background1);
 	transition: background-color .2s ease;
 }
 
@@ -189,7 +189,7 @@
 /* Dropdown container */
 
 .InvitationWindowsComponentStyle-typeListContainer .DropDownStyle-dropdownControl {
-	background-color: var(--severitium-dark-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background1);
 	border: .05em solid var(--severitium-gray-color);
 	transition: background-color .2s ease;
 }
@@ -198,7 +198,7 @@
 
 .InvitationWindowsComponentStyle-typeListContainer .DropDownStyle-dropdownRoot:hover .DropDownStyle-dropdownControl,
 .InvitationWindowsComponentStyle-typeListContainer .DropDownStyle-dropdownRoot:has(.DropDownStyle-dropdownControl + div) .DropDownStyle-dropdownControl {
-	background-color: var(--severitium-dark-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background1);
 }
 
 /* Arrow down on the dropdown container */
@@ -266,7 +266,7 @@
 /* Disabled invite button */
 
 .InvitationWindowsComponentStyle-buttonsContainer > .InvitationWindowsComponentStyle-buttons > div[class*='disabled'i] {
-	background-color: var(--severitium-dark-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background1);
 	color: var(--severitium-white-text-color);
 }
 
