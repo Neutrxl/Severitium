@@ -12,8 +12,8 @@ Here's the list of browsers and their versions which support the code. On the ot
 
 ### :warning: Warning
 
-- ❌ Doesn't fully support IE11
-- ❌ Not compatible with Opera Mini
+- :x: Doesn't fully support IE11
+- :x: Not compatible with Opera Mini
 
 ### :white_check_mark: PC
 
