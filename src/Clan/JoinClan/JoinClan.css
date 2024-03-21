@@ -125,7 +125,7 @@
 /* Disabled button */
 
 .ClanCommonStyle-center .ClanCommonStyle-information div[class*='button'i][class*='disabled'i] {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: .25em;
 	border: none;
 	outline: none;
@@ -222,7 +222,7 @@
 /* Table header cell */
 
 .ClanCommonStyle-members .TableComponentStyle-table thead tr th {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: 0;
 }
 
@@ -250,7 +250,7 @@
 /* Filled row */
 
 .ClanCommonStyle-members .TableComponentStyle-tBody .ClanCommonStyle-row {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	opacity: 1;
 }
 

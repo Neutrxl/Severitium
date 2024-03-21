@@ -32,14 +32,14 @@
 	box-sizing: border-box;
 	padding: .2em .5em;
 	box-shadow: 0 0 .1em .05em var(--severitium-gray-color);
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	transition: background-color .2s ease;
 }
 
 /* Single friend's container on hover */
 
 .FriendListComponentStyle-blockList:hover {
-	background-color: var(--severitium-light-transparent-background2);
+	background-color: var(--severitium-dark-transparent-background3);
 }
 
 /* Figure under the rank image */
@@ -277,7 +277,7 @@
 /* Disabled button */
 
 .FriendListComponentStyle-containerButtonFriends[class*='disabled'i] {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	color: var(--severitium-white-text-color);
 	border: none;
 	outline: none;
@@ -406,7 +406,7 @@
 /* Disabled button */
 
 .FriendRequestComponentStyle-buttonDeclineAllInvisible {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: .25em;
 	border: none;
 	outline: none;
@@ -426,7 +426,7 @@
 /* Table header cell */
 
 .FriendListComponentStyle-containerFriends .TableComponentStyle-table thead > tr > th {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 }
 
 /* Table header cell text */
@@ -438,7 +438,7 @@
 /* Table body line */
 
 .FriendListComponentStyle-containerFriends .TableComponentStyle-table tbody > tr {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 }
 
 /* Table body line nickname text */

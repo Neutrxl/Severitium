@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Common Container
-// @version			1.0.3
+// @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -43,7 +43,7 @@
 	});
 
 	// Link to raw TXT file
-	const imageLink = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/General/png/EndlessDark.txt`;
+	const imageLink = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/General/png/CommonContainer.txt`;
 
 	// Make an AJAX request to fetch the TXT file
 	GM_xmlhttpRequest({

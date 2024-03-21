@@ -2,7 +2,7 @@
 
 .ClanHeaderComponentStyle-blockInform {
 	background-image: none;
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	border-radius: .1em;
@@ -12,7 +12,7 @@
 /* Clan description container */
 
 .ClanInfoComponentStyle-messageClan {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	border-radius: .1em;
@@ -159,7 +159,7 @@
 /* Clan action description's container */
 
 .ClanInfoComponentStyle-clanActionDescription {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	border-radius: .1em;
@@ -370,7 +370,7 @@
 /* Table header cell */
 
 .FriendListComponentStyle-containerMembers > .ClanCommonStyle-information + .TableComponentStyle-table thead tr th {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: 0;
 }
 
@@ -398,7 +398,7 @@
 /* Filled row */
 
 .FriendListComponentStyle-containerMembers > .ClanCommonStyle-information + .TableComponentStyle-table .TableComponentStyle-tBody .ClanCommonStyle-row {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	opacity: 1;
 }
 
@@ -501,7 +501,7 @@
 /* Table header cell */
 
 .FriendListComponentStyle-containerMembers .ClanCommonStyle-members thead tr th {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: 0;
 }
 
@@ -529,7 +529,7 @@
 /* Filled row */
 
 .FriendListComponentStyle-containerMembers .ClanCommonStyle-members .TableComponentStyle-tBody .ClanCommonStyle-row {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	opacity: 1;
 }
 
@@ -626,7 +626,7 @@
 /* Parameters container (top container), many of them */
 
 .ClanProfileEditComponentStyle-containerParametersClanBlockInform {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	z-index: 2;
@@ -785,7 +785,7 @@
 /* Container */
 
 .ClanProfileEditComponentStyle-clanDescriptionEdit {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	border-radius: .1em;
@@ -811,7 +811,7 @@
 /* Disabled button */
 
 .ClanProfileEditComponentStyle-commonContainerButtons [class*='button'i][class*='disabled'i] {
-	background-color: var(--severitium-light-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border-radius: .25em;
 	border: none;
 	outline: none;

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.2
+// @version			1.3.3
 // @description		Custom theme for _game_
 // @author			Neutrxl
 
@@ -222,7 +222,7 @@
 
 
 	// Link to raw TXT file
-	const commonContainerBackground = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/General/png/EndlessDark.txt`;
+	const commonContainerBackground = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/General/png/CommonContainer.txt`;
 
 	// Make an AJAX request to fetch the TXT file
 	GM_xmlhttpRequest({
