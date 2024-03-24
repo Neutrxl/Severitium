@@ -165,7 +165,7 @@
 	border-radius: .1em;
 	border: .05em solid var(--severitium-gray-color);
 	color: var(--severitium-white-text-color);
-	padding-bottom: 1em;
+	padding: 0 1em;
 }
 
 /* Clan edit description button */
