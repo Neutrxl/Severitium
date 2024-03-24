@@ -436,7 +436,7 @@
 /* Online */
 
 .FriendListComponentStyle-containerMembers > .ClanCommonStyle-information + .TableComponentStyle-table .TableComponentStyle-tBody .ClanMembersItemComponentStyle-lastVisitCell > span.ClanCommonStyle-onlineNickName {
-	color: var(--severitium-extra-light-gray-text-color);
+	color: var(--severitium-green-text-color);
 }
 
 /* New member text in online cell */
