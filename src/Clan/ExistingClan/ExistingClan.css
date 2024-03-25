@@ -458,6 +458,33 @@
 	color: var(--severitium-main-color);
 }
 
+/* Clan buy additional slot button */
+
+/* Button */
+
+.ClanCommonStyle-information .ClanMembersListComponentStyle-buyClanPlaceButton {
+	outline: none;
+	box-shadow: none;
+	border-radius: .25em;
+	background: var(--severitium-green-button-background);
+	border: var(--severitium-green-button-border-color) solid .1em;
+	transition: border .2s ease;
+}
+
+/* Button on hover */
+
+.ClanCommonStyle-information .ClanMembersListComponentStyle-buyClanPlaceButton:hover {
+	outline: none;
+	box-shadow: none;
+	border: var(--severitium-green-button-border-color-hover) solid .1em;
+}
+
+/* Button's text */
+
+.ClanCommonStyle-information .ClanMembersListComponentStyle-buyClanPlaceButton > span {
+	color: var(--severitium-green-button-color);
+}
+
 /* Clan invite new members button */
 
 /* Button */
@@ -473,7 +500,7 @@
 
 /* Button on hover */
 
-.ClanCommonStyle-information .ClanCommonStyle-buttonInvite {
+.ClanCommonStyle-information .ClanCommonStyle-buttonInvite:hover {
 	outline: none;
 	box-shadow: none;
 	border: var(--severitium-green-button-border-color-hover) solid .1em;
