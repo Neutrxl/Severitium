@@ -93,7 +93,8 @@ svg.link-rects rect {
 
 /* Link URL on bottom side of a card on card hover */
 
-.HeaderComponentStyle-siteLink:hover .HeaderComponentStyle-textLink > span {
+.HeaderComponentStyle-siteLink .HeaderComponentStyle-textLink,
+.HeaderComponentStyle-siteLink .HeaderComponentStyle-textLink > span {
 	color: var(--severitium-main-color);
 }
 
