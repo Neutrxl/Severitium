@@ -90,6 +90,7 @@
 
 .FooterComponentStyle-footer ul > li:hover > div {
 	background-image: none;
+	background-color: var(--severitium-main-color);
 }
 
 /* Notification icon */
