@@ -1,6 +1,7 @@
 /* Dropdown outer container */
 
-.UidInputComponentStyle-dropDownRoot .DropDownStyle-outerContainerStyle {
+.UidInputComponentStyle-dropDownRoot .DropDownStyle-outerContainerStyle,
+.DropDownStyle-dropdownRoot .VerticalScrollStyle-outerContainerStyle {
 	border-radius: 0;
 	border: .1em solid var(--severitium-light-gray-color);
 }

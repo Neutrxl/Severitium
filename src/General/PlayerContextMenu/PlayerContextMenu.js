@@ -15,18 +15,23 @@
 			// Get the color of the span
 			const spanColor = window.getComputedStyle(span).color;
 
+			// Generate unique id
+			let uniqueId;
+			do {
+				uniqueId = 'custom-id-' + Math.random().toString(36).substring(7);
+			} while (usedIds.includes(uniqueId)); // Check uniqueness
+			
+			usedIds.push(uniqueId); // Add id to usedIds
+
+			// Set unique id for the span
+            span.id = uniqueId;
+
+			console.log(`Span id: ${uniqueId}, span text color: ${spanColor}`);
+
 			// Check if the span color is red
 			if (spanColor === 'rgb(255, 124, 124)') {
 				// Create new style
 				var style = document.createElement('style');
-
-				// Generate unique id
-				let uniqueId;
-				do {
-					uniqueId = 'custom-id-' + Math.random().toString(36).substring(7);
-				} while (usedIds.includes(uniqueId)); // Check uniqueness
-				
-				usedIds.push(uniqueId); // Add id to usedIds
 
 				// Style inner
 				style.innerHTML = `
