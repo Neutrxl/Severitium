@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.15
+// @version			1.3.16
 // @description		Custom theme for _game_
 // @author			Neutrxl
 

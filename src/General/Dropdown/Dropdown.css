@@ -14,6 +14,13 @@
 	background-color: var(--severitium-dark-transparent-background1);
 }
 
+/* Dropdown list item's outer container */
+
+.DropDownStyle-innerContainerStyle > div {
+	-webkit-backdrop-filter: blur(.2em);
+			backdrop-filter: blur(.2em);
+}
+
 /* Dropdown list item */
 
 .DropDownStyle-innerContainerStyle > div > div {
