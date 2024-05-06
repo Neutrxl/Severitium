@@ -1,29 +1,44 @@
 (function() {
 	/**
-	 * Sets the background-color on hover to the last element inside modal if its text has red color
+	 * Sets the background-color on hover to elements inside modal based on their text color
 	 * 
 	 * @param {HTMLElement} modal - The modal element to clone
 	*/
-	function configureLastElementHover(modal) {
-		const lastText = modal.querySelector('.ContextMenuStyle-menu > div:last-child > span');
+	function configureElementHover(modal) {
+		// Get all spans inside the modal
+		const spans = modal.querySelectorAll('.ContextMenuStyle-menu > div > span');
 
-		// Check if it exists
-		if (lastText) {
-			// Get color of the last element
-			const lastTextColor = window.getComputedStyle(lastText).color;
+		// Array to store unique IDs
+		const usedIds = [];
 
-			// Check if the lastText is null (no element found)
-			if (!lastText) {
-				return;
-			}
+		for (const span of spans) {
+			// Get the color of the span
+			const spanColor = window.getComputedStyle(span).color;
 
-			// If the color is red
-			if (lastTextColor === 'rgb(255, 124, 124)') {
-				// New style
+			// Check if the span color is red
+			if (spanColor === 'rgb(255, 124, 124)') {
+				// Create new style
 				var style = document.createElement('style');
+
+				// Generate unique id
+				let uniqueId;
+				do {
+					uniqueId = 'custom-id-' + Math.random().toString(36).substring(7);
+				} while (usedIds.includes(uniqueId)); // Check uniqueness
+				
+				usedIds.push(uniqueId); // Add id to usedIds
+
 				// Style inner
-				style.innerHTML = '.ContextMenuStyle-menu>div:last-child:hover{background-color:rgba(225,75,75,.1)!important;}.ContextMenuStyle-menu>div:last-child:hover::before{background-color:rgba(225,75,75,.75)!important;}';
-				// Add this style
+				style.innerHTML = `
+					.ContextMenuStyle-menu > div > span#${uniqueId}:hover {
+						background-color: rgba(225, 75, 75, 0.1) !important;
+					}
+					.ContextMenuStyle-menu > div > span#${uniqueId}:hover::before {
+						background-color: rgba(225, 75, 75, 0.75) !important;
+					}
+				`;
+
+				// Append style to modal
 				modal.appendChild(style);
 			}
 		}
@@ -121,7 +136,7 @@
 							if (contextMenu) {
 								// Clone it
 								cloneModal(node);
-								configureLastElementHover(node);
+								configureElementHover(node);
 							}
 						}
 					}

@@ -2,12 +2,12 @@
 
 .UidInputComponentStyle-dropDownRoot .DropDownStyle-outerContainerStyle {
 	border-radius: 0;
+	border: .1em solid var(--severitium-light-gray-color);
 }
 
 /* Dropdown inner container */
 
 .DropDownStyle-innerContainerStyle {
-	border: .1em solid var(--severitium-light-gray-color);
 	-webkit-backdrop-filter: blur(.2em);
 			backdrop-filter: blur(.2em);
 	background-color: var(--severitium-dark-transparent-background1);
