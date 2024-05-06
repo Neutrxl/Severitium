@@ -15,6 +15,9 @@
 			// Get the color of the span
 			const spanColor = window.getComputedStyle(span).color;
 
+			// Get the parent div
+			const parentDiv = span.closest('div');
+
 			// Generate unique id
 			let uniqueId;
 			do {
@@ -24,9 +27,9 @@
 			usedIds.push(uniqueId); // Add id to usedIds
 
 			// Set unique id for the span
-            span.id = uniqueId;
+            parentDiv.id = uniqueId;
 
-			console.log(`Span id: ${uniqueId}, span text color: ${spanColor}`);
+			console.log(`Div id: ${uniqueId}, span text color: ${spanColor}`);
 
 			// Check if the span color is red
 			if (spanColor === 'rgb(255, 124, 124)') {
@@ -34,14 +37,7 @@
 				var style = document.createElement('style');
 
 				// Style inner
-				style.innerHTML = `
-					.ContextMenuStyle-menu > div > span#${uniqueId}:hover {
-						background-color: rgba(225, 75, 75, 0.1) !important;
-					}
-					.ContextMenuStyle-menu > div > span#${uniqueId}:hover::before {
-						background-color: rgba(225, 75, 75, 0.75) !important;
-					}
-				`;
+				style.innerHTML = `.ContextMenuStyle-menu > div#${uniqueId}:hover { background-color: rgba(225, 75, 75, 0.1) !important; } .ContextMenuStyle-menu > div#${uniqueId}:hover::before { background-color: rgba(225, 75, 75, 0.75) !important; }`;
 
 				// Append style to modal
 				modal.appendChild(style);
