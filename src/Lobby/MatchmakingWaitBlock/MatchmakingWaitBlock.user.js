@@ -1,18 +1,16 @@
 // ==UserScript==
 
-// @name			CSS Player Context Menu
-// @version			1.2.3
+// @name			CSS Matchmaking Wait Block
+// @version			1.0.3
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/kazYkHx.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
-
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/PlayerContextMenu/PlayerContextMenu.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -24,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/PlayerContextMenu/PlayerContextMenu.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/MatchmakingWaitBlock/MatchmakingWaitBlock.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({

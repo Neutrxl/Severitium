@@ -195,6 +195,14 @@
 	border-radius: .2em;
 }
 
+/* Chat system message */
+
+.ChatComponentStyle-systemMessage {
+	margin: .5em 0;
+	padding: 0 1em;
+	color: var(--severitium-orange-text-color);
+}
+
 /* Message header, user nickname */
 
 .ChatComponentStyle-messageRow .ChatComponentStyle-chatUserLabel span {
