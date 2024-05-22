@@ -64,7 +64,7 @@
 /* Average waiting time text value */
 
 .MatchmakingWaitComponentStyle-averageWaitingTimeValue {
-	color: var(--severitium-main-color);
+	color: var(--severitium-orange-text-color);
 }
 
 /* Current waiting time block */
@@ -82,8 +82,8 @@
 
 /* Current waiting time text value */
 
-.MatchmakingWaitComponentStyle-waitingTimeValue > span {
-	color: var(--severitium-main-color);
+.MatchmakingWaitComponentStyle-currentTimeContainer .MatchmakingWaitComponentStyle-waitingTimeValue.MatchmakingWaitComponentStyle-waitingTimeValue > span {
+	color: var(--severitium-orange-text-color);
 	text-shadow: none;
 }
 
