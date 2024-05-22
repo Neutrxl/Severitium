@@ -8,8 +8,8 @@
 	background-image: none;
 	background-color: var(--severitium-dark-transparent-background4);
 	border-bottom-left-radius: 1em;
-	border-left: var(--severitium-gray-color) solid .1em;
-	border-bottom: var(--severitium-gray-color) solid .1em;
+	border-left: var(--severitium-main-color) solid .1em;
+	border-bottom: var(--severitium-main-color) solid .1em;
 	-webkit-backdrop-filter: blur(.1em);
 			backdrop-filter: blur(.1em);
 }
@@ -32,7 +32,7 @@
 	width: auto;
 	padding: 1.5em 3em;
 	width: 15em;
-	border-right: var(--severitium-gray-color) solid .1em;
+	border-right: var(--severitium-main-color) solid .1em;
 }
 
 /* Header of the info block (battle mode) */
@@ -64,7 +64,7 @@
 /* Average waiting time text value */
 
 .MatchmakingWaitComponentStyle-averageWaitingTimeValue {
-	color: var(--severitium-orange-text-color);
+	color: var(--severitium-main-color);
 }
 
 /* Current waiting time block */
@@ -83,7 +83,7 @@
 /* Current waiting time text value */
 
 .MatchmakingWaitComponentStyle-currentTimeContainer .MatchmakingWaitComponentStyle-waitingTimeValue.MatchmakingWaitComponentStyle-waitingTimeValue > span {
-	color: var(--severitium-orange-text-color);
+	color: var(--severitium-main-color);
 	text-shadow: none;
 }
 
