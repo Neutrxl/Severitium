@@ -2,11 +2,12 @@
 
 .AnnouncementHomeScreenComponentStyle-mainContainer {
 	bottom: 1.5em;
+	right: 4em;
 	background-color: transparent;
 	-webkit-backdrop-filter: blur(.25em);
 			backdrop-filter: blur(.25em);
 	border: none;
-	border-radius: 0;
+	border-radius: .25em;
 	box-shadow: 0 0 0 .075em var(--severitium-main-color);
 	transition: none;
 	transition: box-shadow .2s ease;
@@ -29,6 +30,7 @@
 	height: 3em;
 	opacity: 0;
 	z-index: -1;
+	border-radius: .25em;
 	transition: all .2s ease;
 }
 

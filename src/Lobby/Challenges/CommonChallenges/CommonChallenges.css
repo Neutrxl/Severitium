@@ -1,6 +1,10 @@
 /* Common challenges container */
 
 .BattlePassLobbyComponentStyle-menuBattlePass {
+	right: 4em;
+	margin-top: 11em;
+	padding: 0;
+	height: 10em;
 	-webkit-filter: none;
 			filter: none;
 	-webkit-backdrop-filter: blur(.2em);
@@ -8,7 +12,7 @@
 	background: none;
 	background-color: var(--severitium-dark-transparent-background1);
 	box-shadow: 0 0 0 .075em var(--severitium-main-color);
-	border-radius: 0;
+	border-radius: .25em;
 	transition: none;
 	transition: box-shadow .2s ease, background-color .2s ease, -webkit-backdrop-filter .2s ease;
 	transition: box-shadow .2s ease, background-color .2s ease, backdrop-filter .2s ease;
@@ -34,6 +38,7 @@
 	height: 2em;
 	opacity: 0;
 	z-index: -1;
+	border-radius: .25em;
 	transition: all .2s ease;
 }
 

@@ -14,7 +14,7 @@
 	width: 20em;
 	height: 10em;
 	box-shadow: none;
-	border-radius: 0;
+	border-radius: .25em;
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
 	background-size: 300%;
@@ -42,6 +42,7 @@
 	height: 3em;
 	opacity: 0;
 	z-index: -1;
+	border-radius: .25em;
 	transition: all .3s ease;
 }
 

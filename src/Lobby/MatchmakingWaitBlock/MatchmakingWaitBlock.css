@@ -7,7 +7,7 @@
 	width: auto;
 	background-image: none;
 	background-color: var(--severitium-dark-transparent-background4);
-	border-bottom-left-radius: 2em;
+	border-bottom-left-radius: 1em;
 	border-left: var(--severitium-gray-color) solid .1em;
 	border-bottom: var(--severitium-gray-color) solid .1em;
 	-webkit-backdrop-filter: blur(.1em);
