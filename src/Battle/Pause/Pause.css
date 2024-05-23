@@ -112,6 +112,16 @@
 	background-color: var(--severitium-red-button-background);
 }
 
+/* Pause disabled buttons on hover */
+
+.BattlePauseMenuComponentStyle-disabledButton:hover {
+	background: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
 /* Pause buttons' texts */
 
 .BattlePauseMenuComponentStyle-menuButton span,
