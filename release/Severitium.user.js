@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.22
+// @version			1.3.23
 // @description		Custom theme for _game_
 // @author			Neutrxl
 
@@ -92,6 +92,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Clan/JoinClan/JoinClan.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/XP/XP.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/MatchmakingWaitBlock/MatchmakingWaitBlock.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/Pause/Pause.min.css',
 	];
 
 	for (const link of linksCSS) {
