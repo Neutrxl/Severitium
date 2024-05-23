@@ -29,7 +29,7 @@
 	width: fit-content;
 	padding: 2em 1em;
 	border-radius: .25em;
-	background-color: var(--severitium-dark-transparent-background3);
+	background-color: var(--severitium-light-transparent-background3);
 	border: .1em solid var(--severitium-gray-color);
 	box-shadow: 0 0 1em var(--severitium-gray-color);
 }
@@ -82,9 +82,10 @@
 	display: none;
 }
 
-/* Pause enabled buttons */
+/* Pause enabled/disabled buttons */
 
-.BattlePauseMenuComponentStyle-enabledButton {
+.BattlePauseMenuComponentStyle-enabledButton,
+.BattlePauseMenuComponentStyle-disabledButton {
 	background: none;
 	background-color: transparent;
 	padding: 1em .5em;
