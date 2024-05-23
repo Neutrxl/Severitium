@@ -89,6 +89,8 @@
 	background: none;
 	background-color: transparent;
 	padding: 1em .5em;
+	border: none;
+	border-radius: .25em;
 	transition: background-color .2s ease;
 }
 
