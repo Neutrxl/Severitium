@@ -6,7 +6,7 @@
 			backdrop-filter: blur(.2em);
 	box-shadow: none;
 	border: .1em solid var(--severitium-tab-borders-color);
-	border-radius: .1em;
+	border-radius: .25em;
 }
 
 /* All elements inside the tab */

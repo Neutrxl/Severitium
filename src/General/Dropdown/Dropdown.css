@@ -2,7 +2,7 @@
 
 .UidInputComponentStyle-dropDownRoot .DropDownStyle-outerContainerStyle,
 .DropDownStyle-dropdownRoot .VerticalScrollStyle-outerContainerStyle {
-	border-radius: 0;
+	border-radius: .25em;
 	border: .1em solid var(--severitium-light-gray-color);
 }
 

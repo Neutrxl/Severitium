@@ -7,7 +7,7 @@
 			backdrop-filter: blur(.5em);
 	outline: var(--severitium-gray-color) solid .1em;
 	box-shadow: none;
-	border-radius: .05em;
+	border-radius: .25em;
 }
 
 /* Header container of the modal window */
@@ -237,7 +237,7 @@
 			backdrop-filter: blur(.5em);
 	outline: var(--severitium-gray-color) solid .1em;
 	box-shadow: none;
-	border-radius: .05em;
+	border-radius: .25em;
 	-webkit-animation: tooltipOpens .1s ease;
 			animation: tooltipOpens .1s ease;
 }
