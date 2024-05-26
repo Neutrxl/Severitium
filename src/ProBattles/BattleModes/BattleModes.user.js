@@ -1,7 +1,7 @@
 // ==UserScript==
 
-// @name			CSS Battle Type
-// @version			1.1.1
+// @name			CSS Battle Modes
+// @version			1.0.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/BattleSelect/BattleType/BattleType.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/ProBattles/BattleModes/BattleModes.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({
