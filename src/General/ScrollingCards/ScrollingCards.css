@@ -1,11 +1,10 @@
 /* Scrolling area with cards */
 
 .ScrollingCardsComponentStyle-scrollCardPick {
-	width: auto;
 	min-width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	padding: .25em 1em 1em 1em;
 }
 
@@ -42,20 +41,20 @@
 			transform: scale(1.1, 1.1);
 }
 
-/* Mode name */
+/* Card name */
 
-.ScrollingCardsComponentStyle-cardName h2 {
+.ScrollingCardsComponentStyle-cardName > h2 {
 	color: var(--severitium-light-gray-text-color);
 	transition: color .2s ease;
 }
 
-/* Mode name on card hover */
+/* Card name on card hover */
 
-.ScrollingCardsComponentStyle-scrollCard:hover .ScrollingCardsComponentStyle-cardName h2 {
+.ScrollingCardsComponentStyle-scrollCard:hover .ScrollingCardsComponentStyle-cardName > h2 {
 	color: var(--severitium-white-text-color);
 }
 
-/* Count of battles of such type */
+/* Count of items of such type */
 
 .ScrollingCardsComponentStyle-cardCount {
 	display: flex;
@@ -66,7 +65,8 @@
 
 /* All count elements that are NOT equal to zero */
 
-.ScrollingCardsComponentStyle-cardCount:not([class*='ksc'i]) {
+.ScrollingCardsComponentStyle-cardCount:not([class*='ksc'i]),
+.ScrollingCardsComponentStyle-cardName[class*='ksc'i] .ScrollingCardsComponentStyle-cardCount {
 	background-color: var(--severitium-main-color);
 }
 
@@ -76,14 +76,14 @@
 	background-color: var(--severitium-gray-color);
 }
 
-/* Count of battles of such type, text */
+/* Count of items of such type, text */
 
 .ScrollingCardsComponentStyle-cardCount p {
 	font-size: 1em;
 	color: var(--severitium-black-text-color);
 }
 
-/* Mode description */
+/* Card description */
 
 .ScrollingCardsComponentStyle-cardDescription p {
 	opacity: 1;

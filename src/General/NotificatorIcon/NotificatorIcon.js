@@ -66,7 +66,7 @@
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
 							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
 							for (const target of iconsImg) { // Iterate through found elements
-								replaceNotificationImg(target); // Apply styles to each element
+								// replaceNotificationImg(target); // Apply styles to each element
 							}
 						}
 					}

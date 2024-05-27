@@ -662,8 +662,8 @@
 /* First container */
 
 .ClanProfileEditComponentStyle-containerParametersClanBlockInform:first-child {
-	border-top-left-radius: .1em;
-	border-top-right-radius: .1em;
+	border-top-left-radius: .25em;
+	border-top-right-radius: .25em;
 	border-top: .05em solid var(--severitium-gray-color);
 	border-left: .05em solid var(--severitium-gray-color);
 	border-right: .05em solid var(--severitium-gray-color);
@@ -672,8 +672,8 @@
 /* Second container */
 
 .ClanProfileEditComponentStyle-containerParametersClanBlockInform:nth-child(2) {
-	border-bottom-left-radius: .1em;
-	border-bottom-right-radius: .1em;
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
 	border-bottom: .05em solid var(--severitium-gray-color);
 	border-left: .05em solid var(--severitium-gray-color);
 	border-right: .05em solid var(--severitium-gray-color);

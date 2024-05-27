@@ -1,9 +1,11 @@
 /* Small size notificators (not image) (settongs, quests, etc.) */
+
 .ItemNotificationMarkerStyle-base {
 	background-color: var(--severitium-main-color);
 }
 
 /* Small notificators (containers) */
+
 .LockableContainersComponentStyle-navigationBlock .MenuComponentStyle-commonBlock + span {
 	background-color: var(--severitium-main-color);
 }
