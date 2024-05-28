@@ -1,11 +1,11 @@
 // ==UserScript==
 
 // @name			XP
-// @version			1.0.2
+// @version			1.0.3
 // @description		Changes the default XP icon
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/kazYkHx.png
+// @icon			https://i.imgur.com/AL0h1u5.png
 
 // @match			https://*.tankionline.com/*
 

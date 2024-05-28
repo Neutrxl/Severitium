@@ -100,9 +100,3 @@
 			transform: translate(0,0);
 	opacity: 1;
 }
-
-/* Notificators (THEY SUCK) */
-
-.MainScreenComponentStyle-blockMainMenu > ul > li [class*='notification'i] {
-	display: none;
-}

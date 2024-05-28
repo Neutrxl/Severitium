@@ -10,13 +10,13 @@
 
 		// Create elements for the custom dropdown menu
 		const selectorContainer = document.createElement('div');
-		selectorContainer.classList.add('selector-container');
+		selectorContainer.classList.add('severitium-selector-container');
 
 		const selectorArrow = document.createElement('div');
-		selectorArrow.classList.add('selector-arrow');
+		selectorArrow.classList.add('severitium-selector-arrow');
 
 		const customDropdown = document.createElement('div');
-		customDropdown.classList.add('custom-dropdown');
+		customDropdown.classList.add('severitium-custom-dropdown');
 
 		// Append elements to the selector container
 		selectorContainer.appendChild(customDropdown);
@@ -27,7 +27,7 @@
 
 		// Create and display the currently selected option
 		const selectedText = document.createElement('span');
-		selectedText.classList.add('selected-text');
+		selectedText.classList.add('severitium-selected-text');
 		selectedText.textContent = originalSelect.options[originalSelect.selectedIndex].textContent;
 		customDropdown.appendChild(selectedText);
 
@@ -44,7 +44,7 @@
 			listItem.addEventListener('click', (event) => {
 				event.stopPropagation();
 				originalSelect.value = option.value;
-				customDropdown.querySelector('.selected-text').textContent = option.textContent;
+				customDropdown.querySelector('.severitium-selected-text').textContent = option.textContent;
 				selectorContainer.classList.remove('show');
 
 				// Trigger change event on original select
@@ -58,7 +58,7 @@
 		customDropdown.addEventListener('click', (event) => {
 			event.stopPropagation();
 
-			const selectedOptionText = customDropdown.querySelector('.selected-text').textContent;
+			const selectedOptionText = customDropdown.querySelector('.severitium-selected-text').textContent;
 			originalSelect.querySelectorAll('option').forEach(option => {
 				if (option.textContent === selectedOptionText) {
 					originalSelect.value = option.value;
@@ -77,7 +77,7 @@
 
 		// Close dropdown when clicking outside of it
 		document.addEventListener('mousedown', (event) => {
-			if (!selectorContainer.contains(event.target) && !event.target.closest('.selector-container')) {
+			if (!selectorContainer.contains(event.target) && !event.target.closest('.severitium-selector-container')) {
 				selectorContainer.classList.remove('show');
 			}
 		});

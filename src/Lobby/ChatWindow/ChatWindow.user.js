@@ -1,11 +1,11 @@
 // ==UserScript==
 
-// @name			Chat Window
-// @version			1.1.8
+// @name			CSS Chat Window
+// @version			1.1.9
 // @description		Changes the default look of a chat window
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/shBq1mo.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 

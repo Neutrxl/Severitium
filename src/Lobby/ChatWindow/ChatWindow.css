@@ -56,8 +56,8 @@
 
 /* Selector container and all elements inside it */
 
-.selector-container,
-.selector-container * {
+.severitium-selector-container,
+.severitium-selector-container * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -65,7 +65,7 @@
 
 /* Selector container (selector + arrow) */
 
-.selector-container {
+.severitium-selector-container {
 	width: 17.5em;
 	height: auto;
 	cursor: pointer;
@@ -77,14 +77,14 @@
 
 /* Selector container on hover or when shows dropdown */
 
-.selector-container:hover,
-.selector-container.show {
+.severitium-selector-container:hover,
+.severitium-selector-container.show {
 	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Arrow for the selector */
 
-.selector-arrow {
+.severitium-selector-arrow {
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -99,7 +99,7 @@
 
 /* Custom dropdown for the selector */
 
-.custom-dropdown {
+.severitium-custom-dropdown {
 	width: 100%;
 	position: relative;
 	display: inline-block;
@@ -108,7 +108,7 @@
 
 /* Text of the selected option */
 
-.custom-dropdown .selected-text {
+.severitium-custom-dropdown .severitium-selected-text {
 	font-family: RubikBold;
 	font-weight: 500;
 	font-size: 1.05em;
@@ -117,7 +117,7 @@
 
 /* List of options */
 
-.custom-dropdown div {
+.severitium-custom-dropdown div {
 	width: 100%;
 	display: none;
 	position: absolute;
@@ -133,7 +133,7 @@
 
 /* List of options when opened */
 
-.selector-container.show .custom-dropdown div {
+.severitium-selector-container.show .severitium-custom-dropdown div {
 	display: flex;
 	animation: open-menu .2s ease;
 }
@@ -152,7 +152,7 @@
 
 /* Single option */
 
-.custom-dropdown div span {
+.severitium-custom-dropdown div span {
 	z-index: 1;
 	padding: .5em 1em;
 	cursor: pointer;
@@ -165,7 +165,7 @@
 
 /* Single option on hover */
 
-.custom-dropdown div span:hover {
+.severitium-custom-dropdown div span:hover {
 	background-color: var(--severitium-light-transparent-background3);
 }
 

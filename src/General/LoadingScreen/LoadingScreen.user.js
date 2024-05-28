@@ -1,11 +1,11 @@
 // ==UserScript==
 
-// @name			Loading Screen
+// @name			CSS Loading Screen
 // @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/WmnCbNE.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 

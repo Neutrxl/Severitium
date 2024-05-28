@@ -1,11 +1,11 @@
 // ==UserScript==
 
-// @name			Top Menu
-// @version			1.0.1
+// @name			CSS Top Panel
+// @version			1.0.2
 // @description		Restyles the common look of the top panel
 // @author			OrakomoRi
 
-// @icon			https://i.imgur.com/WtGwbtP.png
+// @icon			https://i.imgur.com/InNLwvb.png
 
 // @match			https://*.tankionline.com/*
 

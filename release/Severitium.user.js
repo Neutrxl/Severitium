@@ -1,9 +1,9 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.39
-// @description		Custom theme for _game_
-// @author			Neutrxl
+// @version			1.3.40
+// @description		Custom theme for Tanki Online
+// @author			OrakomoRi
 
 // @icon			https://i.imgur.com/Srv1szX.png
 
