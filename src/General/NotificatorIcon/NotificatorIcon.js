@@ -102,7 +102,9 @@
 			} else if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
 				const target = mutation.target;
 				if (target.matches(`img[class*='new'i][src*='ellipse'i]`)) {
-					if (target.classList.contains('nonew')) {
+					const classList = target.className.split(/\s+/);
+        			const hasNoNewClass = classList.some(className => /nonew/i.test(className));
+					if (hasNoNewClass) {
 						removeNotificationSvg(target);
 					} else {
 						changeNotificationImg(target);
