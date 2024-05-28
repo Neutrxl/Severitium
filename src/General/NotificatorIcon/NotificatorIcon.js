@@ -48,8 +48,11 @@
 			<circle cx="15" cy="15" r="11.5" stroke="var(--severitium-main-color)" stroke-opacity="0.25" stroke-width="7"/>
 		`;
 
-		// Replace the original element with the SVG
-		element.parentNode.replaceChild(svg, element);
+		// Hide the original element
+		element.style.display = 'none';
+
+		// Add the SVG as a sibling element
+		element.parentNode.appendChild(svg);
 	}
 
 	/**
@@ -60,7 +63,8 @@
 	function removeNotificationSvg(element) {
 		const svg = element.parentNode.querySelector('.severitium-notificator-icon');
 		if (svg) {
-			element.parentNode.replaceChild(element, svg);
+			svg.remove();
+			element.style.display = 'block'; // Reset display property of the original element
 		}
 	}
 
