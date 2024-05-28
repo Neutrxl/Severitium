@@ -101,7 +101,7 @@
 				});
 			} else if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
 				const target = mutation.target;
-				if (target.matches(selector) && target.matches('img[class*="new" i][src*="ellipse" i]')) {
+				if (target.matches(`img[class*='new'i][src*='ellipse'i]`)) {
 					if (target.classList.contains('nonew')) {
 						removeNotificationSvg(target);
 					} else {
