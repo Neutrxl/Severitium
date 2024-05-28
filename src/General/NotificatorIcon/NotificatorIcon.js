@@ -64,7 +64,7 @@
 		const svg = element.parentNode.querySelector('.severitium-notificator-icon');
 		if (svg) {
 			svg.remove();
-			element.style.display = 'block'; // Reset display property of the original element
+			element.style.display = ''; // Reset display property of the original element
 		}
 	}
 
