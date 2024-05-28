@@ -4,7 +4,7 @@
 	 * 
 	 * @param {HTMLElement} element - The element to be replaced
 	*/
-	function replaceNotificationImg(element) {
+	function changeNotificationImg(element) {
 		// Get computed styles of the element
 		var initStyles = window.getComputedStyle(element);
 
@@ -85,7 +85,7 @@
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
 							const iconsImg = document.querySelectorAll(selector);
 							for (const target of iconsImg) { // Iterate through found elements
-								replaceNotificationImg(target); // Apply styles to each element
+								changeNotificationImg(target); // Apply styles to each element
 							}
 						}
 					}
@@ -101,11 +101,9 @@
 				});
 			} else if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
 				const target = mutation.target;
-				if (target.matches(selector)) {
+				if (target.matches(selector) && target.matches('img[class*="new" i][src*="ellipse" i]')) {
 					if (target.classList.contains('nonew')) {
 						removeNotificationSvg(target);
-					} else {
-						replaceNotificationImg(target);
 					}
 				}
 			}
