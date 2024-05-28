@@ -104,6 +104,8 @@
 				if (target.matches(selector) && target.matches('img[class*="new" i][src*="ellipse" i]')) {
 					if (target.classList.contains('nonew')) {
 						removeNotificationSvg(target);
+					} else {
+						changeNotificationImg(target);
 					}
 				}
 			}
