@@ -453,6 +453,17 @@
 	color: var(--severitium-main-color);
 }
 
+/* New incomming friend's text alert */
+
+.FriendListComponentStyle-containerFriends .TableComponentStyle-table tbody > tr .FriendRequestComponentStyle-cellName span.InviteUsersComponentStyle-newUser {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-shadow: none;
+	font-size: .8em;
+	color: var(--severitium-main-color);
+}
+
 /* Decline request button */
 
 /* Button */

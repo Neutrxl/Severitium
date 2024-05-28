@@ -53,31 +53,63 @@
 	}
 
 	/**
+	 * Function to remove custom SVG when the related element is removed
+	 * 
+	 * @param {HTMLElement} element - The element to be replaced
+	*/
+	function removeNotificationSvg(element) {
+		const svg = element.parentNode.querySelector('.severitium-notificator-icon');
+		if (svg) {
+			element.parentNode.replaceChild(element, svg);
+		}
+	}
+
+	/**
 	 * Create a new instance of MutationObserver with a callback function
 	 * to observe changes in the DOM 
 	*/
 	const observer = new MutationObserver(function (mutations) {
+		const selector = `img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i]:not([class*='nonew'i]), .NewsComponentStyle-newsItemDate img[src*='circle'i]`;
+
 		mutations.forEach(function (mutation) {
 			if (mutation.type === 'childList') { // If the change is of type childList
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const iconImg = node.querySelector(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i]:not([class*='nonew'i]), .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
+						const iconImg = node.querySelector(selector);
 						if (iconImg) { // If found
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
-							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i]:not([class*='nonew'i]), .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
+							const iconsImg = document.querySelectorAll(selector);
 							for (const target of iconsImg) { // Iterate through found elements
 								replaceNotificationImg(target); // Apply styles to each element
 							}
 						}
 					}
 				});
+
+				mutation.removedNodes.forEach(function (node) { // Handle removed nodes
+					if (node.nodeType === Node.ELEMENT_NODE) {
+						const iconImg = node.querySelector(selector);
+						if (iconImg) {
+							removeNotificationSvg(iconImg);
+						}
+					}
+				});
+			} else if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+				const target = mutation.target;
+				if (target.matches(selector)) {
+					if (target.classList.contains('nonew')) {
+						removeNotificationSvg(target);
+					} else {
+						replaceNotificationImg(target);
+					}
+				}
 			}
 		});
 	});
 
 	// Configuration for the mutation observer
-	const observerConfig = { childList: true, subtree: true };
+	const observerConfig = { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] };
 
 	// Start observing mutations in the document body
 	observer.observe(document.body, observerConfig);
