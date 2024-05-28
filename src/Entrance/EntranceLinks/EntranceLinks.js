@@ -7,13 +7,13 @@
 		const icon = document.querySelector(`.HeaderComponentStyle-enableIconLinksComponentShowed`);
 
 		// Define the new SVG icon markup
-		const newIcon = `<svg class="link-rects" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="8" height="8" rx="1"/><rect x="11" y="0" width="8" height="8" rx="1"/><rect x="22" y="0" width="8" height="8" rx="1"/><rect x="0" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/><rect x="22" y="11" width="8" height="8" rx="1"/><rect x="0" y="22" width="8" height="8" rx="1"/><rect x="11" y="22" width="8" height="8" rx="1"/><rect x="22" y="22" width="8" height="8" rx="1"/></svg>`;
+		const newIcon = `<svg class="severitium-link-rects" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="8" height="8" rx="1"/><rect x="11" y="0" width="8" height="8" rx="1"/><rect x="22" y="0" width="8" height="8" rx="1"/><rect x="0" y="11" width="8" height="8" rx="1"/><rect x="11" y="11" width="8" height="8" rx="1"/><rect x="22" y="11" width="8" height="8" rx="1"/><rect x="0" y="22" width="8" height="8" rx="1"/><rect x="11" y="22" width="8" height="8" rx="1"/><rect x="22" y="22" width="8" height="8" rx="1"/></svg>`;
 
 		// Set the new SVG icon as innerHTML of the icon element
 		icon.innerHTML = newIcon;
 
 		// Add mouseenter event listener to the .link-rects SVG elements
-		document.querySelector(".link-rects").addEventListener("mouseenter", function () {
+		document.querySelector(".severitium-link-rects").addEventListener("mouseenter", function () {
 			fill = this.getAttribute('fill');
 
 			var rects = this.querySelectorAll("rect");

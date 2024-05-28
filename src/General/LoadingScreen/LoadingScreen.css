@@ -59,7 +59,7 @@ body {
 
 /* Canvas for custom background with stars */
 
-.star-canvas-container {
+.severitium-star-canvas-container {
 	z-index: -1;
 	position: absolute;
 	height: 100%;
@@ -69,7 +69,7 @@ body {
 
 /* Custom progress element to replace the defauld gif */
 
-.custom-progress {
+.severitium-progress {
 	background: none;
 	position: absolute;
 	bottom: 4em;
@@ -87,7 +87,7 @@ body {
 
 /* Inner of the custom progress (running line) */
 
-.custom-progress > div {
+.severitium-progress > div {
 	width: 50%;
 	height: 100%;
 	background-color: var(--severitium-main-color);

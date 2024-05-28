@@ -31,7 +31,7 @@
 					if (src.includes(linkPart)) {
 						// Replace the button's HTML with SVG icon and text
 						const svg = `
-							<div class="entrance-icon">
+							<div class="severitium-entrance-icon">
 								<div>
 									<svg viewBox="0 0 200 200" fill="none" class="border-visuals"><circle cx="100" cy="100" r="96"/></svg>
 									${SVGs[linkPart]}
@@ -70,13 +70,13 @@
 					if (src.includes(linkPart)) {
 						// Replace the button's HTML with SVG icon and text
 						const svg = `
-					<div class="entrance-icon">
-						<div>
-							<svg viewBox="0 0 200 200" fill="none" class="border-visuals"><circle cx="100" cy="100" r="96"/></svg>
-							${SVGs[linkPart]}
+						<div class="severitium-entrance-icon">
+							<div>
+								<svg viewBox="0 0 200 200" fill="none" class="border-visuals"><circle cx="100" cy="100" r="96"/></svg>
+								${SVGs[linkPart]}
+							</div>
 						</div>
-					</div>
-					`;
+						`;
 						button.innerHTML = svg;
 
 						break;

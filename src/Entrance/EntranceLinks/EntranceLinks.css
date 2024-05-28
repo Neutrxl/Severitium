@@ -14,7 +14,7 @@
 
 /* Custom icon */
 
-svg.link-rects {
+svg.severitium-link-rects {
 	fill: var(--severitium-extra-light-gray-color);
 	padding: .5em;
 	width: 2rem;
@@ -22,13 +22,13 @@ svg.link-rects {
 
 /* Custom icon on hover */
 
-svg.link-rects:hover {
+svg.severitium-link-rects:hover {
 	fill: var(--severitium-white-color);
 }
 
 /* Custom icon parts (rectangles) */
 
-svg.link-rects rect {
+svg.severitium-link-rects rect {
 	transition: fill .2s ease;
 }
 

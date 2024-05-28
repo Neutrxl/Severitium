@@ -103,11 +103,11 @@
 
 		// Create canvas element
 		canvas = document.createElement('canvas');
-		canvas.className = 'star-canvas';
+		canvas.className = 'severitium-star-canvas';
 
 		// Create container to store the canvas
 		const canvasContainer = document.createElement('div');
-		canvasContainer.className = 'star-canvas-container';
+		canvasContainer.className = 'severitium-star-canvas-container';
 
 		// Place the container into the parent element and the canvas into the container
 		backgroundElement.appendChild(canvasContainer);
@@ -206,7 +206,7 @@
 		// Inner of the new progress
 		const progressInner = document.createElement('div');
 		// Set the class of the new progrss
-		newProgress.className = 'custom-progress';
+		newProgress.className = 'severitium-progress';
 		// Set the bottom position (to replace the old one)
 		newProgress.style.bottom = element.style.bottom;
 		// Append the inner to the new progrss

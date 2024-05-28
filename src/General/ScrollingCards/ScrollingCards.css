@@ -99,13 +99,15 @@
 
 /* "Select" button-like element's text */
 
-.ScrollingCardsComponentStyle-selectCard h2 {
+.ScrollingCardsComponentStyle-selectCard h2,
+.ScrollingCardsComponentStyle-selectCard span[id*="timer"i] {
 	color: var(--severitium-white-text-color);
 	transition: color .2s ease;
 }
 
 /* "Select" button-like element's text on card hover */
 
-.ScrollingCardsComponentStyle-scrollCard:hover .ScrollingCardsComponentStyle-selectCard h2 {
+.ScrollingCardsComponentStyle-scrollCard:hover .ScrollingCardsComponentStyle-selectCard h2,
+.ScrollingCardsComponentStyle-scrollCard:hover .ScrollingCardsComponentStyle-selectCard span[id*="timer"i] {
 	color: var(--severitium-main-color);
 }

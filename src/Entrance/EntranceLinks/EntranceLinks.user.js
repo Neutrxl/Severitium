@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Links
-// @version			1.0.9
+// @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 

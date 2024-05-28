@@ -12,6 +12,7 @@
 		var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 		svg.setAttribute('fill', 'none');
 		svg.setAttribute('viewBox', '0 0 30 30');
+		svg.setAttribute('class', 'severitium-notificator-icon');
 
 		// Get specific styles of the original element
 		var position = initStyles.getPropertyValue('position');
@@ -61,12 +62,12 @@
 				mutation.addedNodes.forEach(function (node) { // Iterate through added nodes
 					if (node.nodeType === Node.ELEMENT_NODE) { // If it's an element node
 						// Find an element with the selector in the added node
-						const iconImg = node.querySelector(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
+						const iconImg = node.querySelector(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i]:not([class*='nonew'i]), .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
 						if (iconImg) { // If found
 							// Get all elements with the class 'img[class*='notification'i][src*='ellipse'i]'
-							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i], .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
+							const iconsImg = document.querySelectorAll(`img[class*='notification'i][src*='ellipse'i], img[class*='new'i][src*='ellipse'i]:not([class*='nonew'i]), .NewsComponentStyle-newsItemDate img[src*='circle'i]`);
 							for (const target of iconsImg) { // Iterate through found elements
-								// replaceNotificationImg(target); // Apply styles to each element
+								replaceNotificationImg(target); // Apply styles to each element
 							}
 						}
 					}

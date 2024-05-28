@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Loading Screen
-// @version			1.0.6
+// @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
