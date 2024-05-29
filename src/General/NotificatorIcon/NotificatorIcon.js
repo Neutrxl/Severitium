@@ -28,19 +28,24 @@
 		var marginTop = initStyles.getPropertyValue('margin-top');
 		var marginBottom = initStyles.getPropertyValue('margin-bottom');
 
-		// Set styles for the SVG element
-		svg.style.setProperty('position', position);
-		svg.style.setProperty('display', display);
-		svg.style.setProperty('height', height);
-		svg.style.setProperty('width', width);
-		svg.style.setProperty('right', right);
-		svg.style.setProperty('top', top);
-		svg.style.setProperty('left', left);
-		svg.style.setProperty('bottom', bottom);
-		svg.style.setProperty('margin-right', marginRight);
-		svg.style.setProperty('margin-left', marginLeft);
-		svg.style.setProperty('margin-top', marginTop);
-		svg.style.setProperty('margin-bottom', marginBottom);
+		// Check if the svg is inside .MainScreenComponentStyle-blockMainMenu > ul > li > svg
+		var inMainMenu = element.closest('.MainScreenComponentStyle-blockMainMenu > ul > li');
+
+		// Set styles for the SVG element only if it's not inside main menu
+		if (!isInMainMenu) {
+			svg.style.setProperty('position', position);
+			svg.style.setProperty('display', display);
+			svg.style.setProperty('height', height);
+			svg.style.setProperty('width', width);
+			svg.style.setProperty('right', right);
+			svg.style.setProperty('top', top);
+			svg.style.setProperty('left', left);
+			svg.style.setProperty('bottom', bottom);
+			svg.style.setProperty('margin-right', marginRight);
+			svg.style.setProperty('margin-left', marginLeft);
+			svg.style.setProperty('margin-top', marginTop);
+			svg.style.setProperty('margin-bottom', marginBottom);
+		}
 
 		// Add SVG inner content
 		svg.innerHTML = `
@@ -107,7 +112,7 @@
 				const target = mutation.target;
 				if (target.matches(`img[class*='new'i][src*='ellipse'i]`)) {
 					const classList = target.className.split(/\s+/);
-        			const hasNoNewClass = classList.some(className => /nonew/i.test(className));
+					const hasNoNewClass = classList.some(className => /nonew/i.test(className));
 					if (hasNoNewClass) {
 						removeNotificationSvg(target);
 					} else {
