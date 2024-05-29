@@ -24,6 +24,7 @@
 .FriendListComponentStyle-stringCommunity {
 	display: flex;
 	gap: .5em;
+	width: auto;
 }
 
 /* Single friend's container */
@@ -31,6 +32,8 @@
 .FriendListComponentStyle-blockList {
 	box-sizing: border-box;
 	padding: .2em .5em;
+	border: none;
+	border-radius: .25em;
 	box-shadow: 0 0 .1em .05em var(--severitium-gray-color);
 	background-color: var(--severitium-dark-transparent-background1);
 	transition: background-color .2s ease;

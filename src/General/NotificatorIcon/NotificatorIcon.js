@@ -1,4 +1,27 @@
 (function () {
+	// Observers to observe original notificator icons' changes
+	const styleObservers = new Map();
+
+	/**
+	 * Generation of a unique identifier consisting of two letters and two digits
+	 * @returns {string} - Uniqie identifier
+	*/
+	function generateUniqueId() {
+		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+		const digits = '0123456789';
+
+		function getRandomElement(arr) {
+			return arr[Math.floor(Math.random() * arr.length)];
+		}
+
+		let id;
+		do {
+			id = getRandomElement(letters) + getRandomElement(letters) + getRandomElement(digits) + getRandomElement(digits);
+		} while (styleObservers.has(id));
+
+		return id;
+	}
+
 	/**
 	 * Function to replace notification images with SVG elements
 	 * 
@@ -53,6 +76,30 @@
 
 		// Add the SVG as a sibling element
 		element.parentNode.appendChild(svg);
+
+		// Create a unique ID for the observer
+		const observerId = generateUniqueId();
+		element.setAttribute('data-S-N-ID', observerId);
+
+		// Observe changes to the original element's style attribute
+		const styleObserver = new MutationObserver(() => {
+			const updatedStyles = window.getComputedStyle(element);
+			svg.style.setProperty('position', updatedStyles.getPropertyValue('position'));
+			svg.style.setProperty('display', updatedStyles.getPropertyValue('display'));
+			svg.style.setProperty('height', updatedStyles.getPropertyValue('height'));
+			svg.style.setProperty('width', updatedStyles.getPropertyValue('width'));
+			svg.style.setProperty('right', updatedStyles.getPropertyValue('right'));
+			svg.style.setProperty('top', updatedStyles.getPropertyValue('top'));
+			svg.style.setProperty('left', updatedStyles.getPropertyValue('left'));
+			svg.style.setProperty('bottom', updatedStyles.getPropertyValue('bottom'));
+			svg.style.setProperty('margin-right', updatedStyles.getPropertyValue('margin-right'));
+			svg.style.setProperty('margin-left', updatedStyles.getPropertyValue('margin-left'));
+			svg.style.setProperty('margin-top', updatedStyles.getPropertyValue('margin-top'));
+			svg.style.setProperty('margin-bottom', updatedStyles.getPropertyValue('margin-bottom'));
+		});
+
+		styleObserver.observe(element, { attributes: true, attributeFilter: ['style'] });
+		styleObservers.set(observerId, styleObserver);
 	}
 
 	/**
@@ -65,6 +112,12 @@
 		if (svg) {
 			svg.remove();
 			element.style.display = ''; // Reset display property of the original element
+
+			const observerId = element.getAttribute('data-S-N-ID');
+            if (observerId && styleObservers.has(observerId)) {
+                styleObservers.get(observerId).disconnect(); // Disconnect the style observer
+                styleObservers.delete(observerId);
+            }
 		}
 	}
 
@@ -103,7 +156,7 @@
 				const target = mutation.target;
 				if (target.matches(`img[class*='new'i][src*='ellipse'i]`)) {
 					const classList = target.className.split(/\s+/);
-        			const hasNoNewClass = classList.some(className => /nonew/i.test(className));
+					const hasNoNewClass = classList.some(className => /nonew/i.test(className));
 					if (hasNoNewClass) {
 						removeNotificationSvg(target);
 					} else {

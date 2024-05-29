@@ -31,6 +31,7 @@
 .InvitationWindowsComponentStyle-usersScroll > div {
 	display: flex;
 	gap: .5em;
+	width: auto;
 }
 
 /* Single friend's container */
@@ -38,21 +39,65 @@
 .InvitationWindowsComponentStyle-usersScroll > div > div {
 	box-sizing: border-box;
 	padding: .2em .5em;
+	border: none;
+	border-radius: .25em;
 	box-shadow: 0 0 .1em .05em var(--severitium-gray-color);
 	background-color: var(--severitium-dark-transparent-background1);
 	transition: background-color .2s ease;
 }
 
+/* Single friend's container when selected */
+
+.InvitationWindowsComponentStyle-usersScroll > div > div:has(> img[src*="selected"i][class*="selected"i]) {
+	border: none;
+	box-shadow: 0 0 .1em .05em var(--severitium-main-color);
+	background-color: var(--severitium-light-transparent-background3);
+}
+
 /* Single friend's container on hover */
 
-.InvitationWindowsComponentStyle-usersScroll > div > div:hover {
+.InvitationWindowsComponentStyle-usersScroll > div > div:hover,
+.InvitationWindowsComponentStyle-usersScroll > div > div:has(> img[src*="selected"i][class*="selected"i]):hover {
 	background-color: var(--severitium-light-transparent-background2);
+}
+
+/* Rank container */
+
+.InvitationWindowsComponentStyle-usersScroll > div > div > .InvitationWindowsComponentStyle-rankContainer {
+	position: relative;
 }
 
 /* Figure under the rank image */
 
 .InvitationWindowsComponentStyle-substrateRank {
 	display: none;
+}
+
+/* Original checkmark on rank when player is selected */
+
+.InvitationWindowsComponentStyle-usersScroll > div > div > img[src*="selected"i][class*="selected"i] {
+	display: none;
+}
+
+/* Custom checkmark on rank when player is selected */
+
+.InvitationWindowsComponentStyle-usersScroll > div > div:has(> img[src*="selected"i][class*="selected"i]) > .InvitationWindowsComponentStyle-rankContainer::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 2em;
+	height: 2em;
+	background-color: var(--severitium-green-color);
+	-webkit-mask-position: center center;
+			mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.837 17.837"><path d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27 c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0 L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.837 17.837"><path d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27 c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0 L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z" fill="white"/></svg>');
 }
 
 /* Friend's nickname text */

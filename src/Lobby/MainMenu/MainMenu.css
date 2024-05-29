@@ -32,7 +32,6 @@
 	border: none;
 	outline: none;
 	box-shadow: none;
-/* 	background: var(--severitium-dark-transparent-background1); */
 	border-radius: 0;
 }
 
@@ -99,4 +98,17 @@
 	-webkit-transform: translate(0,0);
 			transform: translate(0,0);
 	opacity: 1;
+}
+
+/* Notificator icon next to a button */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover > svg.severitium-notificator-icon {
+	opacity: 1;
+	transition: opacity .2s ease;
+}
+
+/* Notificator icon on button's hover */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover > svg.severitium-notificator-icon {
+	opacity: 0;
 }
