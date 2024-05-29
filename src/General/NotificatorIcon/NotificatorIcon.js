@@ -71,8 +71,12 @@
 			<circle cx="15" cy="15" r="11.5" stroke="var(--severitium-main-color)" stroke-opacity="0.25" stroke-width="7"/>
 		`;
 
-		// Hide the original element
-		element.style.display = 'none';
+		// Hide the original element using accessibility styles
+        element.style.setProperty('position', 'absolute');
+        element.style.setProperty('height', '1px');
+        element.style.setProperty('width', '1px');
+        element.style.setProperty('overflow', 'hidden');
+        element.style.setProperty('clip', 'rect(0 0 0 0)');
 
 		// Add the SVG as a sibling element
 		element.parentNode.appendChild(svg);
@@ -84,10 +88,6 @@
 		// Observe changes to the original element's style attribute
 		const styleObserver = new MutationObserver(() => {
 			const updatedStyles = window.getComputedStyle(element);
-			svg.style.setProperty('position', updatedStyles.getPropertyValue('position'));
-			svg.style.setProperty('display', updatedStyles.getPropertyValue('display'));
-			svg.style.setProperty('height', updatedStyles.getPropertyValue('height'));
-			svg.style.setProperty('width', updatedStyles.getPropertyValue('width'));
 			svg.style.setProperty('right', updatedStyles.getPropertyValue('right'));
 			svg.style.setProperty('top', updatedStyles.getPropertyValue('top'));
 			svg.style.setProperty('left', updatedStyles.getPropertyValue('left'));
