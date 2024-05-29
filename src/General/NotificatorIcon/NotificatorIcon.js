@@ -32,7 +32,7 @@
 		var inMainMenu = element.closest('.MainScreenComponentStyle-blockMainMenu > ul > li');
 
 		// Set styles for the SVG element only if it's not inside main menu
-		if (!isInMainMenu) {
+		if (!inMainMenu) {
 			svg.style.setProperty('position', position);
 			svg.style.setProperty('display', display);
 			svg.style.setProperty('height', height);
