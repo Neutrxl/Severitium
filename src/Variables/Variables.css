@@ -1,7 +1,7 @@
 :root {
 	/* Main theme colors */
 
-	--severitium-main-color: rgb(118, 198, 78);
+	--severitium-main-color: rgb(78, 132, 198);
 
 	/* Theme text colors */
 
@@ -18,7 +18,7 @@
 
 	/* Some highlighting colors */
 
-	--severitium-friend-color: rgb(190, 130, 200);
+	--severitium-friend-color: rgb(170, 99, 183);
 
 	/* Theme backgrounds */
 

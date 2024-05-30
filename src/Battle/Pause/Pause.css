@@ -28,12 +28,10 @@
 	width: -moz-fit-content;
 	width: fit-content;
 	padding: 2em 1em;
-	-webkit-backdrop-filter: blur(.25em);
-	backdrop-filter: blur(.25em);
 	border-radius: .25em;
 	background-color: var(--severitium-dark-transparent-background3);
-	border: .1em solid var(--severitium-main-color);
-	box-shadow: 0 0 1em var(--severitium-main-color);
+	border: .1em solid var(--severitium-gray-color);
+	box-shadow: 0 0 1em var(--severitium-gray-color);
 }
 
 /* Pause timer's container */
@@ -93,6 +91,7 @@
 	padding: 1em .5em;
 	border: none;
 	border-radius: .25em;
+	background-color: var(--severitium-light-transparent-background3);
 	transition: background-color .2s ease;
 }
 
