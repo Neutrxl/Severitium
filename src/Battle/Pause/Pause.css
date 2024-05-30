@@ -29,7 +29,7 @@
 	width: fit-content;
 	padding: 2em 1em;
 	border-radius: .25em;
-	background-color: var(--severitium-dark-transparent-background3);
+	background-color: var(--severitium-dark-transparent-background2);
 	border: .1em solid var(--severitium-gray-color);
 	box-shadow: 0 0 1em var(--severitium-gray-color);
 }
@@ -131,7 +131,8 @@
 
 .BattlePauseMenuComponentStyle-menuButton span,
 .BattlePauseMenuComponentStyle-enabledButton span {
-	font-size: 1.2em;
+	font-size: 1.25em;
+	line-height: normal;
 }
 
 /* Pause red button (leave) */
