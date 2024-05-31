@@ -44,15 +44,31 @@
 
 /* Button text */
 
-.MainScreenComponentStyle-blockMainMenu > ul > li span {
+.MainScreenComponentStyle-blockMainMenu > ul > li span[class*="name"i] {
 	color: var(--severitium-extra-light-gray-text-color);
 	transition: color .2s ease;
 }
 
 /* Button text on button hover */
 
-.MainScreenComponentStyle-blockMainMenu > ul > li:hover span {
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover span[class*="name"i] {
 	color: var(--severitium-white-text-color);
+}
+
+/* Discount in the menu */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li span[class*="discount"i] {
+	width: auto;
+	padding: 0 .75em;
+	font-size: 1.5em;
+	color: var(--severitium-black-text-color);
+	background-color: var(--severitium-gold-text-color);
+}
+
+/* Discount in the menu on button hover */
+
+.MainScreenComponentStyle-blockMainMenu > ul > li:hover span[class*="discount"i] {
+	color: var(--severitium-black-text-color);
 }
 
 /* Pseudo elements for beauty corner borders animation */
