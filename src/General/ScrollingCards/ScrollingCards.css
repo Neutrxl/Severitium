@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	gap: 1em;
 	padding: .25em 1em 1em 1em;
 	margin: 2em 0 1em 0;
 }
@@ -16,18 +17,13 @@
 	box-shadow: 0 0 0 .075em var(--severitium-main-color);
 	transition: box-shadow .2s ease;
 	border-radius: .25em;
+	margin: 0;
 }
 
 /* Single card on hover */
 
 .ScrollingCardsComponentStyle-scrollCard:hover {
 	box-shadow: 0 0 0 .2em var(--severitium-main-color);
-}
-
-/* First card */
-
-.ScrollingCardsComponentStyle-scrollCard:first-child {
-	margin: 0;
 }
 
 /* Card background */
