@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: space-evenly;
 	padding: .25em 1em 1em 1em;
+	margin: 2em 0 1em 0;
 }
 
 /* Single card */
@@ -21,6 +22,12 @@
 
 .ScrollingCardsComponentStyle-scrollCard:hover {
 	box-shadow: 0 0 0 .2em var(--severitium-main-color);
+}
+
+/* First card */
+
+.ScrollingCardsComponentStyle-scrollCard:first-child {
+	margin: 0;
 }
 
 /* Card background */
