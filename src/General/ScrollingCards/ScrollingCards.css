@@ -37,6 +37,12 @@
 	transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
+/* First card */
+
+.ScrollingCardsComponentStyle-scrollCard:first-child {
+	margin: 0;
+}
+
 /* Card background on card hover */
 
 .ScrollingCardsComponentStyle-scrollCard:hover .Common-backgroundImageCover {
