@@ -2,6 +2,7 @@
 
 .ScrollingCardsComponentStyle-scrollCardPick {
 	min-width: 100%;
+	box-sizing: border-box;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -37,9 +38,10 @@
 	transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
-/* First card */
+/* First/Last cards */
 
-.ScrollingCardsComponentStyle-scrollCard:first-child {
+.ScrollingCardsComponentStyle-scrollCard:first-child,
+.ScrollingCardsComponentStyle-scrollCard:last-child {
 	margin: 0;
 }
 
