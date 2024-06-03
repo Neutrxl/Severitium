@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Forms
-// @version			1.1.6
+// @version			1.2.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
