@@ -38,6 +38,65 @@ svg.severitium-link-rects rect {
 	background: transparent;
 }
 
+/* Form with cards */
+
+.EntranceComponentStyle-containerFormForEntranceLinksComponent > form {
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+}
+
+/* Inner form container with cards */
+
+.EntranceComponentStyle-containerFormForEntranceLinksComponent > form > div {
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Main container of card lists */
+
+.EntranceComponentStyle-containerFormForEntranceLinksComponent > form .HeaderComponentStyle-listArray {
+	width: auto;
+	height: calc(100vh - 12em);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* List container for card rows */
+
+.EntranceComponentStyle-containerFormForEntranceLinksComponent > form .EntranceComponentStyle-mainBlockScreen {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: .5em;
+}
+
+/* Lists for single cards */
+
+.EntranceComponentStyle-containerFormForEntranceLinksComponent > form .EntranceComponentStyle-mainBlockScreen > ul {
+	width: 100%;
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .5em;
+}
+
 /* Single link card */
 
 .HeaderComponentStyle-siteLink {
@@ -46,7 +105,18 @@ svg.severitium-link-rects rect {
 			backdrop-filter: blur(.2em);
 	box-shadow: 0 0 .25em .05em var(--severitium-gray-color);
 	border-radius: .25em;
+	margin: 0;
+	padding: 1em 0;
+	box-sizing: border-box;
 	transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+/* Single link card on hover */
+
+.HeaderComponentStyle-siteLink:hover {
+	background-color: var(--severitium-dark-transparent-background1);
+	box-shadow: 0 0 .25em .05em var(--severitium-main-color);
+	padding: 1em 0;
 }
 
 /* Header of a card */
@@ -69,13 +139,6 @@ svg.severitium-link-rects rect {
 
 .HeaderComponentStyle-siteLink .HeaderComponentStyle-textLink > span {
 	transition: color .2s ease;
-}
-
-/* Single link card on hover */
-
-.HeaderComponentStyle-siteLink:hover {
-	background-color: var(--severitium-dark-transparent-background1);
-	box-shadow: 0 0 .25em .05em var(--severitium-main-color);
 }
 
 /* Header of a card on card hover */

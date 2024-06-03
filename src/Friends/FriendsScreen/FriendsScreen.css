@@ -402,7 +402,7 @@
 
 /* Button's text */
 
-.FriendRequestComponentStyle-buttonDeclineAll {
+.FriendRequestComponentStyle-buttonDeclineAll > span {
 	color: var(--severitium-red-button-color);
 }
 
