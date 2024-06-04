@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0
+// @version			1.4.0+build.2
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -99,15 +99,15 @@
 						break;
 					case 0:
 						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`You are using the latest version.`);
+						console.log(`You are using the latest version.\n========`);
 						break;
 					case 1:
 						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`You are using a version newer than the one on GitHub.`);
+						console.log(`You are using a version newer than the one on GitHub.\n========`);
 						break;
 					case -2:
 						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`Error comparing versions.`);
+						console.log(`Error comparing versions.\n========`);
 						break;
 				}
 			},
