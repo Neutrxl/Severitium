@@ -4,6 +4,12 @@
 
 ## :black_heart: Vibrant, interactive, memorable
 
+Free open-source theme for Tanki Online. 
+
+Modern animations, custom colors, original bug fixes: it's all possible!
+
+See the [changelog](CHANGELOG.md)
+
 ---
 
 ## :rocket: Browser compatibility
@@ -59,3 +65,10 @@ Samsung Internet|20+
 Main developer: [Neutrxl](https://github.com/Neutrxl)
 
 Some ideas: [N3onTechF0X](https://github.com/N3onTechF0X)
+
+## :coin: Donate
+
+Any donations would be appreciated
+
+- [Boosty](https://boosty.to/orakomori/donate)
+- [Patreon](https://www.patreon.com/orakomori)
