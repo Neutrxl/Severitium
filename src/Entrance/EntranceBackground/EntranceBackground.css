@@ -28,6 +28,6 @@
 /* Links and copyright block on page's bottom */
 
 .HeaderComponentStyle-headerLinkBar .HeaderComponentStyle-commonBlockContentPanel
-> div:not(.SocialNetworksComponentStyle-container):not(.HeaderComponentStyle-supportBlock) {
+> div:not(.SocialNetworksComponentStyle-container):not(.HeaderComponentStyle-supportBlock):not(.HeaderComponentStyle-messageContainer) {
 	display: none;
 }
