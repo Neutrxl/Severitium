@@ -60,7 +60,7 @@ svg.severitium-link-rects rect {
 /* Main container of card lists */
 
 .EntranceComponentStyle-containerFormForEntranceLinksComponent > form .HeaderComponentStyle-listArray {
-	width: auto;
+	width: 100%;
 	height: calc(100vh - 12em);
 	box-sizing: border-box;
 	margin: 0;

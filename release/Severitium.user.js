@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.40+build.20
+// @version			1.3.40+build21
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -31,34 +31,134 @@
 // @grant			GM_xmlhttpRequest
 // @grant			unsafeWindow
 
+// @require			https://cdn.jsdelivr.net/gh/OrakomoRi/CompareVersions@main/JS/compareversions.min.js
+// @require			https://cdn.jsdelivr.net/npm/sweetalert2@11
+
 // ==/UserScript==
 
 (function() {
 	'use strict';
 
-	const variables = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Variables/Variables.min.css';
+	/**
+	 * Configs
+	 * 
+	 * @param {Boolean} updateCheck - Checks for userscript updates
+	 * 
+	 * @param {Array} customModal - Enable custom modal
+	 * Uses SweetAlert2 library (https://cdn.jsdelivr.net/npm/sweetalert2@11) for the modal
+	 * @param {Boolean} customModal.enable - When set to false, the default modal will be used
+	 * @param {*} customModal.timer - Can be set (number | false): used to set the time
+	 * the custom modal should wait for response untill it closes
+	 * 
+	 * @param {Boolean} hasIgnoredUpdate - Used for the updater
+	 * 
+	 * @param {String} GITHUB_SCRIPT_URL - Link to the script to update
+	*/
+	
+	const updateCheck = true;
 
-	// Make an AJAX request to fetch the CSS file
-	GM_xmlhttpRequest({
-		method: 'GET',
-		url: variables,
-		onload: function(response) {
-			// Inject CSS into the page
-			// Create a <style> element
-			var styleElement = document.createElement('style');
-			// Set the class for the element to detect the 'container' with variables
-			styleElement.setAttribute('data-module', 'SeveritiumVariables');
-			// Set the CSS text to styles
-			styleElement.textContent = response.responseText;
-			// Apply styles to body end (to override initial styles)
-			document.body.appendChild(styleElement);
-		},
-		onerror: function(error) {
-			console.error('Failed to load CSS file:', error);
+	const customModal = {
+		enable: true,
+		timer: 5000,
+	};
+
+	// Link to the script to update
+	const GITHUB_SCRIPT_URL = GM_info.script.updateURL;
+
+	/**
+	 * Function to check if the script is updated 
+	*/
+	function checkForUpdates() {
+		GM_xmlhttpRequest({
+			method: 'GET',
+			url: GITHUB_SCRIPT_URL,
+			onload: function(response) {
+				// Script from GitHub
+				const data = response.responseText;
+
+				// Try to extract version from the script on GitHub
+				const match = data.match(/@version\s+([\w.-]+)/);
+				if (!match) {
+					console.log("Unable to extract version from the GitHub script.", "e");
+					return;
+				}
+
+				// Version on GitHub
+				const githubVersion = match[1];
+				// Current version
+				const currentVersion = GM_info.script.version;
+
+				// Compare versions
+				const compareResult = compareVersions(githubVersion, currentVersion);
+
+				switch (compareResult) {
+					case -1:
+						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`GitHub version : local version === ${githubVersion} : ${currentVersion}\n========`);
+						promptUpdate(githubVersion);
+						break;
+					case 0:
+						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`You are using the latest version.`);
+						break;
+					case 1:
+						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`You are using a version newer than the one on GitHub.`);
+						break;
+					case -2:
+						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`Error comparing versions.`);
+						break;
+				}
+			},
+			onerror: function(error) {
+				console.error('Failed to check for updates:', error);
+			}
+		});
+	}
+
+	function promptUpdate(newVersion) {
+		const skippedVersion = GM_getValue('skippedVersion', '');
+		if (skippedVersion === newVersion) return;
+		if (customModal.enable) {
+			Swal.fire({
+				position: 'top-end',
+				backdrop: false,
+				title: `${GM_info.script.name}: new version is available!`,
+				text: `Do you want to update to version ${newVersion}?`,
+				icon: 'info',
+				showCancelButton: true,
+				showDenyButton: true,
+				confirmButtonText: 'Update',
+				denyButtonText: 'Skip',
+				cancelButtonText: 'Close',
+				timer: customModal.timer ?? 5000,
+				timerProgressBar: true,
+				didOpen: (modal) => {
+					modal.onmouseenter = Swal.stopTimer;
+					modal.onmouseleave = Swal.resumeTimer;
+				}
+			}).then((result) => {
+				if (result.isConfirmed) {
+					GM_openInTab(GITHUB_SCRIPT_URL, { active: true });
+				} else if (result.isDenied) {
+					GM_setValue('skippedVersion', newVersion);
+				}
+			});
+		} else {
+			var result = window.confirm(`${GM_info.script.name}: A new version is available. Please update your script.`);
+
+			if (result) {
+				GM_openInTab(GITHUB_SCRIPT_URL, { active: true });
+			}
 		}
-	});
+	}
+
+	if (updateCheck) { checkForUpdates(); }
 
 
+
+	const variables = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Variables/Variables.min.css';
 
 	const linksCSS = [
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/Modal/Modal.min.css',
@@ -96,15 +196,18 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/ScrollingCards/ScrollingCards.min.css',
 	];
 
-	for (const link of linksCSS) {
-		// Make an AJAX request to fetch the CSS file
+	// Function to inject CSS
+	function injectCSS(url, attributes = []) {
 		GM_xmlhttpRequest({
 			method: 'GET',
-			url: link,
+			url: url,
 			onload: function(response) {
-				// Inject CSS into the page
 				// Create a <style> element
 				var styleElement = document.createElement('style');
+				// Set all the needed attributes
+				for (const attribute of attributes) {
+					styleElement.setAttribute(attribute.name, attribute.value);
+				}
 				// Set the CSS text to styles
 				styleElement.textContent = response.responseText;
 				// Apply styles to body end (to override initial styles)
@@ -116,9 +219,11 @@
 		});
 	}
 
+	injectCSS(variables, [{ name: 'data-module', value: 'SeveritiumVariables' }])
 
-
-
+	for (const link of linksCSS) {
+		injectCSS(link);
+	}
 
 
 
@@ -140,10 +245,6 @@
 			console.error('Failed to load TXT file:', error);
 		}
 	});
-
-
-
-
 
 
 
@@ -176,10 +277,10 @@
 						// Get the parent node of the element
 						const parent = element.parentNode;
 						// Check if the parent already has div.custom-background
-						const existingCustomBackground = parent.querySelector('div.custom-background');
+						const existingCustomBackground = parent.querySelector('div.severitium-custom-background');
 						if (!existingCustomBackground) { // If not
 							const div = document.createElement('div');
-							div.classList.add('custom-background');
+							div.classList.add('severitium-custom-background');
 							div.style.backgroundImage = `url(${backgroundImageUrl})`;
 							element.parentNode.replaceChild(div, element);
 						} else { // If yes
@@ -210,17 +311,13 @@
 				});
 			});
 
-			// Configuration for the mutation observer
-			const observerConfig = { childList: true, subtree: true };
-
 			// Start observing mutations in the document body
-			observer.observe(document.body, observerConfig);
+			observer.observe(document.body, { childList: true, subtree: true });
 		},
 		onerror: function(error) {
 			console.error('Failed to load TXT file:', error);
 		}
 	});
-
 
 
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Entrance Background
-// @version			1.2.9
+// @version			1.3.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -75,10 +75,10 @@
 						// Get the parent node of the element
 						const parent = element.parentNode;
 						// Check if the parent already has div.custom-background
-						const existingCustomBackground = parent.querySelector('div.custom-background');
+						const existingCustomBackground = parent.querySelector('div.severitium-custom-background');
 						if (!existingCustomBackground) { // If not
 							const div = document.createElement('div');
-							div.classList.add('custom-background');
+							div.classList.add('severitium-custom-background');
 							div.style.backgroundImage = `url(${backgroundImageUrl})`;
 							element.parentNode.replaceChild(div, element);
 						} else { // If yes
