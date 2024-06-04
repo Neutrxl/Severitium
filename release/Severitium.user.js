@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.3.40+build21
+// @version			1.3.40+build22
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -62,7 +62,6 @@
 		timer: 5000,
 	};
 
-	// Link to the script to update
 	const GITHUB_SCRIPT_URL = GM_info.script.updateURL;
 
 	/**
@@ -93,20 +92,21 @@
 
 				switch (compareResult) {
 					case -1:
-						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`========\n${GM_info.script.name}\n`);
+						console.log(`A new version is available. Please update your script.\n`);
 						console.log(`GitHub version : local version === ${githubVersion} : ${currentVersion}\n========`);
 						promptUpdate(githubVersion);
 						break;
 					case 0:
-						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`========\n${GM_info.script.name}\n`);
 						console.log(`You are using the latest version.`);
 						break;
 					case 1:
-						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`========\n${GM_info.script.name}\n`);
 						console.log(`You are using a version newer than the one on GitHub.`);
 						break;
 					case -2:
-						console.log(`========\n${GM_info.script.name}\nA new version is available. Please update your script.`);
+						console.log(`========\n${GM_info.script.name}\n`);
 						console.log(`Error comparing versions.`);
 						break;
 				}

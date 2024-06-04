@@ -458,14 +458,14 @@
 	clip: rect(0 0 0 0);
 }
 
-.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > .checkbox-text {
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > .severitium-checkbox-text {
 	font-size: 1.125em;
 	white-space: nowrap;
 }
 
 /* Container of the checkbox */
 
-.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon {
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .severitium-checkbox-icon {
 	width: 2.5em;
 	height: 2.5em;
 	flex-shrink: 0;
@@ -474,7 +474,7 @@
 
 /* Borders */
 
-.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon rect {
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .severitium-checkbox-icon rect {
 	stroke-width: .05em;
 	stroke: var(--severitium-green-color);
 	transition: stroke .2 ease;
@@ -482,7 +482,7 @@
 
 /* Checkbox checkmark */
 
-.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .checkbox-icon .tick {
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input + .severitium-checkbox-icon .tick {
 	stroke: var(--severitium-green-color);
 	stroke-dasharray: 100%;
 	stroke-dashoffset: 100%;
@@ -492,7 +492,7 @@
 
 /* Checkbox checkmark when input is checked */
 
-.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input:checked + .checkbox-icon .tick {
+.EntranceComponentStyle-checkbox > .CheckBoxStyle-checkbox > label > input:checked + .severitium-checkbox-icon .tick {
 	stroke-dashoffset: 0%;
 }
 

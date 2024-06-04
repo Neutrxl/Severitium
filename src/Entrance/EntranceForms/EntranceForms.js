@@ -9,7 +9,7 @@
 		const checkboxText = document.querySelector('.EntranceComponentStyle-checkbox > span');
 
 		// New checkbox visuals
-		const newCheckboxVisuals = `<svg class="checkbox-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><rect width="21" height="21" x=".5" y=".5" fill="#ffffff" stroke="#006F94" rx="3" /><path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" /></svg><span class="checkbox-text">${checkboxText.textContent}</span>`;
+		const newCheckboxVisuals = `<svg class="severitium-checkbox-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><rect width="21" height="21" x=".5" y=".5" fill="#ffffff" stroke="#006F94" rx="3" /><path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" /></svg><span class="severitium-checkbox-text">${checkboxText.textContent}</span>`;
 
 		// Replace old checkbox visuals with the new one
 		checkboxVisuals.outerHTML = newCheckboxVisuals;
