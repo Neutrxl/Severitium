@@ -114,9 +114,7 @@
 /* Header + buttons containers + login/register elements */
 
 .EntranceComponentStyle-ContainerForm form:not(:has([class*="round"i][class*="button"i])) > div {
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
