@@ -5,6 +5,7 @@
 ## Added
 
 - :tada: Changelog :tada:
+- :tada: Script auto-update :tada:
 
 ### Changed
 

@@ -66,6 +66,8 @@ Main developer: [Neutrxl](https://github.com/Neutrxl)
 
 Some ideas: [N3onTechF0X](https://github.com/N3onTechF0X)
 
+---
+
 ## :coin: Donate
 
 Any donations would be appreciated
