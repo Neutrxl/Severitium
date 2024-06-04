@@ -108,30 +108,30 @@
 
 /* Group button */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2),
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]),
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) {
 	background-color: transparent;
 	transition: background-color .2s ease;
 }
 
 /* Group button on hover */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2):hover,
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2):hover {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]):hover,
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]):hover {
 	background-color: var(--severitium-light-transparent-background3);
 }
 
 /* Icon of a group button (old icon parts) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img,
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img,
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div > img {
 	display: none;
 }
 
 /* Icon of a group button (new icon parts) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div,
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div,
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div {
 	-webkit-mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white"/></svg>');
 			mask-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4" fill="white"/></svg>');
 	-webkit-mask-size: contain;
@@ -146,22 +146,22 @@
 
 /* Icon part of a group button (inactive) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]),
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]),
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='offline'i]) {
 	background-color: var(--severitium-light-gray-color);
 }
 
 /* Icon part of a group button (leader) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]),
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]),
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='lead'i]) {
 	background-color: var(--severitium-main-color);
 }
 
 /* Icon part of a group button (member) */
 
-.UserInfoContainerStyle-userTitleContainer > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]),
-.BreadcrumbsComponentStyle-headerContainer > div:first-child > div:nth-child(2) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]) {
+.UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]),
+.BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) .UserGroupTitleButtonComponentStyle-commonBlockGroup > div:has(img[src*='ready'i]) {
 	background-color: var(--severitium-green-color);
 }
 
@@ -180,17 +180,71 @@
 
 /* Currency buttons */
 
-.UserScoreComponentStyle-blockRightPanel > div:first-child > div,
-.BreadcrumbsComponentStyle-rightButtonsContainer > div:first-child > div {
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="coin"i]),
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="crystal"i]),
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="coin"i]),
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="crystal"i]) {
+	position: relative;
 	background-color: transparent;
 	transition: background-color .2s ease;
 }
 
 /* Currency buttons on hover */
 
-.UserScoreComponentStyle-blockRightPanel > div:first-child > div:hover,
-.BreadcrumbsComponentStyle-rightButtonsContainer > div:first-child > div:hover {
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="coin"i]):hover,
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="crystal"i]):hover,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="coin"i]):hover,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="crystal"i]):hover {
 	background-color: linear-gradient(270deg, var(--severitium-light-transparent-background3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Original plus sign icons on currency buttons */
+
+.UserScoreComponentStyle-blockRightPanel div> img[src*="coin"i][src*="add"i],
+.UserScoreComponentStyle-blockRightPanel div> img[src*="crystal"i][src*="add"i],
+.BreadcrumbsComponentStyle-rightButtonsContainer div> img[src*="coin"i][src*="add"i],
+.BreadcrumbsComponentStyle-rightButtonsContainer div> img[src*="crystal"i][src*="add"i] {
+	display: none;
+}
+
+/* Custom plus sign icons on currency buttons */
+
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="coin"i][src*="add"i])::after,
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="crystal"i][src*="add"i])::after,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="coin"i][src*="add"i])::after,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="crystal"i][src*="add"i])::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	transform: translateY(-50%);
+	width: 1em;
+	height: 1em;
+	background-color: var(--severitium-light-gray-color);
+	-webkit-mask-image: url('data:image/svg+xml,<svg class="item-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 0H28.5V19.5H48V28.5L0 28.5V19.5H19.5V0Z"/><path d="M19.5003 37.5001L28.5003 28.5001V48.0001L19.5003 48.0001V37.5001Z"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg class="item-icon" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 0H28.5V19.5H48V28.5L0 28.5V19.5H19.5V0Z"/><path d="M19.5003 37.5001L28.5003 28.5001V48.0001L19.5003 48.0001V37.5001Z"/></svg>');
+	-webkit-mask-size: contain;
+			mask-size: contain;
+	-webkit-mask-position: center;
+			mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+	background-image: none;
+	transition: background-color .2s ease;
+}
+
+/* Custom plus sign icon on coin button hover */
+
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="coin"i][src*="add"i]):hover::after,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="coin"i][src*="add"i]):hover::after {
+	background-color: var(--severitium-gold-color);
+}
+
+/* Custom plus sign icon on crystal button hover */
+
+.UserScoreComponentStyle-blockRightPanel div:has(> img[src*="crystal"i][src*="add"i]):hover::after,
+.BreadcrumbsComponentStyle-rightButtonsContainer div:has(> img[src*="crystal"i][src*="add"i]):hover::after {
+	background-color: var(--severitium-light-blue-color);
 }
 
 /* Full screen button */
