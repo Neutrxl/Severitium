@@ -2,6 +2,7 @@
 
 .ModalStyle-rootHover > div:not([class*='battlepick'i]),
 .DialogContainerComponentStyle-container {
+	position: relative;
 	background: var(--severitium-dark-transparent-background1);
 	-webkit-backdrop-filter: blur(.5em);
 			backdrop-filter: blur(.5em);
@@ -16,6 +17,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: unset;
 }
 
 /* Header of the modal window */
@@ -185,32 +187,41 @@
 	color: var(--severitium-main-color);
 }
 
+/* Close icon container */
+
+:has(> .DialogContainerComponentStyle-imgClose) {
+	position: unset;
+}
+
 /* Close (cross) icon of the modal container */
 
 .DialogContainerComponentStyle-imgClose {
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 4em;
-	height: 4em;
-	-webkit-mask-image: url('data:image/svg+xml,<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M60 32L64 36L48 52L36 64L32 60L44 48L32 36L36 32L48 44L60 32Z" fill="white"/><path d="M48 52H56L64 60L60 64L48 52Z" fill="white"/></svg>');
-			mask-image: url('data:image/svg+xml,<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M60 32L64 36L48 52L36 64L32 60L44 48L32 36L36 32L48 44L60 32Z" fill="white"/><path d="M48 52H56L64 60L60 64L48 52Z" fill="white"/></svg>');
+	right: 0;
+	width: 1.5em;
+	height: 1.5em;
+	margin: .5em;
+	padding: 0;
+	background: none;
+	background-image: none;
+	-webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="m84,0l12,12-48,48L12,96,0,84l36-36L0,12,12,0l36,36L84,0Z" fill="white"/><path d="m48,60h24l24,24-12,12-36-36Z" fill="white"/></svg>');
+			mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><path d="m84,0l12,12-48,48L12,96,0,84l36-36L0,12,12,0l36,36L84,0Z" fill="white"/><path d="m48,60h24l24,24-12,12-36-36Z" fill="white"/></svg>');
 	background-color: var(--severitium-white-color);
-	-webkit-mask-size: contain;
-			mask-size: contain;
-	-webkit-mask-position: center;
-			mask-position: center;
+	-webkit-mask-position: center center;
+			mask-position: center center;
 	-webkit-mask-repeat: no-repeat;
 			mask-repeat: no-repeat;
-	background-image: none;
+	-webkit-mask-size: contain;
+			mask-size: contain;
 	transition: background-color .2s ease;
 }
 
 /* Close (cross) icon of the modal container on hover */
 
 .DialogContainerComponentStyle-imgClose:hover {
-	width: 4em;
-	height: 4em;
+	width: 1.5em;
+	height: 1.5em;
 	background-image: none;
 	background-color: var(--severitium-red-color);
 }

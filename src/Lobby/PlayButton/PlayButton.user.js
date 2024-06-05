@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Play Button
-// @version			1.9.0
+// @version			1.9.1
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
