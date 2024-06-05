@@ -136,9 +136,6 @@
 
 .UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]),
 .BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]) {
-	width: 1.5em;
-	height: 1.5em;
-	position: relative;
 	background-color: transparent;
 	transition: background-color .2s ease;
 }
@@ -148,6 +145,15 @@
 .UserInfoContainerStyle-userTitleContainer > div:has(> [class*="user"i][class*="group"i]):hover,
 .BreadcrumbsComponentStyle-headerContainer > div > div:has(> [class*="user"i][class*="group"i]):hover {
 	background-color: var(--severitium-light-transparent-background3);
+}
+
+/* Group button icon */
+
+.UserInfoContainerStyle-userTitleContainer > div > [class*="user"i][class*="group"i],
+.BreadcrumbsComponentStyle-headerContainer > div > div > [class*="user"i][class*="group"i] {
+	width: 1.5em;
+	height: 1.5em;
+	position: relative;
 }
 
 /* Icon of a group button (old icon parts) */
