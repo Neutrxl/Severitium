@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Notificator Icon
-// @version			1.2.11
+// @version			1.2.12
 // @description		Restyles and replaces notification icons
 // @author			OrakomoRi
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Join Clan
-// @version			1.0.2
+// @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 

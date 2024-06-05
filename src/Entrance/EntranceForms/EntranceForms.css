@@ -601,6 +601,8 @@
 	border-radius: .25em;
 	padding: .5em 1em;
 	border: .1em solid var(--severitium-red-color);
+	-webkit-backdrop-filter: blur(.25em);
+			backdrop-filter: blur(.25em);
 	background: none;
 	background-color: var(--severitium-dark-transparent-background1);
 }

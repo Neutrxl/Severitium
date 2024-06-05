@@ -74,3 +74,7 @@ Any donations would be appreciated
 
 - [Boosty](https://boosty.to/orakomori/donate)
 - [Patreon](https://www.patreon.com/orakomori)
+-  **BTC**: *bc1qujagmeactpljqa03ywhul5zpa62ru9g0280f3c*
+- **USDT (BNB Smart Chain)**: *0x8c7393091428d9A3b44fF4436217d8EbD33e7990*
+- **USDT (Tron)**: *TQj3EjdQXv8fhRsf3eXWowxz7YpYvYEoLU*
+- **USDT (Solana)**: *2UKZe2J4TohqFsF1kQRqmCXqwCcdUJkAvcM6ByZiqds8*

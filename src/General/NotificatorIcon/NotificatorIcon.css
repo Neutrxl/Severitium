@@ -6,7 +6,7 @@
 
 /* Small notificators (containers) */
 
-.LockableContainersComponentStyle-navigationBlock .MenuComponentStyle-commonBlock + span {
+[class*="container"i][class*="navigation"i] .MenuComponentStyle-commonBlock + span {
 	background-color: var(--severitium-main-color);
 }
 
