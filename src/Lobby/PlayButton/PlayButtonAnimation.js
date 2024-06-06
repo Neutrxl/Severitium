@@ -64,6 +64,33 @@
 	const observer = new MutationObserver(function (mutationsList, observer) {
 		// Iterate through all mutations
 		for (const mutation of mutationsList) {
+			// Check if the mutation is done with some child
+			if (mutation.type === 'childList') {
+				for (const node of mutation.addedNodes) {
+					if (node.nodeType === node.ELEMENT_NODE) {
+						// Check if the added node or its descendants contain the target class
+						const targetNode = node.classList && node.classList.contains('MainScreenComponentStyle-playButtonContainer') 
+							? node 
+							: node.querySelector('.MainScreenComponentStyle-playButtonContainer');
+						if (targetNode && targetNode.classList.contains('MainScreenComponentStyle-disabledButtonPlay')) {
+							applyAnimation(targetNode);
+						}
+					}
+				}
+
+				for (const node of mutation.removedNodes) {
+					if (node.nodeType === node.ELEMENT_NODE) {
+						// Check if the removed node or its descendants contain the target class
+						const targetNode = node.classList && node.classList.contains('MainScreenComponentStyle-playButtonContainer') 
+							? node 
+							: node.querySelector('.MainScreenComponentStyle-playButtonContainer');
+						if (targetNode) {
+							stopAnimation(targetNode);
+						}
+					}
+				}
+			}
+
 			// Check if the mutation is an attribute change
 			if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
 				// Check if the element is a .MainScreenComponentStyle-playButtonContainer
