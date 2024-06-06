@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0+build.10
+// @version			1.4.0+build.11
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -23,7 +23,7 @@
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceIcons/EntranceIcons.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceLinks/EntranceLinks.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattleTab/ColorfulResists/ColorfulResists.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButtonAnimation.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButton.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/ChatWindow/ChatWindow.min.js
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/PlayerContextMenu/PlayerContextMenu.min.js
 

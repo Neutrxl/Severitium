@@ -1,4 +1,10 @@
 (function () {
+	// State to keep track of the previous X and Y values of button background
+	let state = {
+		prevX: 10,
+		prevY: 25,
+	};
+	
 	/**
 	 * Generates a random number within a specified range with a maximum difference from the previous value
 	 * 
@@ -22,16 +28,16 @@
 	 * @param {HTMLElement} disabledButton - The element to which the animation will be applied
 	*/
 	function applyAnimation(disabledButton) {
-		let prevX = parseInt(disabledButton.dataset.prevX) || 10; // Previous value of X
-		let prevY = parseInt(disabledButton.dataset.prevY) || 25; // Previous value of Y
+		let prevX = state.prevX || 10; // Previous value of X
+		let prevY = state.prevY || 25; // Previous value of Y
 
 		const intervalId = setInterval(function () {
 			const randomX = getRandomInRange(0, 100, prevX, 35); // Random value between 0 and 100 for X
 			const randomY = getRandomInRange(0, 100, prevY, 35); // Random value between 0 and 100 for Y
 			disabledButton.style.transition = "background-position 0.75s ease"; // Apply smooth animation
 			disabledButton.style.backgroundPosition = `${randomX}% ${randomY}%`; // Set new background position
-			disabledButton.dataset.prevX = randomX; // Update previous value of X in dataset
-			disabledButton.dataset.prevY = randomY; // Update previous value of Y in dataset
+			state.prevX = randomX; // Update previous value of X in dataset
+			state.prevY = randomY; // Update previous value of Y in dataset
 		}, 1250); // Update position every 1.25 seconds
 
 		// Save interval identifier in the element's dataset
@@ -55,7 +61,7 @@
 			const playButton = document.querySelector('.MainScreenComponentStyle-playButtonContainer');
 			if (playButton) {
 				// Set the background position of the parent container
-				playButton.style.backgroundPosition = `${disabledButton.dataset.prevX}% ${disabledButton.dataset.prevY}%`;
+				playButton.style.backgroundPosition = `${state.prevX}% ${state.prevY}%`;
 			}
 		}
 	}

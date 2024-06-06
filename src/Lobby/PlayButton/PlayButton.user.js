@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Play Button
-// @version			1.9.2
+// @version			1.9.3
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -12,7 +12,7 @@
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButtonAnimation.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButton.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
