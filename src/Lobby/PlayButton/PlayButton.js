@@ -67,7 +67,7 @@
 	}
 
 	// Create a new instance of MutationObserver
-	const observer = new MutationObserver(function (mutationsList, observer) {
+	const observer = new MutationObserver(function (mutationsList) {
 		// Iterate through all mutations
 		for (const mutation of mutationsList) {
 			// Check if the mutation is done with some child
@@ -117,5 +117,5 @@
 	});
 
 	// Set up observation for changes in the document
-	observer.observe(document.body, { attributes: true, subtree: true });
+	observer.observe(document.body, { attributes: true, childList: true, subtree: true });
 })();
