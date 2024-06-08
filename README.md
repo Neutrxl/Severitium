@@ -68,7 +68,7 @@ Some ideas: [N3onTechF0X](https://github.com/N3onTechF0X)
 
 ---
 
-## :coin: Donate
+## :coin: Support me
 
 Any donations would be appreciated
 

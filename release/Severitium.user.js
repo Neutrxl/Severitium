@@ -1,19 +1,19 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0+build.12
+// @version			1.4.0+build.13
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
 // @icon			https://i.imgur.com/Srv1szX.png
 
-// @match			https://*.tankionline.com/*
+// @match			https://*.tankionline.com/play/*
 
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
-// @updateURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/Severitium.user.js
-// @downloadURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/Severitium.user.js
+// @updateURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/severitium.user.js
+// @downloadURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/severitium.user.js
 
 // @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Additional/_getSeason.min.js
 
@@ -30,9 +30,12 @@
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
 // @grant			unsafeWindow
+// @grant			GM_getValue
+// @grant			GM_setValue
+// @grant			GM_openInTab
 
-// @require			https://cdn.jsdelivr.net/gh/OrakomoRi/CompareVersions@main/JS/compareversions.min.js
 // @require			https://cdn.jsdelivr.net/npm/sweetalert2@11
+// @require			https://cdn.jsdelivr.net/gh/OrakomoRi/CompareVersions@main/JS/compareversions.min.js
 
 // ==/UserScript==
 
@@ -78,7 +81,7 @@
 				// Try to extract version from the script on GitHub
 				const match = data.match(/@version\s+([\w.-]+)/);
 				if (!match) {
-					console.log("Unable to extract version from the GitHub script.", "e");
+					console.log(`========\n${GM_info.script.name}\nUnable to extract version from the GitHub script.\n========`);
 					return;
 				}
 
@@ -90,26 +93,27 @@
 				// Compare versions
 				const compareResult = compareVersions(githubVersion, currentVersion);
 
+				console.log(`========\n${GM_info.script.name}\n`);
+				
 				switch (compareResult) {
 					case 1:
-						console.log(`========\n${GM_info.script.name}\n`);
 						console.log(`A new version is available. Please update your script.\n`);
-						console.log(`GitHub version : local version === ${githubVersion} : ${currentVersion}\n========`);
+						console.log(`GitHub × Your: ${githubVersion} × ${currentVersion}`);
 						promptUpdate(githubVersion);
 						break;
 					case 0:
-						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`You are using the latest version.\n========`);
+						console.log(`You are using the latest version.`);
 						break;
 					case -1:
-						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`You are using a version newer than the one on GitHub.\n========`);
+						console.log(`You are using a version newer than the one on GitHub.`);
 						break;
 					case -2:
-						console.log(`========\n${GM_info.script.name}\n`);
-						console.log(`Error comparing versions.\n========`);
+						console.log(`Error comparing versions.`);
 						break;
 				}
+
+				console.log(`Your: ${currentVersion} --- GitHub: ${githubVersion}`);
+				console.log(`\n========`);
 			},
 			onerror: function(error) {
 				console.error('Failed to check for updates:', error);
@@ -120,10 +124,17 @@
 	function promptUpdate(newVersion) {
 		const skippedVersion = GM_getValue('skippedVersion', '');
 		if (skippedVersion === newVersion) return;
+
 		if (customModal.enable) {
+			const style = document.createElement('style');
+			style.textContent = '.swal2-container { z-index: 8888; } .swal2-container h1, .swal2-container h2, .swal2-container h3, .swal2-container h4, .swal2-container span, .swal2-container p { color: #000000; } ';
+			document.head.appendChild(style);
+
 			Swal.fire({
 				position: 'top-end',
 				backdrop: false,
+				color: "#000000",
+				background: "#ffffff",
 				title: `${GM_info.script.name}: new version is available!`,
 				text: `Do you want to update to version ${newVersion}?`,
 				icon: 'info',
