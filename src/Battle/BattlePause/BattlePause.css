@@ -47,6 +47,7 @@
 	height: 0;
 	top: 0;
 	left: 0;
+	pointer-events: none;
 }
 
 /* Pseudo-element 'before' for pause content container */
@@ -54,10 +55,26 @@
 .BattlePauseMenuDialogComponentStyle-content::before {
 	border-top-color: var(--severitium-extra-light-gray-color);
 	border-right-color: var(--severitium-extra-light-gray-color);
-	animation: pausebeforeborder 0.5s ease-out forwards;
+	-webkit-animation: pausebeforeborder 0.5s ease-out forwards;
+			animation: pausebeforeborder 0.5s ease-out forwards;
 }
 
 /* Animation for 'before' pause content container element */
+
+@-webkit-keyframes pausebeforeborder {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 100%;
+		height: 0;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
 
 @keyframes pausebeforeborder {
 	0% {
@@ -79,10 +96,26 @@
 .BattlePauseMenuDialogComponentStyle-content::after {
 	border-bottom-color: var(--severitium-extra-light-gray-color);
 	border-left-color: var(--severitium-extra-light-gray-color);
-	animation: pauseafterborder 0.5s ease-out forwards;
+	-webkit-animation: pauseafterborder 0.5s ease-out forwards;
+			animation: pauseafterborder 0.5s ease-out forwards;
 }
 
 /* Animation for 'after' pause content container element */
+
+@-webkit-keyframes pauseafterborder {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 0;
+		height: 100%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
 
 @keyframes pauseafterborder {
 	0% {

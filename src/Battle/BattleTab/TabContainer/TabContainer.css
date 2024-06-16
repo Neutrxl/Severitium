@@ -28,6 +28,7 @@
 	height: 0;
 	top: 0;
 	left: 0;
+	pointer-events: none;
 }
 
 /* Pseudo-element 'before' for tab container */
@@ -35,10 +36,26 @@
 .BattleTabStatisticComponentStyle-container > div::before {
 	border-top-color: var(--severitium-tab-main-border-color);
 	border-right-color: var(--severitium-tab-main-border-color);
-	animation: tabbeforeborder 0.5s ease-out forwards;
+	-webkit-animation: tabbeforeborder 0.5s ease-out forwards;
+			animation: tabbeforeborder 0.5s ease-out forwards;
 }
 
 /* Animation for 'before' tab container element */
+
+@-webkit-keyframes tabbeforeborder {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 100%;
+		height: 0;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
 
 @keyframes tabbeforeborder {
 	0% {
@@ -60,10 +77,26 @@
 .BattleTabStatisticComponentStyle-container > div::after {
 	border-bottom-color: var(--severitium-tab-main-border-color);
 	border-left-color: var(--severitium-tab-main-border-color);
-	animation: tabafterborder 0.5s ease-out forwards;
+	-webkit-animation: tabafterborder 0.5s ease-out forwards;
+			animation: tabafterborder 0.5s ease-out forwards;
 }
 
 /* Animation for 'after' tab container element */
+
+@-webkit-keyframes tabafterborder {
+	0% {
+		width: 0;
+		height: 0;
+	}
+	50% {
+		width: 0;
+		height: 100%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
 
 @keyframes tabafterborder {
 	0% {
@@ -322,7 +355,8 @@
 	content: '';
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
 	left: 2.75em;
 	width: 11.5em;
 	height: 1em;
@@ -570,7 +604,8 @@
 	content: '';
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
 	left: 5.5em;
 	width: 14em;
 	height: 1em;

@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Tab Container
-// @version			1.5.0
+// @version			1.5.1
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
