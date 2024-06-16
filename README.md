@@ -48,7 +48,7 @@ Samsung Internet|20+
 
 1. Download [Tampermonkey](https://www.tampermonkey.net/)
 
-2. Add or update [script](https://raw.githubusercontent.com/Neutrxl/Themed/main/release/Severitium.user.js) in Tampermonkey
+2. Add or update [script](https://raw.githubusercontent.com/Neutrxl/Severitium/main/release/severitium.user.js) in Tampermonkey
 
 ---
 
