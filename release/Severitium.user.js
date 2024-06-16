@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0+build.14
+// @version			1.4.0+build.15
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -12,20 +12,20 @@
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
-// @updateURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/severitium.user.js
-// @downloadURL		https://raw.githubusercontent.com/Neutrxl/Themed/main/release/severitium.user.js
+// @updateURL		https://raw.githubusercontent.com/Neutrxl/Severitium/main/release/severitium.user.js
+// @downloadURL		https://raw.githubusercontent.com/Neutrxl/Severitium/main/release/severitium.user.js
 
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Additional/_getSeason.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/_Additional/_getSeason.min.js
 
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/LoadingScreen/LoadingScreen.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/NotificatorIcon/NotificatorIcon.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceForms/EntranceForms.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceIcons/EntranceIcons.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceLinks/EntranceLinks.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattleTab/ColorfulResists/ColorfulResists.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButton.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/ChatWindow/ChatWindow.min.js
-// @require			https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/PlayerContextMenu/PlayerContextMenu.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/LoadingScreen/LoadingScreen.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/NotificatorIcon/NotificatorIcon.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceForms/EntranceForms.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceIcons/EntranceIcons.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceLinks/EntranceLinks.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Battle/BattleTab/ColorfulResists/ColorfulResists.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/PlayButton/PlayButton.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/ChatWindow/ChatWindow.min.js
+// @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/PlayerContextMenu/PlayerContextMenu.min.js
 
 // @run-at			document-start
 // @grant			GM_xmlhttpRequest
@@ -169,42 +169,42 @@
 
 
 
-	const variables = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Variables/Variables.min.css';
+	const variables = 'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Variables/Variables.min.css';
 
 	const linksCSS = [
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/Modal/Modal.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/Dropdown/Dropdown.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/LoadingScreen/LoadingScreen.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/NotificatorIcon/NotificatorIcon.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/TopPanel/TopPanel.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceBackground/EntranceBackground.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceForms/EntranceForms.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceIcons/EntranceIcons.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Entrance/EntranceLinks/EntranceLinks.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattleChat/BattleChat.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattleTab/TabContainer/TabContainer.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/FooterMenu/FooterMenu.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/MainMenu/MainMenu.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/PlayButton/PlayButton.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/NewsWindow/NewsWindow.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/ChatWindow/ChatWindow.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/Challenges/CommonChallenges/CommonChallenges.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/Challenges/EliteChallenges/EliteChallenges.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/Announcements/Announcements.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/BattleSelect/BattleType/BattleType.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/BattleSelect/BattleMode/BattleMode.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/TopMenu/TopMenu.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Friends/FriendsScreen/FriendsScreen.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Friends/InviteScreen/InviteScreen.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/CommonContainer/CommonContainer.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/PlayerContextMenu/PlayerContextMenu.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Clan/ClanModal/ClanModal.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Clan/ExistingClan/ExistingClan.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Clan/JoinClan/JoinClan.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/XP/XP.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/MatchmakingWaitBlock/MatchmakingWaitBlock.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattlePause/BattlePause.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/ScrollingCards/ScrollingCards.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/Modal/Modal.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/Dropdown/Dropdown.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/LoadingScreen/LoadingScreen.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/NotificatorIcon/NotificatorIcon.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/TopPanel/TopPanel.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceBackground/EntranceBackground.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceForms/EntranceForms.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceIcons/EntranceIcons.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Entrance/EntranceLinks/EntranceLinks.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Battle/BattleChat/BattleChat.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Battle/BattleTab/TabContainer/TabContainer.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/FooterMenu/FooterMenu.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/MainMenu/MainMenu.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/PlayButton/PlayButton.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/NewsWindow/NewsWindow.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/ChatWindow/ChatWindow.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/Challenges/CommonChallenges/CommonChallenges.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/Challenges/EliteChallenges/EliteChallenges.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/Announcements/Announcements.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/BattleSelect/BattleType/BattleType.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/BattleSelect/BattleMode/BattleMode.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/TopMenu/TopMenu.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Friends/FriendsScreen/FriendsScreen.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Friends/InviteScreen/InviteScreen.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/CommonContainer/CommonContainer.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/PlayerContextMenu/PlayerContextMenu.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Clan/ClanModal/ClanModal.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Clan/ExistingClan/ExistingClan.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Clan/JoinClan/JoinClan.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/XP/XP.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Lobby/MatchmakingWaitBlock/MatchmakingWaitBlock.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/Battle/BattlePause/BattlePause.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/General/ScrollingCards/ScrollingCards.min.css',
 	];
 
 	// Function to inject CSS
@@ -239,7 +239,7 @@
 
 
 	// Link to raw TXT file
-	const playButton = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/Lobby/png/PlayButton.txt';
+	const playButton = 'https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/_Base64/Lobby/png/PlayButton.txt';
 
 	// Make an AJAX request to fetch the TXT file
 	GM_xmlhttpRequest({
@@ -262,7 +262,7 @@
 	const season = _getSeason();
 
 	// Link to raw TXT file
-	const entranceBackground = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/Entrance/png/${season}.txt`;
+	const entranceBackground = `https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/_Base64/Entrance/png/${season}.txt`;
 
 	// Make an AJAX request to fetch the TXT file
 	GM_xmlhttpRequest({
@@ -333,7 +333,7 @@
 
 
 	// Link to raw TXT file
-	const commonContainerBackground = `https://raw.githubusercontent.com/Neutrxl/Themed/main/src/_Base64/General/png/CommonContainer.txt`;
+	const commonContainerBackground = `https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/_Base64/General/png/CommonContainer.txt`;
 
 	// Make an AJAX request to fetch the TXT file
 	GM_xmlhttpRequest({
