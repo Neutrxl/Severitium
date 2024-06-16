@@ -73,6 +73,7 @@
 	/* Theme colors for battle tab */
 
 	--severitium-tab-background: rgba(0, 0, 0, .75);
+	--severitium-tab-main-border-color: rgb(200, 200, 200);
 	--severitium-tab-borders-color: rgb(80, 80, 80);
 	--severitium-tab-borders-hover-color: rgb(200, 200, 200);
 	--severitium-tab-header-border-color: rgb(100, 100, 100);

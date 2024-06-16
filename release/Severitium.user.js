@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0+build.13
+// @version			1.4.0+build.14
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -203,7 +203,7 @@
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Clan/JoinClan/JoinClan.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/XP/XP.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Lobby/MatchmakingWaitBlock/MatchmakingWaitBlock.min.css',
-		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/Pause/Pause.min.css',
+		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattlePause/BattlePause.min.css',
 		'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/General/ScrollingCards/ScrollingCards.min.css',
 	];
 

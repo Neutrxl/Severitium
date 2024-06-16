@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			CSS Pause
-// @version			1.0.8
+// @version			1.1.0
 // @description		Injects CSS code into the page
 // @author			OrakomoRi
 
@@ -22,7 +22,7 @@
 	'use strict';
 
 	// Link to raw CSS file
-	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/Pause/Pause.min.css';
+	const link = 'https://raw.githubusercontent.com/Neutrxl/Themed/main/src/Battle/BattlePause/BattlePause.min.css';
 
 	// Make an AJAX request to fetch the CSS file
 	GM_xmlhttpRequest({
