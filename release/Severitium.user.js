@@ -1,7 +1,7 @@
 // ==UserScript==
 
 // @name			Severitium
-// @version			1.4.0+build.16
+// @version			1.4.0+build.17
 // @description		Custom theme for Tanki Online
 // @author			OrakomoRi
 
@@ -12,8 +12,8 @@
 // @connect			raw.githubusercontent.com
 // @connect			cdn.jsdelivr.net
 
-// @updateURL		https://github.com/Neutrxl/Severitium/raw/main/release/Severitium.user.js
-// @downloadURL		https://github.com/Neutrxl/Severitium/raw/main/release/Severitium.user.js
+// @updateURL		https://raw.githubusercontent.com/Neutrxl/Severitium/main/release/severitium.user.js
+// @downloadURL		https://raw.githubusercontent.com/Neutrxl/Severitium/main/release/severitium.user.js
 
 // @require			https://raw.githubusercontent.com/Neutrxl/Severitium/main/src/_Additional/_getSeason.min.js
 
